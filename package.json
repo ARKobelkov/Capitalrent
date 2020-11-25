@@ -2,7 +2,7 @@
   "name": "capitalrent",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "",
   "scripts": {
     "dev": "SET NODE_ENV=development&&gulp",
     "build": "SET NODE_ENV=production&&gulp",

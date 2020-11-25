@@ -26,6 +26,9 @@ gulp.task('styles', function() {
       cascade: false
     }))
     .pipe(mediaQueries())
+    .pipe(gulpIf(mode !== 'development', cleanCss({
+			format: (mode === 'production') ? false : 'beautify'
+		})))
     .pipe(gulpIf(mode === 'development', sourcemaps.write('.')))
     .pipe(gulp.dest('dist/css/'))
     .pipe(browserSync.stream());
@@ -41,7 +44,7 @@ gulp.task('html', function() {
     }))
     .pipe(useref())
     .pipe(gulpIf(mode === 'production' && '*.js', uglify()))
-    .pipe(gulpIF(mode !== 'development' && '*.css', cleanCss({
+    .pipe(gulpIf(mode !== 'development' && '*.css', cleanCss({
       format: (mode === 'production') ? false : 'beautify'
     })))
     .pipe(gulp.dest('dist/'));
@@ -56,7 +59,7 @@ gulp.task('javascript', function() {
     .pipe(babel())
     .pipe(gulpIf(mode === 'production', uglify()))
     .pipe(gulpIf(mode === 'development', sourcemaps.write('.')))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js/'))
     .pipe(browserSync.stream());
 });
 

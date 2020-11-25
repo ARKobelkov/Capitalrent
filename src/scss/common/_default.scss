@@ -1,0 +1,184 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: $firstbackground;
+  font: 400 19px / 28px 'Fira Sans', sans-serif;
+  color: $fontcolor;
+}
+a {
+  color: $linkcolor;
+  outline: none;
+  text-decoration: underline;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+p {
+  margin: 0 0 10px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+b,
+strong {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  color: $titlecolor;
+  line-height: normal;
+  margin: 0 0 15px;
+}
+h1 {
+  font-size: 46px;
+  line-height: 59px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 31px;
+  line-height: 26px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+h5 {
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h6 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+ul.marker li,
+ol.marker li {
+  padding-left: 17px;
+  position: relative;
+}
+ul.marker li:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $circlecolor;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+ol.marker li {
+  counter-increment: step-counter;
+}
+ol.marker li:before {
+  content: counter(step-counter) '.';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 19px;
+  line-height: 28px;
+  color: $fontcolor;
+}
+q {
+  display: block;
+  margin: 0 0 10px;
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  font-style: italic;
+  color: $fontcolor;
+}
+svg {
+  display: block;
+  overflow: hidden;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $inputcolor;
+  opacity: 1;
+  /* Хром */
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $inputcolor;
+  opacity: 1;
+  /* Файерфокс */
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $inputcolor;
+  opacity: 1;
+  /* Для старых версий файерфокса */
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $inputcolor;
+  opacity: 1;
+  /* едж и эксплорер */
+}
+input::-ms-clear {
+  display: none;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.cover {
+  padding: 0 15px;
+  position: relative;
+  margin: 0 auto;
+  // @media screen and (min-width: 480px) {
+  //   min-width: 320px;
+  // }
+  @media screen and (min-width: 600px) {
+    max-width: 570px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 730px;
+  }
+  @media screen and (min-width: 990px) {
+    max-width: 970px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1170px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1390px;
+  }
+}
