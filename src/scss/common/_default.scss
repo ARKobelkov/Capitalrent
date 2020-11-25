@@ -163,9 +163,9 @@ input::-ms-clear {
   padding: 0 15px;
   position: relative;
   margin: 0 auto;
-  // @media screen and (min-width: 480px) {
-  //   min-width: 320px;
-  // }
+  @media screen and (min-width: 480px) {
+    min-width: 320px;
+  }
   @media screen and (min-width: 600px) {
     max-width: 570px;
   }

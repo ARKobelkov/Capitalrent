@@ -1,0 +1,152 @@
+.header {
+  &__top {
+    background: $headerfirst;
+    &-wrapper {
+      display: flex;
+    }
+    &-left {
+      display: flex;
+      flex: 1 1 auto;
+      padding: 18px 0;
+      align-items: center;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      border-left: 1px solid #16283e;
+      position: relative;
+      padding: 18px 0 18px 12px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100000px;
+        height: 100%;
+        overflow: hidden;
+        background: $headersecond;
+        z-index: 1;
+      }
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+      margin: 0 -10px;
+      padding: 0 13px;
+      z-index: 2;
+    }
+    &-btn {
+      padding: 0 10px;
+      &-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+      }
+      &-icon {
+        fill: $topbtns;
+        @media screen and (min-width: 1440px) {
+          margin-right: 10px;
+        }
+        &_grey {
+          fill: $topbtnsnotactive;
+        }
+      }
+      &-count {
+        display: block;
+        position: absolute;
+        top: -3px;
+        right: -5px;
+        border-radius: 13px;
+        font: 500 11px / 11px 'Fira Sans', sans-serif;
+        text-transform: uppercase;
+        color: $topbtns;
+        padding: 2px;
+        @media screen and (min-width: 1440px) {
+          position: relative;
+          top: auto;
+          right: auto;
+          padding: 4px 13px;
+          font: 500 15px / 19px 'Fira Sans', sans-serif;
+        }
+        &_blue {
+          background: $libra;
+        }
+        &_red {
+          background: $heart;
+        }
+        &_yellow {
+          background: $star;
+        }
+      }
+    }
+    &-user {
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      text-decoration: none;
+      color: $topbtns; 
+      margin-left: 15px;
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+      &-circle {
+        position: relative;
+        background: #eaedee;
+        height: 27px;
+        width: 27px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+        flex: 0 0 auto;
+      }
+      &-icon {
+        fill: $user;
+        position: absolute;
+        bottom: 0;
+        left: 2px;
+      }
+      &-text {
+        display: none;
+        font: 400 15px / 15px 'Fira Sans', sans-serif;
+        color: $topbtns;
+        @media screen  and (min-width: 1200px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__nav {
+    flex: 1 1 auto;
+    &-list {
+      display: none;
+      align-items: center;
+      margin: 0 -15px;
+      @media screen and (min-width: 990px) {
+        display: flex;
+      }
+    }
+    &-item {
+      padding: 7px 15px;
+    }
+    &-link {
+      display: block;
+      font: 400 15px / 15px 'Fira Sans', sans-serif;
+      color: $navcolor;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        color: $hovercolor;
+      }
+    }
+  }
+  &__social-block {
+    margin: 0 20px;
+    display: none;
+    @media screen and (min-width: 480px) {
+      display: block;
+    }
+  }
+}

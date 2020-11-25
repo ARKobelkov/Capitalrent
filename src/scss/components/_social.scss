@@ -1,0 +1,16 @@
+.social {
+  margin: 0 -5px;
+  display: flex;
+  &__item {
+    padding: 0 5px;
+  }
+  &__link {
+    display: block;
+    height: 29px;
+    width: 29px;
+  }
+  &__icon {
+    max-width: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+.pull {
+  flex: 0 0 auto;
+  display: flex;
+  @media screen and (min-width: 990px) {
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    cursor: pointer;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  &__icon {
+    width: 20px;
+    height: 17px;
+    flex: 0 0 auto;
+    position: relative;
+    div {
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      transition: all 200ms ease;
+    }
+    div:nth-child(1) {
+      top: 0;
+    }
+    div:nth-child(2) {
+      top: 7px;
+    }
+    div:nth-child(3) {
+      top: 14px;
+    }
+  }
+  &__text {
+    font: 500 17px 'Fira Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    display: none;
+    margin-left: 15px;
+    @media screen and (min-width: 480px) {
+      display: block;
+    }
+  }
+}
