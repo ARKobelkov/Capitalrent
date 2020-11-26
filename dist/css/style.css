@@ -556,6 +556,218 @@ input::-ms-clear {
   display: none;
 }
 
+.header__main-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 -20px;
+}
+
+.header__logo {
+  padding: 18px 20px;
+}
+
+.header__logo-link {
+  display: block;
+  max-width: 224px;
+}
+
+.header__logo-img {
+  max-width: none;
+  width: 100%;
+}
+
+.header__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.header__btn {
+  padding: 0 10px;
+}
+
+.header__btn-link {
+  height: 57px;
+  min-width: 57px;
+  text-align: center;
+  text-decoration: none;
+  font: 600 15px/15px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #30322e;
+  display: block;
+  border: 2px solid #e1e4ec;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__btn-link:hover,
+.header__btn-link:active {
+  color: #105394;
+}
+
+.header__btn-link.active {
+  background: #e1e4ec;
+}
+
+.header__btn-content {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.header__btn-content_catalog-icon {
+  padding-left: 40px;
+}
+
+.header__btn-content_catalog-icon:before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -20px;
+  width: 26px;
+  height: 18px;
+  background: url(../images/catalog.svg) left top no-repeat;
+}
+
+.header__btn-content_search-icon {
+  padding-left: 24px;
+}
+
+.header__btn-content_search-icon:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: -19px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/search.svg) left top no-repeat;
+}
+
+.header__btn-text {
+  display: none;
+}
+
+.header__btn-text_hulltext {
+  display: none !important;
+}
+
+.header__main-nav {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__main-nav-item {
+  padding: 0 10px;
+}
+
+.header__main-nav-link {
+  display: block;
+  text-decoration: none;
+  font: 600 17px/17px "FiraSans", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #30322e;
+}
+
+.header__main-nav-link:hover,
+.header__main-nav-link:active {
+  color: #E83F33;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header__phone-link {
+  display: block;
+  text-decoration: none;
+  cursor: default;
+  font: 600 24px/24px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #004b90;
+}
+
+.header__link {
+  font: 400 15px/15px "Fira Sans", sans-serif;
+  color: #004b90;
+  text-decoration: none;
+  border-bottom: 2px dotted;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.header__link:hover,
+.header__link:active {
+  border-bottom: none;
+}
+
 @media screen and (min-width: 480px) {
   .cover {
     min-width: 320px;
@@ -580,6 +792,38 @@ input::-ms-clear {
   .cover {
     max-width: 730px;
   }
+
+  .header__main-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .header__buttons {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    padding: 0 10px;
+  }
+
+  .header__btn-link.active {
+    height: 113px;
+  }
+
+  .header__contacts {
+    padding: 0 20px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -598,6 +842,14 @@ input::-ms-clear {
     display: -ms-flexbox;
     display: flex;
   }
+
+  .header__main-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -607,6 +859,25 @@ input::-ms-clear {
 
   .header__top-user-text {
     display: block;
+  }
+
+  .header__btn-link {
+    padding: 0 25px;
+    min-width: 167px;
+  }
+
+  .header__btn-content_catalog-icon:before {
+    left: 0;
+    top: -2px;
+  }
+
+  .header__btn-content_search-icon:before {
+    left: 0;
+    top: -1px;
+  }
+
+  .header__btn-text {
+    display: inline-block;
   }
 }
 
@@ -625,6 +896,22 @@ input::-ms-clear {
     right: auto;
     padding: 4px 13px;
     font: 500 15px/19px "Fira Sans", sans-serif;
+  }
+
+  .header__btn-text_hulltext {
+    display: inline-block !important;
+  }
+
+  .header__main-nav {
+    padding: 0 20px;
+  }
+
+  .header__main-nav-item {
+    padding: 0 20px;
+  }
+
+  .header__phone-link {
+    letter-spacing: 0.5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

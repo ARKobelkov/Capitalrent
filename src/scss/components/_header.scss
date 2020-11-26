@@ -149,4 +149,179 @@
       display: block;
     }
   }
+  &__main {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 0 -20px;
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+  }
+  &__logo {
+    padding: 18px 20px;
+    &-link {
+      display: block;
+      max-width: 224px;
+    }
+    &-img {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    order: 1;
+    @media screen and (min-width: 768px) {
+      order: 0;
+      padding: 0 10px;
+    }
+  }
+  &__btn {
+    padding: 0 10px;
+    &-link {
+      height: 57px;
+      min-width: 57px;
+      text-align: center;
+      text-decoration: none;
+      font: 600 15px / 15px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      color: $headerbtnfont;
+      display: block;
+      border: 2px solid $headerbtn;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        color: $headerbtnfonthover;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 0 25px;
+        min-width: 167px;
+      }
+    }
+    &-link.active {
+      background: $headerbtn;
+      @media screen and (min-width: 768px) {
+        height: 113px;
+      }
+    }
+    &-content {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      &_catalog-icon {
+        padding-left: 40px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 8px;
+          top: -20px;
+          width: 26px;
+          height: 18px;
+          background: url(../images/catalog.svg) left top no-repeat;
+          @media screen and (min-width: 1200px) {
+            left: 0;
+            top: -2px;
+          }
+        }
+      }
+      &_search-icon {
+        padding-left: 24px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 4px;
+          top: -19px;
+          width: 16px;
+          height: 16px;
+          background: url(../images/search.svg) left top no-repeat;
+          @media screen and (min-width: 1200px) {
+            left: 0;
+            top: -1px;
+          }
+        }
+      }
+    }
+    &-text {
+      display: none;
+      @media screen and (min-width: 1200px) {
+        display: inline-block;
+      }
+      &_hulltext {
+        display: none!important;
+        @media screen and (min-width: 1440px) {
+          display: inline-block!important;
+        }
+      }
+    }
+  }
+  &__main-nav {
+    display: none;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 990px) {
+      display: flex;
+    }
+    @media screen and (min-width: 1440px) {
+      padding: 0 20px;
+    }
+    &-item {
+      padding: 0 10px;
+      @media screen and (min-width: 1440px) {
+        padding: 0 20px;
+      }
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      font: 600 17px / 17px 'FiraSans', sans-serif;
+      transition: all 0.3s ease;
+      color: $headerbtnfont;
+      &:hover,
+      &:active {
+        color: $hovercolor;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    @media screen and (min-width: 768px) {
+      padding: 0 20px;
+      align-items: flex-end;
+    }
+  }
+  &__phone-link {
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    font: 600 24px / 24px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: $phonecolor;
+    @media screen and (min-width: 1440px) {
+      letter-spacing: 0.5px;
+    }
+  }
+  &__link {
+    font: 400 15px / 15px 'Fira Sans', sans-serif;
+    color: $phonecolor;
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    transition: all 0.1s ease;
+    &:hover,
+    &:active {
+      border-bottom: none;
+    }
+  }
 }
