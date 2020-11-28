@@ -1,0 +1,122 @@
+.modal-catalog {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 335px;
+  background: rgba(22,26,31,0.94);
+  z-index: 999;
+  @media screen and (min-width: 480px) {
+    padding-top: 337px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 178px;
+  }
+  &__block {
+    border-top: 2px solid $headerbtn;
+    background: $firstbackground;
+    padding: 15px 0 25px 0;
+    @media screen and (min-width: 768px) {
+      padding: 60px 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__main {
+    flex: 1 1 auto;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  &__nav-block {
+    width: auto;
+    padding: 25px 0 0 0;
+    @media screen and (min-width: 768px) {
+      width: calc(100%/3);
+      padding: 25px 40px 0 0;
+    }
+    @media screen and (min-width: 1440px) {
+      padding: 25px 110px 0 0;
+    }
+  }
+  &__title {
+    font: 600 18px / 18px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: $headerbtnfont;
+    margin-bottom: 15px;
+  }
+  &__item {
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      padding: 4px 0;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font: 400 15px / 22px 'Fira Sans', sans-serif;
+    color: $modalcatalogfont;
+    text-decoration: none;
+    @include texthover
+  }
+  &__miniblock {
+    &:first-child {
+      margin-bottom: 57px;
+    }
+  }
+  &__text {
+    font: 400 15px / 21px 'Fira Sans', sans-serif;
+    color: $modalcatalogfont;
+    padding-top: 10px;
+    margin-bottom: 8px;
+  }
+  &__link-wrapper {
+    margin-bottom: 8px;
+  }
+  &__miniblock-link {
+    display: inline-block;
+    position: relative;
+    font: 400 14px / 20px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $phonecolor;
+    text-decoration: none;
+    &:hover .modal-catalog__link-text,
+    &:active .modal-catalog__link-text {
+      border: none;
+    }
+    &_icon-map {
+      padding-left: 16px;
+    }
+  }
+  &__link-text {
+    border-bottom: 2px dotted;
+    transition: all 0.1s ease;
+  }
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    fill: $phonecolor;
+  }
+  &__side {
+    display: none;
+    flex: 0 0 auto;
+    @media screen and (min-width: 990px) {
+      display: block;
+    }
+  }
+  &__close-btn {
+    position: absolute;
+    bottom: -70px;
+    right: 15px;
+    @media screen and (min-width: 768px) {
+      bottom: -117px;
+    }
+  }
+}

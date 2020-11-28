@@ -1,0 +1,33 @@
+.modal-close {
+  &__link {
+    display: block;
+    text-decoration: none;
+    font: 400 18px / 18px 'Fira Sans', sans-serif;
+    color: $navcolor;
+    padding-left: 25px;
+    @include texthover;
+    &:hover,
+    &:active {
+      &:before,
+      &:after {
+        background: $hovercolor;
+      }
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 17px;
+      height: 2px;
+      background: $navcolor;
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

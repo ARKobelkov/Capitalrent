@@ -1,0 +1,7 @@
+@mixin texthover {
+  transition: all 0.2s ease;
+  &:hover,
+  &:active {
+    color: $hovercolor;
+  }
+}

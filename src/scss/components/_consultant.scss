@@ -1,0 +1,52 @@
+.consultant {
+  max-width: 235px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    max-width: 280px;
+  }
+  &__content {
+    background: $consultantbg;
+    border-radius: 3px 3px 0px 0px;
+    padding: 25px 15px;
+    @media screen and (min-width: 1200px) {
+      padding: 25px 40px;
+    }
+  }
+  &__img-wrapper {
+    width: 154px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__text {
+    font: 400 16px / 24px 'Fira Sans', sans-serif;
+    color: $headerbtnfont;
+    margin-bottom: 12px;
+  }
+  &__info {
+    font: 400 14px / 20px 'Fira Sans', sans-serif;
+    color: $consultantinfo;
+    margin-bottom: 0;
+  }
+  &__btn {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background: $consultantbtn;
+    border-radius: 0px 0px 3px 3px;
+    font: 500 15px / 24px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: $topbtns;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      background: $phonecolor;
+    }
+  }
+}
