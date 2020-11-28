@@ -1,6 +1,8 @@
 .header {
   &__top {
     background: $headerfirst;
+    position: relative;
+    z-index: 1000;
     &-wrapper {
       display: flex;
     }
@@ -25,7 +27,7 @@
         height: 100%;
         overflow: hidden;
         background: $headersecond;
-        z-index: 1;
+        z-index: 1001;
       }
     }
     &-buttons {
@@ -33,7 +35,7 @@
       align-items: center;
       margin: 0 -10px;
       padding: 0 13px;
-      z-index: 2;
+      z-index: 1002;
     }
     &-btn {
       padding: 0 10px;
@@ -83,7 +85,7 @@
     &-user {
       display: flex;
       align-items: center;
-      z-index: 2;
+      z-index: 1002;
       text-decoration: none;
       color: $topbtns; 
       margin-left: 15px;
@@ -135,11 +137,7 @@
       font: 400 15px / 15px 'Fira Sans', sans-serif;
       color: $navcolor;
       text-decoration: none;
-      transition: all 0.3s ease;
-      &:hover,
-      &:active {
-        color: $hovercolor;
-      }
+      @include texthover
     }
   }
   &__social-block {
@@ -150,6 +148,9 @@
     }
   }
   &__main {
+    position: relative;
+    background: $firstbackground;
+    z-index: 1000;
     &-wrapper {
       display: flex;
       align-items: center;
@@ -283,12 +284,8 @@
       display: block;
       text-decoration: none;
       font: 600 17px / 17px 'FiraSans', sans-serif;
-      transition: all 0.3s ease;
       color: $headerbtnfont;
-      &:hover,
-      &:active {
-        color: $hovercolor;
-      }
+      @include texthover
     }
   }
   &__contacts {
@@ -314,6 +311,7 @@
     }
   }
   &__link {
+    display: inline-block;
     font: 400 15px / 15px 'Fira Sans', sans-serif;
     color: $phonecolor;
     text-decoration: none;

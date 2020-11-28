@@ -136,7 +136,7 @@
                 </div>
                 <div class="header__buttons">
                   <div class="header__btn">
-                    <a href="#" class="header__btn-link">
+                    <a href="#" class="header__btn-link" id="catalog-btn">
                       <div class="header__btn-content header__btn-content_catalog-icon">
                         <span class="header__btn-text">Каталог <span class="header__btn-text header__btn-text_hulltext">недвижимости</span></span>
                       </div>
@@ -172,15 +172,305 @@
               </div>
             </div>
           </div>
+          <!-- (modal-catalog) -->
+          <div class="modal-catalog" id="modal-catalog">
+            <div class="modal-catalog__block">
+              <div class="modal-catalog__cover cover">
+                <div class="modal-catalog__wrapper">
+                  <div class="modal-catalog__main">
+                    <div class="modal-catalog__nav-block">
+                      <h6 class="modal-catalog__title">Аренда</h6>
+                      <ul class="modal-catalog__list">
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">ПСН</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Ресторан / кафе / бар</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Торговая недвижимость</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Парикмахерская</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Салон красоты</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Офис</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Банк</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Шоу-рум</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Автосервис</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-catalog__nav-block">
+                      <h6 class="modal-catalog__title">Продажа</h6>
+                      <ul class="modal-catalog__list">
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">ПСН</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Ресторан / кафе / бар</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Торговая недвижимость</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Парикмахерская</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Салон красоты</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Офис</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Банк</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Шоу-рум</a>
+                        </li>
+                        <li class="modal-catalog__item">
+                          <a href="#" class="modal-catalog__link">Автосервис</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal-catalog__nav-block">
+                      <div class="modal-catalog__miniblock">
+                        <h6 class="modal-catalog__title">Арендный бизнес</h6>
+                        <p class="modal-catalog__text">Готовый арендный бизнес в Москве</p>
+                        <div class="modal-catalog__link-wrapper">
+                          <a href="#" class="modal-catalog__miniblock-link">
+                            <span class="modal-catalog__link-text">смотреть предложения</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="modal-catalog__miniblock">
+                        <h6 class="modal-catalog__title">Недвижимость на карте</h6>
+                        <p class="modal-catalog__text">Вся недвижимость на одной карте
+                          с удобной фильтрацией</p>
+                        <div class="modal-catalog__link-wrapper">
+                          <a href="#" class="modal-catalog__miniblock-link modal-catalog__miniblock-link_icon-map">
+                            <svg class="modal-catalog__icon" width="10" height="12">
+                              <use xlink:href="images/icons.svg#icon-map"></use>
+                            </svg>
+                            <span class="modal-catalog__link-text">открыть карту</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-catalog__side">
+                    <!-- (consultant) -->
+                    <div class="consultant">
+                      <div class="consultant__content">
+                        <div class="consultant__img-wrapper">
+                          <img src="images/content/consultant.png" alt="Консультант" class="consultant__img">
+                        </div>
+                        <p class="consultant__text">«Не можете выбрать? Предложим Вам варианты и проконсультируем»</p>
+                        <p class="consultant__info">
+                          Александр Смирнов
+                          <br>
+                          Эксперт по недвижимости</p>
+                      </div>
+                      <button class="consultant__btn">Заявка на подбор</button>
+                    </div>
+                    <!-- End (consultant) -->
+                  </div>
+                  <div class="modal-catalog__close-btn" id="catalog-close">
+                    <!-- (modal-close) -->
+                    <div class="modal-close">
+                      <a href="#" class="modal-close__link">Закрыть</a>
+                    </div>
+                    <!-- End (modal-close) -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End (modal-catalog) -->
         </section>
         <!-- End (header) -->
       </div>
       <!-- End (main) -->
       <!-- (footer) -->
       <div class="wrapper__footer">
-        
+        <footer class="footer">
+          <div class="footer__main">
+            <div class="footer__cover cover">
+              <div class="footer__main-wrapper">
+                <div class="footer__info">
+                  <div class="footer__info-logo-wrapper">
+                    <a href="/" class="footer__info-logo-link">
+                      <img src="images/logo-footer.svg" alt="Лого" class="footer__info-logo">
+                    </a>
+                  </div>
+                  <div class="footer__contacts">
+                    <div class="footer__phone-wrapper">
+                      <a href="tel:+74995515511" class="footer__phone-link">+7 (499) 551-551-1</a>
+                    </div>
+                    <div class="footer__link-wrapper">
+                      <a href="#" class="footer__info-link">перезвоните мне</a>
+                    </div>
+                  </div>
+                  <div class="footer__mail">
+                    <a href="mailto:capitalrent@info.ru" class="footer__mail-link">
+                      <svg class="footer__mail-icon" width="14" height="11">
+                        <use xlink:href="images/icons.svg#icon-mail"></use>
+                      </svg>
+                      <span class="footer__mail-text">capitalrent@info.ru</span>
+                    </a>
+                  </div>
+                  <div class="footer__social">
+                    <!-- (social) -->
+                    <ul class="social">
+                      <li class="social__item">
+                        <a href="#" class="social__link">
+                          <img src="images/social/icon-vk.svg" alt="Вконтакте" class="social__icon">
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link">
+                          <img src="images/social/icon-facebook.svg" alt="Вконтакте" class="social__icon">
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link">
+                          <img src="images/social/icon-youtube.svg" alt="Вконтакте" class="social__icon">
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End (social) -->
+                  </div>
+                </div>
+                <div class="footer__nav">
+                  <h6 class="footer__nav-title">О компании</h6>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">О нас</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Наша команда</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Пресс-центр</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Новости</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Реквизиты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav">
+                  <h6 class="footer__nav-title">Аренда</h6>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Рестораны / кафе / бары</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Торговая недвижимость</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Салоны красоты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Офисы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Банки</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Шоу-румы</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__nav">
+                  <h6 class="footer__nav-title">Продажа</h6>
+                  <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Рестораны / кафе / бары</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Торговая недвижимость</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Салоны красоты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Офисы</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Банки</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#" class="footer__nav-link">Шоу-румы</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__descr">
+                  <div class="footer__descr-block">
+                    <h6 class="footer__nav-title">Арендный бизнес</h6>
+                    <p class="footer__descr-text">Готовый арендный бизнес в Москве</p>
+                    <div class="footer__descr-link-wrapper">
+                      <a href="#" class="footer__descr-link">
+                        <svg class="footer__descr-icon footer__descr-icon-arrow" width="7" height="9">
+                          <use xlink:href="images/icons.svg#arrow"></use>
+                        </svg>
+                        <span class="footer__descr-link-text">смотреть предложения</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer__descr-block">
+                    <h6 class="footer__nav-title">Недвижимость на карте</h6>
+                    <p class="footer__descr-text">Вся недвижимость на одной карте
+                      с удобной фильтрацией</p>
+                    <div class="footer__descr-link-wrapper">
+                      <a href="#" class="footer__descr-link">
+                        <svg class="footer__descr-icon" width="10" height="12">
+                          <use xlink:href="images/icons.svg#icon-map"></use>
+                        </svg>
+                        <span class="footer__descr-link-text">открыть карту</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__cover cover">
+              <div class="footer__bottom-wrapper">
+                <div class="footer__condition">
+                  <a href="#" class="footer__condition-link">Условия использования сайта</a>
+                </div>
+                <div class="footer__copyright">© Capitalrent 2005-2017. All rights reserved</div>
+                <div class="footer__studio">
+                  <span class="footer__studio-text">Разработка сайта:</span>
+                  <a href="#" class="footer__studio-link">МосОблСайт</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
       <!-- End (footer) -->
     </div>
+    <!-- (scripts) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- End (scripts) -->
   </body>
 </html>

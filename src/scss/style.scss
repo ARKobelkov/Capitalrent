@@ -1,4 +1,5 @@
 @import 'utilities/data';
+@import 'utilities/mixins';
 
 // @import 'common/fonts';
 @import 'common/default';
@@ -6,5 +7,10 @@
 
 @import 'components/social';
 @import 'components/pull';
+@import 'components/modal-catalog';
+@import 'components/consultant';
+@import 'components/modal-close';
 
 @import 'components/header';
+
+@import 'components/footer';
