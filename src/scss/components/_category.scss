@@ -1,0 +1,125 @@
+.category {
+  position: relative;
+  background: $firstbackground;
+  border: 2px solid #e7e9ef;
+  border-radius: 2px;
+  height: 100%;
+  min-height: 187px;
+  &:not(&_noimg):hover &__name ,
+  &:not(&_noimg):active &__name {
+    opacity: 0;
+  }
+  &:hover &__links,
+  &:active &__links {
+    opacity: 1;
+  }
+  &_noimg {
+    &:hover .category__all-categories,
+    &:active .category__all-categories {
+      color: $hovercolor;
+      &:before {
+        border-bottom: 2px solid $hovercolor;
+        border-right: 2px solid $hovercolor;
+      }
+    }
+    .category__name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__name {
+    display: block;
+    opacity: 1;
+    height: 100%;
+    text-decoration: none;
+    font: 500 17px / 21px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    padding: 35px;
+    text-align: center;
+  }
+  &__img-wrapper {
+    position: relative;
+    height: 59px;
+    margin: 0 auto 14px auto;
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  &__text {
+    max-width: 130px;
+    margin: 0 auto;
+  }
+  &__all-categories {
+    font: 500 16px / 21px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $categorybtn;
+    padding: 32px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    &:before {
+      content: '';
+      transition: all 0.3s ease;
+      display: block;
+      position: absolute;
+      bottom: 11px;
+      right: 50%;
+      transform: translateX(50%) rotate(45deg);
+      height: 15px;
+      width: 15px;
+      border-bottom: 2px solid $categorybtn;
+      border-right: 2px solid $categorybtn;
+    }
+  }
+  &__all-categories.active {
+    &:before {
+      bottom: 5px;
+      transform: translateX(50%) rotate(-135deg);
+    }
+  }
+  &__links {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    height: 50%;
+    font: 400 17px / 33px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $topbtns;
+    background: $categorybg1;
+    text-decoration: none;
+    padding: 30px 40px 30px 35px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      background: $phonecolor;
+      &:before {
+        display: block;
+      }
+    }
+    &:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 33px;
+      transform: rotate(45deg) translateY(-50%);
+      border-top: 2px solid $topbtns;
+      border-right: 2px solid $topbtns;
+    }
+  }
+}
