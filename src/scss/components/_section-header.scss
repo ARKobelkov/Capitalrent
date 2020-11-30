@@ -1,0 +1,106 @@
+.section-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #e6e9ea;
+  padding-top: 55px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  &__title {
+    font: 700 40px / 30px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    margin: 0 55px 20px 0;
+    @media screen and (min-width: 768px) {
+      margin: 0 55px 10px 0;
+    }
+  }
+  &__tabs {
+    margin-right: auto;
+    margin-bottom: -2px;
+    order: 1;
+    @media screen and (min-width: 768px) {
+      order: 0;
+    }
+    &-text {
+      font: 300 14px / 23px 'Fira Sans', sans-serif;
+      color: $shtext;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -8px 0 -8px;
+      @media screen and (min-width: 480px) {
+        margin: 0 -10px;
+      }
+    }
+    &-item {
+      padding: 0 8px;
+      @media screen and (min-width: 480px) {
+        padding: 0 10px;
+      }
+    }
+    &-link {
+      display: block;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(0,0,0,0,);
+      text-decoration: none;
+      font: 700 16px / 25px 'Fira Sans', sans-serif;
+      color: $shtabfont;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        color: $footertitle;
+        border-color: $footertitle;
+      }
+    }
+    &-link.active {
+      color: $footertitle;
+      border-color: $footertitle;
+    }
+  }
+  &__link-wrapper {
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font: 400 16px / 21px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $phonecolor;
+    padding-right: 27px;
+    @include texthover;
+    &:hover,
+    &:active {
+      &:before {
+        background: $hovercolor;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background: $phonecolor;
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      border-right: 2px solid $firstbackground;
+      border-top: 2px solid $firstbackground;
+      transform: rotate(45deg);
+    }
+  }
+}

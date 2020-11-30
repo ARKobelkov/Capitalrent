@@ -34,4 +34,7 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.06 14.06" id="close-icon">
     <path stroke="#C84136" d="M.53.53l13 13m0-13l-13 13"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.6 12" id="eye-icon">
+    <path d="M8.8 0A9.43 9.43 0 000 6a9.45 9.45 0 0017.6 0 9.43 9.43 0 00-8.8-6zm0 10a4 4 0 01-4-4 4 4 0 018 0 4 4 0 01-4 4zm0-6.4A2.36 2.36 0 006.4 6a2.4 2.4 0 104.8 0 2.36 2.36 0 00-2.4-2.4zm0 0"></path>
+  </symbol>
 </svg>

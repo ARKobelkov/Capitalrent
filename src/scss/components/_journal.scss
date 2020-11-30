@@ -1,0 +1,198 @@
+.journal {
+  background: $firstbackground;
+  &__tabs {
+    padding: 30px 0;
+  }
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    @media screen and (min-width: 990px) {
+      width: 100%;
+      float: left;
+      min-height: 1px;
+      padding-right: 345px;
+    }
+  }
+  &__news {
+    padding: 10px;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 990px) {
+      width: calc(100%/3);
+    }
+    @media screen and (min-width: 1200px) {
+      width: 25%;
+    }
+    @media screen and (min-width: 1440px) {
+      width: calc(100%/3);
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      position: relative;
+      height: 100%;
+      &:hover .journal__news-img,
+      &:active .journal__news-img {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+    }
+    &-content {
+      padding: 14px 10px 9px 10px;
+    }
+    &-label {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      padding: 5px 18px 3px 18px;
+      font: 400 14px / 21px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: $jlabelfont;
+      background: $phonecolor;
+      border-radius: 14.5px;
+      z-index: 1;
+    }
+    &-img-wrapper {
+      background: #000;
+      overflow: hidden;
+    }
+    &-img {
+      max-width: none;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+    &-title {
+      font: 400 18px / 25px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 15px;
+      max-height: 50px;
+      overflow: hidden;
+    }
+    &-descr {
+      display: flex;
+      flex-wrap: wrap;
+      font: 400 14px / 14px 'Fira Sans', sans-serif;
+      color: $jldescrfont;
+      flex-direction: row;
+      @media screen and (min-width: 990px) {
+        flex-direction: column;
+      }
+      @media screen and (min-width: 1440px) {
+        flex-direction: row;
+      }
+    }
+    &-time {
+      margin-right: 20px;
+      margin-bottom: 5px;
+      @media screen and (min-width: 1440px) {
+        flex-direction: row;
+      }
+    }
+    &-views {
+      position: relative;
+      padding-left: 20px;
+    }
+    &-icon {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      fill: $jldescrfont;
+    }
+    &_large {
+      width: 100%;
+      @media screen and (min-width: 480px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 990px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 1440px) {
+        width: calc(100% * 2/3);
+      }
+      .journal__news-label {
+        top: 10px;
+        left: 10px;
+        @media screen and (min-width: 480px) {
+          top: 20px;
+          left: 30px;
+        }
+      }
+      .journal__news-img-wrapper {
+        height: 100%;
+      }
+      .journal__news-img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .journal__news-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 5px 10px;
+        @media screen and (min-width: 480px) {
+          padding: 20px 30px;
+        }
+      }
+      .journal__news-title {
+        font: 700 18px / 25px 'Fira Sans', sans-serif;
+        color: $topbtns;
+        margin-bottom: 10px;
+        max-height: 50px;
+        @media screen and (min-width: 480px) {
+          max-height: 62px;
+          margin-bottom: 20px;
+          font: 700 26px / 31px 'Fira Sans', sans-serif;
+        }
+      }
+      .journal__news-descr {
+        color: $topbtns;
+      }
+      .journal__news-time {
+        margin-right: 30px;
+      }
+      .journal__news-icon {
+        fill: $topbtns;
+      }
+    }
+  }
+  &__aside {
+    margin-top: 5px;
+    @media screen and (min-width: 990px) {
+      float: left;
+      width: 345px;
+      margin-left: -345px;
+      padding-left: 45px;
+    }
+    &-title {
+      font: 700 23px / 30px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 3px;
+    }
+    &-item {
+      padding: 12px 0;
+      border-top: 1px solid #e6e9ea;
+      &:first-child {
+        border-top: none;
+      }
+    }
+    &-link {
+      display: inline-block;
+      text-decoration: none;
+      font: 400 16px / 20px 'Fira Sans', sans-serif;
+      color: $phonecolor;
+      margin-bottom: 5px;
+      @include texthover;
+    }
+    &-time {
+      display: block;
+      font: 400 13px / 23px 'Fira Sans', sans-serif;
+      color: $journalasidetime;
+    }
+  }
+}

@@ -36,4 +36,10 @@ $(function () {
     $('.categories__category.hidden').slideToggle();
   });
 
+  // Табы - блок "Журнал"
+  $('#journal-nav').easytabs({
+    updateHash: false,
+    animate: true,
+    panelContext: $('#journal-tabs')
+  });
 });

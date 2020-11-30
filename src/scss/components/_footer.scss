@@ -68,7 +68,7 @@
     transition: all 0.1s ease;
     &:hover,
     &:active {
-      border-bottom: none;
+      border-bottom: 2px dotted rgba(0,0,0,0);
     }
   }
   &__mail {
