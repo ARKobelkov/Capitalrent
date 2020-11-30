@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     margin: 0 -10px;
     @media screen and (min-width: 990px) {
-      width: 100%;
+      width: calc(100% + 20px);
       float: left;
       min-height: 1px;
       padding-right: 345px;

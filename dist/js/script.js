@@ -39,6 +39,12 @@ $(function () {
     updateHash: false,
     animate: true,
     panelContext: $('#journal-tabs')
+  }); // Табы - блок "Интервью"
+
+  $('#interview-nav').easytabs({
+    updateHash: false,
+    animate: true,
+    panelContext: $('#interview-tabs')
   });
 });
 //# sourceMappingURL=script.js.map

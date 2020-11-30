@@ -1,0 +1,221 @@
+.interview {
+  background: $secondbg;
+  &__tabs {
+    padding: 30px 0 60px 0;
+  }
+  &__tab {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__big {
+    width: 100%;
+    @media screen and (min-width: 990px) {
+      width: 50%;
+      padding-right: 10px;
+    }
+    &-one {
+      height: 100%;
+      background: #fff;
+      // margin-top: 10px;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        box-shadow: 0 0 13px 0 rgba(18, 46, 72, 0.1);
+      }
+    }
+    &-video {
+      display: block;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 17px;
+        left: 18px;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: $topbtns;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 35px;
+        left: 45px;
+        border: 13px solid transparent;
+        border-left: 13px solid #859893;
+      }
+    }
+    &-img {
+      max-width: none;
+      width: 100%;
+    }
+    &-time {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      font: 400 14px / 14px 'Fiea Sans', sans-serif;
+      text-transform: uppercase;
+      color: #000;
+      background: $topbtns;
+      border-radius: 14.5px 0px 0px 14.5px;
+      padding: 8px 15px 8px 17px;
+    }
+    &-content {
+      background: $firstbackground;
+    }
+    &-person {
+      display: flex;
+      padding: 20px 20px 17px 20px;
+      border-bottom: 1px solid #e6e9ea;
+      &-img-wrapper {
+        flex: 0 0 auto;
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 13px;
+      }
+      &-img {
+        max-width: none;
+        width: 100%;
+      }
+      &-name {
+        font: 500 19px / 25px 'Fira Sans', sans-serif;
+        color: $namefont;
+        margin-bottom: 5px;
+      }
+      &-position {
+        font: 400 12px / 15px 'Fira Sans', sans-serif;
+        text-transform: uppercase;
+        color: $positionfont;
+      }
+    }
+    &-descr {
+      padding: 20px 20px 15px 20px;
+      &-text {
+        font: 500 18px / 25px 'Fira Sans', sans-serif;
+        color: $footertitle;
+        margin-bottom: 20px;
+      }
+    }
+    &-info {
+      display: flex;
+      font: 400 14px / 14px 'Fira Sans', sans-serif;
+      color: $jldescrfont;
+      &-time {
+        margin-right: 20px;
+        margin-bottom: 5px;
+      }
+      &-views {
+        padding-left: 20px;
+        position: relative;
+        fill: $jldescrfont;
+      }
+      &-icon {
+        position: absolute;
+        left: 0;
+        top: 1px;
+      }
+    }
+  }
+  &__small {
+    width: 100%;
+    @media screen and (min-width: 990px) {
+      width: 50%;
+      padding-left: 10px;
+    }
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      // margin: 0 -10px;
+    }
+    &-item {
+      // padding: 10px;
+      margin-top: 20px;
+      &:first-child {
+        @media screen and (min-width: 990px) {
+          margin-top: 0;
+        }
+      }
+    }
+    &-link {
+      display: block;
+      background: $firstbackground;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        box-shadow: 0 0 13px 0 rgba(18, 46, 72, 0.1);
+      }
+      @media screen and (min-width: 480px) {
+        text-align: left;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+        padding: 18px 28px;
+      }
+    }
+    &-img-wrapper {
+      flex: 0 0 auto;
+      position: relative;
+      width: 124px;
+      height: 124px;
+      margin-bottom: 13px;
+      @media screen and (min-width: 480px) {
+        margin-right: 25px;
+        margin-bottom: 0;
+      }
+    }
+    &-play {
+      position: absolute;
+      display: block;
+      width: 31px;
+      height: 31px;
+      left: 6px;
+      top: 3px;
+      border-radius: 50%;
+      background: #f43c2e;
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 13px;
+        top: 9px;
+        border: 7px solid transparent;
+        border-left: 7px solid #fff;
+      }
+    }
+    &-img {
+      max-width: none;
+      width: 100%;
+    }
+    &-content {
+      q {
+        font-style: italic;
+      }
+    }
+    &-name {
+      font: 500 16px / 25px 'Fira Sans', sans-serif;
+      color: $namefont;
+      margin-bottom: 5px;
+    }
+    &-position {
+      font: 400 12px / 14px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: $positionfont;
+    }
+    &-descr {
+      font: 400 16px / 21px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 0;
+      padding: 15px 0 0 0;
+    }
+  }
+}
