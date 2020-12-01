@@ -1,0 +1,36 @@
+.banner {
+  &__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+  }
+  &__label {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 700 19px / 21px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    padding: 9px 32px;
+    letter-spacing: 0.3px;
+    color: $jlabelfont;
+    background: #f43c2e;
+    border-radius: 19.5px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__text {
+    width: 100%;
+    font: 700 22px / 29px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $topbtns;
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 30px;
+    text-align: center;
+  }
+}

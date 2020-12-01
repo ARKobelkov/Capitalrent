@@ -45,6 +45,12 @@ $(function () {
     updateHash: false,
     animate: true,
     panelContext: $('#interview-tabs')
+  }); // Табы - блок "Обзоры"
+
+  $('#reviews-nav').easytabs({
+    updateHash: false,
+    animate: true,
+    panelContext: $('#reviews-tabs')
   });
 });
 //# sourceMappingURL=script.js.map
