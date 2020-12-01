@@ -51,6 +51,7 @@
       flex-wrap: wrap;
       @media screen and (min-width: 1200px) {
         display: block;
+        margin: 0;
       }
     }
     &-item {
@@ -62,6 +63,7 @@
       @media screen and (min-width: 1200px) {
         width: 100%;
         margin-top: 22px;
+        padding: 0;
         &:first-child {
           margin-top: 0;
         }
@@ -100,6 +102,11 @@
       font: 500 17px / 22px 'Fira Sans', sans-serif;
       color: $footertitle;
       margin-bottom: 0;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        color: $phonecolor;
+      }
       @media screen and (min-width: 768px) {
         padding: 17px 0;
       }

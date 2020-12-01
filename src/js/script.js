@@ -36,24 +36,37 @@ $(function () {
     $('.categories__category.hidden').slideToggle();
   });
 
+  // Табы
+  function tabsActive (tabsNavBlock, tabsBlock) {
+    $(tabsNavBlock).easytabs({
+      updateHash: false,
+      animate: true,
+      panelContext: $(tabsBlock)
+    });
+  }
+
+  tabsActive('#journal-nav', '#journal-tabs');
+  tabsActive('#interview-nav', '#interview-tabs');
+  tabsActive('#reviews-nav', '#reviews-tabs');
+
   // Табы - блок "Журнал"
-  $('#journal-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#journal-tabs')
-  });
+  // $('#journal-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#journal-tabs')
+  // });
 
   // Табы - блок "Интервью"
-  $('#interview-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#interview-tabs')
-  });
+  // $('#interview-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#interview-tabs')
+  // });
 
   // Табы - блок "Обзоры"
-  $('#reviews-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#reviews-tabs')
-  });
+  // $('#reviews-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#reviews-tabs')
+  // });
 });

@@ -33,24 +33,35 @@ $(function () {
 
     ;
     $('.categories__category.hidden').slideToggle();
-  }); // Табы - блок "Журнал"
+  }); // Табы
 
-  $('#journal-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#journal-tabs')
-  }); // Табы - блок "Интервью"
+  function tabsActive(tabsNavBlock, tabsBlock) {
+    $(tabsNavBlock).easytabs({
+      updateHash: false,
+      animate: true,
+      panelContext: $(tabsBlock)
+    });
+  }
 
-  $('#interview-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#interview-tabs')
-  }); // Табы - блок "Обзоры"
-
-  $('#reviews-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#reviews-tabs')
-  });
+  tabsActive('#journal-nav', '#journal-tabs');
+  tabsActive('#interview-nav', '#interview-tabs');
+  tabsActive('#reviews-nav', '#reviews-tabs'); // Табы - блок "Журнал"
+  // $('#journal-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#journal-tabs')
+  // });
+  // Табы - блок "Интервью"
+  // $('#interview-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#interview-tabs')
+  // });
+  // Табы - блок "Обзоры"
+  // $('#reviews-nav').easytabs({
+  //   updateHash: false,
+  //   animate: true,
+  //   panelContext: $('#reviews-tabs')
+  // });
 });
 //# sourceMappingURL=script.js.map

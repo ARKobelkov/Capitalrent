@@ -1,0 +1,76 @@
+.about {
+  background: $secondbg;
+  &__wrapper {
+    padding: 60px 0 20px;
+    display: block;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  &__info {
+    margin-bottom: 40px;
+    @media screen and (min-width: 1200px) {
+      width: 60%;
+      margin-bottom: 25px;
+      padding-right: 55px;
+    }
+  }
+  &__info p {
+    font: 400 16px / 24px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font: 400 30px / 30px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    position: relative;
+    padding-bottom: 21px;
+    margin-bottom: 20px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background: #0a2b49;
+    }
+  }
+  &__link-wrapper {
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+  &__link {
+    display: inline-block;
+    font: 400 16px / 24px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $phonecolor;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    &:hover,
+    &:active {
+      border-bottom: 2px dotted transparent;
+    }
+  }
+  &__brends {
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+    }
+  }
+  &__imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -14px;
+  }
+  &__img-wrapper {
+    padding: 0 14px;
+    margin-bottom: 35px;
+    max-width: 150px;
+  }
+  &__brend {
+    max-width: none;
+    width: 100%;
+  }
+}

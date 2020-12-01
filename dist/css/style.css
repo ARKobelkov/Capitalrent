@@ -2221,6 +2221,15 @@ input::-ms-clear {
   font: 500 17px/22px "Fira Sans", sans-serif;
   color: #2c2f2e;
   margin-bottom: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.reviews__review-title:hover,
+.reviews__review-title:active {
+  color: #004b90;
 }
 
 .reviews__review-descr {
@@ -2244,6 +2253,90 @@ input::-ms-clear {
 .reviews__review_big .reviews__review-descr {
   font: 400 16px/24px "Fira Sans", sans-serif;
   float: none;
+}
+
+.about {
+  background: #f3f7f8;
+}
+
+.about__wrapper {
+  padding: 60px 0 20px;
+  display: block;
+}
+
+.about__info {
+  margin-bottom: 40px;
+}
+
+.about__info p {
+  font: 400 16px/24px "Fira Sans", sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 15px;
+}
+
+.about__title {
+  font: 400 30px/30px "Fira Sans", sans-serif;
+  color: #2c2f2e;
+  position: relative;
+  padding-bottom: 21px;
+  margin-bottom: 20px;
+}
+
+.about__title:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: #0a2b49;
+}
+
+.about__link-wrapper {
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.about__link {
+  display: inline-block;
+  font: 400 16px/24px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  color: #004b90;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  border-bottom: 2px dotted;
+}
+
+.about__link:hover,
+.about__link:active {
+  border-bottom: 2px dotted transparent;
+}
+
+.about__imgs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -14px;
+}
+
+.about__img-wrapper {
+  padding: 0 14px;
+  margin-bottom: 35px;
+  max-width: 150px;
+}
+
+.about__brend {
+  max-width: none;
+  width: 100%;
 }
 
 .footer__main {
@@ -2984,11 +3077,13 @@ input::-ms-clear {
 
   .reviews__small-wrapper {
     display: block;
+    margin: 0;
   }
 
   .reviews__small-item {
     width: 100%;
     margin-top: 22px;
+    padding: 0;
   }
 
   .reviews__small-item:first-child {
@@ -2997,6 +3092,24 @@ input::-ms-clear {
 
   .reviews__review-title {
     padding: 0;
+  }
+
+  .about__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .about__info {
+    width: 60%;
+    margin-bottom: 25px;
+    padding-right: 55px;
+  }
+
+  .about__brends {
+    width: 40%;
   }
 
   .footer__info {
