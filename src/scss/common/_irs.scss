@@ -1,0 +1,40 @@
+.modal-filter__sl-strip {
+  .irs {
+    &-line {
+      top: 25px;
+      height: 5px;
+      background-color: #ddd;
+      border-radius: 2.5px;
+    }
+    &-bar {
+      height: 5px;
+      background-color: #064f92;
+      border-radius: 2.5px;
+    }
+    &-handle {
+      width: 30px;
+      height: 31px;
+      background-color: #064f92;
+      border: 7px solid #ffffff;
+      box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.2);
+      border-radius: 50%;
+      top: 12px;
+      i {
+        background: rgba(0,0,0,0)!important;
+      }
+    }
+    &-min,
+    &-max {
+      top: 45px;
+      visibility: visible!important;
+      font: 500 13px / 22px 'Fira Sans', sans-serif;
+      background: #fff;
+      color: #a3abb5;
+    }
+    &-to,
+    &-from,
+    &-single {
+      visibility: hidden!important;
+    }
+  }
+}

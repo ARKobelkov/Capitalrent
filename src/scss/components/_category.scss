@@ -7,11 +7,13 @@
   min-height: 187px;
   &:not(&_noimg):hover &__name ,
   &:not(&_noimg):active &__name {
-    opacity: 0;
+    // opacity: 0;
+    display: none;
   }
   &:hover &__links,
   &:active &__links {
-    opacity: 1;
+    // opacity: 1;
+    display: block;
   }
   &_noimg {
     &:hover .category__all-categories,
@@ -30,7 +32,7 @@
   }
   &__name {
     display: block;
-    opacity: 1;
+    // opacity: 1;
     height: 100%;
     text-decoration: none;
     font: 500 17px / 21px 'Fira Sans', sans-serif;
@@ -83,8 +85,9 @@
     }
   }
   &__links {
-    display: block;
-    opacity: 0;
+    display: none;
+    // display: block;
+    // opacity: 0;
     position: absolute;
     top: 0;
     left: 0;

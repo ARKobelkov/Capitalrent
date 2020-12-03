@@ -100,7 +100,7 @@
             </a>
           </div>
           <div class="header__btn">
-            <a href="#" class="header__btn-link">
+            <a href="#" class="header__btn-link" id="filter-btn">
               <div class="header__btn-content header__btn-content_search-icon">
                 <span class="header__btn-text">Фильтр</span>
               </div>
@@ -253,4 +253,180 @@
     </div>
   </div>
   <!-- End (modal-catalog) -->
+  <!-- (modal-filter) -->
+  <div class="modal-filter" id="modal-filter">
+    <form action="#" name="modal-filter-form" method="POST">
+      <div class="modal-filter__block">
+        <div class="modal-filter__main">
+          <div class="modal-filter__cover cover">
+            <div class="modal-filter__main-wrapper">
+              <div class="modal-filter__selects">
+                <div class="modal-filter__select-wrapper">
+                  <select name="typeTransaction" id="typeTransaction" data-placeholder="Тип сделки" class="modal-filter__select">
+                    <option value="typeTransaction0"></option>
+                    <option value="typeTransaction1">Купить</option>
+                    <option value="typeTransaction2">Продать</option>
+                  </select>
+                </div>
+                <div class="modal-filter__select-wrapper">
+                  <select name="typePremises" id="typePremises" data-placeholder="Тип помещения" class="modal-filter__select">
+                    <option value="typePremises0"></option>
+                    <option value="typePremises1">Торговое помещение</option>
+                    <option value="typePremises2">Офисное помещение</option>
+                  </select>
+                </div>
+                <div class="modal-filter__select-wrapper">
+                  <select name="searchArea" id="searchArea" data-placeholder="Область поиска" class="modal-filter__select">
+                    <option value="searchArea0"></option>
+                    <option value="searchArea1">Москва</option>
+                    <option value="searchArea2">Санкт-Петербург</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-filter__slider-selects">
+               <div class="modal-filter__slider-sl-block-wrapper">
+                <div class="modal-filter__sl-block">
+                  <div class="modal-filter__sl-item">
+                    <div class="modal-filter__sl-item-top">
+                      <div class="modal-filter__sl-label">Стоимость</div>
+                      <div class="modal-filter__sl-inputs">
+                        <div class="modal-filer__sl-input-wrapper">
+                          <input type="text" name="costFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                        </div>
+                        <div class="modal-filter__sl-divider"></div>
+                        <div class="modal-filer__sl-input-wrapper">
+                          <input type="text" name="costTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                        </div>
+                        <div class="modal-filter__sl-currency__wrapper">
+                          <select name="currency" id="currency" class="modal-filter__sl-currency">
+                            <option value="ruble">₽</option>
+                            <option value="euro">€</option>
+                            <option value="dollar">$</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-filter__sl-item-bottom">
+                      <div class="modal-filter__sl-strip">
+                        <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-type="double" readonly class="modal-filter__sl-strip-input">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-filter__sl-item">
+                    <div class="modal-filter__sl-item-top">
+                      <div class="modal-filter__sl-label">Площадь</div>
+                      <div class="modal-filter__sl-inputs">
+                        <div class="modal-filer__sl-input-wrapper">
+                          <input type="text" name="squareFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                        </div>
+                        <div class="modal-filter__sl-divider"></div>
+                        <div class="modal-filer__sl-input-wrapper">
+                          <input type="text" name="squareTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                        </div>
+                        <div class="modal-filter__sl-unit">
+                          <div class="modal-filter__sl-unit-text">м²</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-filter__sl-item-bottom">
+                      <div class="modal-filter__sl-strip">
+                        <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-type="double" readonly class="modal-filter__sl-strip-input">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="modal-filter__sl-block-wrapper hidden" id="hiddenFilters">
+                  <div class="modal-filter__sl-block" >
+                    <div class="modal-filter__sl-item">
+                      <div class="modal-filter__sl-item-top">
+                        <div class="modal-filter__sl-label">Комнаты</div>
+                        <div class="modal-filter__sl-inputs">
+                          <div class="modal-filer__sl-input-wrapper">
+                            <input type="text" name="roomsFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                          </div>
+                          <div class="modal-filter__sl-divider"></div>
+                          <div class="modal-filer__sl-input-wrapper">
+                            <input type="text" name="roomsTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                          </div>
+                          <div class="modal-filter__sl-unit">
+                            <div class="modal-filter__sl-unit-text">комн.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-filter__sl-item-bottom">
+                        <div class="modal-filter__sl-strip">
+                          <input type="hidden" name="roomsStrip" data-step="1" data-min="1" data-max="5" data-postfix=" комн." data-type="double" readonly class="modal-filter__sl-strip-input">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-filter__sl-item">
+                      <div class="modal-filter__sl-item-top">
+                        <div class="modal-filter__sl-label">Площадь</div>
+                        <div class="modal-filter__sl-inputs">
+                          <div class="modal-filer__sl-input-wrapper">
+                            <input type="text" name="floorFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                          </div>
+                          <div class="modal-filter__sl-divider"></div>
+                          <div class="modal-filer__sl-input-wrapper">
+                            <input type="text" name="floorTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                          </div>
+                          <div class="modal-filter__sl-unit">
+                            <div class="modal-filter__sl-unit-text">этаж</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-filter__sl-item-bottom">
+                        <div class="modal-filter__sl-strip">
+                          <input type="text" name="floorStrip" data-step="1" data-min="1" data-max="15" data-postfix=" этаж" data-type="double" readonly class="modal-filter__sl-strip-input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-filter__footer">
+          <div class="modal-filter__cover cover">
+            <div class="modal-filter__footer-wrapper">
+              <div class="modal-filter__all-filters">
+                <a href="#" class="modal-filter__all-filters-link" id="all-filters">
+                  <span class="modal-filter__all-filters-text">показать дополнительные фильтры</span>
+                </a>
+              </div>
+              <div class="modal-filter__links">
+                <div class="modal-filter__link-wrapper">
+                  <a href="#" class="modal-filter__link">Сохранить поиск
+                    <svg class="modal-filter__icon" width="15" height="14">
+                      <use xlink:href="images/icons.svg#heart-icon"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="modal-filter__link-wrapper">
+                  <a href="#" class="modal-filter__link">На карте
+                    <svg class="modal-filter__icon" width="10" height="14">
+                      <use xlink:href="images/icons.svg#icon-map"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="modal-filter__btn-wrapper">
+                  <input type="submit" name="filter-submit" class="modal-filter__btn-input" value="показать 267 объектов">
+                </div>
+              </div>
+              <div class="modal-filter__close-btn" id="filter-close">
+                <!-- (modal-close) -->
+                <div class="modal-close">
+                  <a href="#" class="modal-close__link">Закрыть</a>
+                </div>
+                <!-- End (modal-close) -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- End (modal-filter) -->
 </section>
