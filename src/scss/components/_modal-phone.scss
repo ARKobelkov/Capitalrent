@@ -1,0 +1,119 @@
+.modal-phone {
+  display: none;
+  background: #fff;
+  &__wrapper {
+    text-align: center;
+    padding: 50px 0;
+    max-width: 450px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      max-width: 538px;
+    }
+  }
+  &__logo-wrapper {
+    width: 212px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 80px;
+    }
+    @media screen and (min-width: 990px) {
+      margin-bottom: 170px;
+    }
+  }
+  &__logo-link {
+    display: block;
+  }
+  &__logo {
+    max-width: none;
+    width: 100%;
+  }
+  &__title {
+    font: 500 22px / 27px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: $titlecolor;
+    margin-bottom: 5px;
+  }
+  &__descr {
+    font: 400 16px / 22px 'Fira Sans', sans-serif;
+    color: $inputcolor;
+    margin-bottom: 28px;
+  }
+  &__inputs {
+    display: flex;
+    justify-content: center;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__input-wrapper {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  &__input {
+    background: #f2f3f7;
+    border: 2px solid #ecedf1;
+    font: 400 14px / 18px 'Fira Sans', sans-serif;
+    padding: 15px 20px 13px;
+    @media screen and (min-width: 480px) {
+      width: 254px;
+    }
+    &_textarea {
+      border-radius: 2px;
+      resize: none;
+      height: 206px;
+      width: 100%;
+      @media screen and (min-width: 480px) {
+        width: 100%;
+      }
+    }
+  }
+  &__comment-wrapper {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    background: #df3623;
+    font: 500 17px / 17px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 23px 20px 20px;
+    cursor: pointer;
+    margin-bottom: 22px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      background: $linkcolor;
+    }
+  }
+  &__info {
+    font: 400 16px / 23px 'Fira Sans', sans-serif;
+    color: $inputcolor;
+    margin-bottom: 50px;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 80px;
+    }
+    @media screen and (min-width: 990px) {
+      margin-bottom: 168px;
+    }
+  }
+  &__link {
+    color: #4c8dc8;
+  }
+  &__phone {
+    font: 500 28px / 30px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $titlecolor;
+    margin-bottom: 10px;
+  }
+  &__work-time {
+    font: 400 16px / 20px 'Fira Sans', sans-serif;
+    color: $inputcolor;
+    margin-bottom: 10px;
+  }
+}

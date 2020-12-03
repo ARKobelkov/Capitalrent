@@ -129,4 +129,43 @@ $(function () {
   //   animate: true,
   //   panelContext: $('#reviews-tabs')
   // });
+
+  // Попап - обратный звонок
+  // Попап
+
+  $('.modal').on('click', function (event) {
+    event.preventDefault()
+
+    let iDModal = $(this).attr('data-src');
+
+    $.fancybox.open({
+      src  : iDModal,
+      type : 'inline',
+      opts : {
+        closeExisting: true,
+        gutter: 0,
+        keyboard: true,
+        arrows: false,
+        infobar: false,
+        smallBtn : false,
+        modal: false,
+        touch: false,
+        animationEffect: 'fade',
+        animationDuration: 300,
+        transitionEffect: 'fade',
+        transitionDuration: 300,
+        hideScrollbar: true,
+        hash: false,
+        autoFocus: false,
+        baseTpl:
+					'<div class="fancybox-container" role="dialog" tabindex="-1">' +
+					'<div class="fancybox-bg"></div>' +
+					'<div class="fancybox-inner">' +
+					'<div class="fancybox-stage"></div>' +
+					'</div>' +
+					'</div>'
+      }
+    });
+  });
+
 });

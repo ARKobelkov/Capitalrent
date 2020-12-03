@@ -3182,6 +3182,134 @@ input::-ms-clear {
   padding: 15px 45px 15px 10px;
 }
 
+.modal-phone {
+  display: none;
+  background: #fff;
+}
+
+.modal-phone__wrapper {
+  text-align: center;
+  padding: 50px 0;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.modal-phone__logo-wrapper {
+  width: 212px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.modal-phone__logo-link {
+  display: block;
+}
+
+.modal-phone__logo {
+  max-width: none;
+  width: 100%;
+}
+
+.modal-phone__title {
+  font: 500 22px/27px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #0a1828;
+  margin-bottom: 5px;
+}
+
+.modal-phone__descr {
+  font: 400 16px/22px "Fira Sans", sans-serif;
+  color: #888f98;
+  margin-bottom: 28px;
+}
+
+.modal-phone__inputs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.modal-phone__input-wrapper {
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.modal-phone__input {
+  background: #f2f3f7;
+  border: 2px solid #ecedf1;
+  font: 400 14px/18px "Fira Sans", sans-serif;
+  padding: 15px 20px 13px;
+}
+
+.modal-phone__input_textarea {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  resize: none;
+  height: 206px;
+  width: 100%;
+}
+
+.modal-phone__comment-wrapper {
+  margin-bottom: 20px;
+}
+
+.modal-phone__btn {
+  background: #df3623;
+  font: 500 17px/17px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 23px 20px 20px;
+  cursor: pointer;
+  margin-bottom: 22px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.modal-phone__btn:hover,
+.modal-phone__btn:active {
+  background: #5a97cb;
+}
+
+.modal-phone__info {
+  font: 400 16px/23px "Fira Sans", sans-serif;
+  color: #888f98;
+  margin-bottom: 50px;
+}
+
+.modal-phone__link {
+  color: #4c8dc8;
+}
+
+.modal-phone__phone {
+  font: 500 28px/30px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  color: #0a1828;
+  margin-bottom: 10px;
+}
+
+.modal-phone__work-time {
+  font: 400 16px/20px "Fira Sans", sans-serif;
+  color: #888f98;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 480px) {
   .cover {
     min-width: 320px;
@@ -3272,6 +3400,22 @@ input::-ms-clear {
     width: 40%;
     margin-right: 20px;
     margin-bottom: 0;
+  }
+
+  .modal-phone__logo-wrapper {
+    margin-bottom: 80px;
+  }
+
+  .modal-phone__input {
+    width: 254px;
+  }
+
+  .modal-phone__input_textarea {
+    width: 100%;
+  }
+
+  .modal-phone__info {
+    margin-bottom: 80px;
   }
 }
 
@@ -3471,6 +3615,16 @@ input::-ms-clear {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+
+  .modal-phone__wrapper {
+    max-width: 538px;
+  }
+
+  .modal-phone__inputs {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -3628,6 +3782,14 @@ input::-ms-clear {
 
   .footer__descr {
     width: 25%;
+  }
+
+  .modal-phone__logo-wrapper {
+    margin-bottom: 170px;
+  }
+
+  .modal-phone__info {
+    margin-bottom: 168px;
   }
 }
 

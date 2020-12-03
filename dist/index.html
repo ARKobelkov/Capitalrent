@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
     <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -169,7 +170,7 @@
                     <a href="tel:+74995515511" class="header__phone-link">+7 (499) 551-551-1</a>
                   </div>
                   <div class="header__link-wrapper">
-                    <a href="#" class="header__link">перезвоните мне</a>
+                    <a href="#" data-src="#modal-phone" class="header__link modal">перезвоните мне</a>
                   </div>
                 </div>
               </div>
@@ -283,7 +284,7 @@
                           <br>
                           Эксперт по недвижимости</p>
                       </div>
-                      <button class="consultant__btn">Заявка на подбор</button>
+                      <button data-src="#modal-phone" class="consultant__btn modal">Заявка на подбор</button>
                     </div>
                     <!-- End (consultant) -->
                   </div>
@@ -1640,7 +1641,7 @@
                       <a href="tel:+74995515511" class="footer__phone-link">+7 (499) 551-551-1</a>
                     </div>
                     <div class="footer__link-wrapper">
-                      <a href="#" class="footer__info-link">перезвоните мне</a>
+                      <a href="#" data-src="#modal-phone" class="footer__info-link modal">перезвоните мне</a>
                     </div>
                   </div>
                   <div class="footer__mail">
@@ -1790,6 +1791,46 @@
       </div>
       <!-- End (footer) -->
     </div>
+    <!-- (modal-phone) -->
+    <section class="modal-phone" id="modal-phone">
+      <div class="modal-phone__wrapper">
+        <div class="modal-phone__logo-wrapper">
+          <a href="/" class="modal-phone__logo-link">
+            <img src="images/logo-footer.svg" alt="Лого" class="modal-phone__logo">
+          </a>
+        </div>
+        <div class="modal-phone__form">
+          <form action="#" name="callForm" method="POST">
+            <div class="modal-phone__form-field">
+              <h3 class="modal-phone__title">Оставьте заявку</h3>
+              <p class="modal-phone__descr">и наши специалисты свяжутся с вами в ближайшее время</p>
+              <div class="modal-phone__inputs">
+                <div class="modal-phone__input-wrapper">
+                  <input type="text" name="userName" placeholder="Ваше имя" class="modal-phone__input">
+                </div>
+                <div class="modal-phone__input-wrapper">
+                  <input type="tel" name="userPhone" placeholder="Номер телефона" class="modal-phone__input">
+                </div>
+              </div>
+              <div class="modal-phone__comment-wrapper">
+                <textarea name="userComment" id="userComment" placeholder="Коментарии" cols="30" rows="10" class="modal-phone__input modal-phone__input_textarea"></textarea>
+              </div>
+              <button type="submit" class="modal-phone__btn">оставить заявку</button>
+              <p class="modal-phone__info">
+                Отправляя данные, Вы подтверждаете ознакомление
+                <br>
+                <a href="#" class="modal-phone__link">с пользовательским соглашением</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="modal-phone__phone-wrapper">
+          <div class="modal-phone__phone">+7 (499) 551-551-1</div>
+          <div class="modal-phone__work-time">Пн-Пт 9:00-19:00</div>
+        </div>
+      </div>
+    </section>
+    <!-- End (modal-phone) -->
     <!-- (mobile-nav) -->
     <div class="mobile-nav" id="mobile-nav">
       <div class="mobile-nav__background"></div>
@@ -1839,6 +1880,7 @@
     <script src="js/svg4everybody.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
     <script src="js/plugins/jquery.easytabs.js"></script>
     <script src="js/script.js"></script>
     <!-- End (scripts) -->
