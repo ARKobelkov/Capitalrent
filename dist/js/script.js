@@ -2,7 +2,18 @@
 
 $(function () {
   /* Поддержка svg спрайтов в IE 11 */
-  svg4everybody(); // Модальное окно - каталог
+  svg4everybody();
+  /* Боковое меню */
+
+  $('.pull__wrapper').on('click', function () {
+    $('#mobile-nav').addClass('mobile-nav_visible');
+  });
+  $('#mobile-nav-close').on('click', function () {
+    $('#mobile-nav').removeClass('mobile-nav_visible');
+  });
+  $('.mobile-nav__background').on('click', function () {
+    $('#mobile-nav').removeClass('mobile-nav_visible');
+  }); // Модальное окно - каталог
 
   $('#catalog-btn').on('click', function (event) {
     event.preventDefault();

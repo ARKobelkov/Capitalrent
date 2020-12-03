@@ -3064,6 +3064,124 @@ input::-ms-clear {
   color: #e9e9e9;
 }
 
+.mobile-nav_visible .mobile-nav__background {
+  display: block;
+}
+
+.mobile-nav_visible .mobile-nav__wrapper {
+  left: 0;
+}
+
+.mobile-nav__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1004;
+  background: rgba(31, 26, 29, 0.15);
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mobile-nav__wrapper {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  z-index: 1005;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  display: block;
+  padding: 30px 20px 10px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mobile-nav__title {
+  font: 600 20px/20px "Fira Sans", sans-serif;
+  color: #004b90;
+  margin-bottom: 15px;
+}
+
+.mobile-nav__close-btn {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  cursor: pointer;
+}
+
+.mobile-nav__close-btn:before,
+.mobile-nav__close-btn:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #E83F33;
+}
+
+.mobile-nav__close-btn:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-nav__close-btn:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mobile-nav__item {
+  border-bottom: 2px solid #f6f6f6;
+}
+
+.mobile-nav__item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav__link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font: 400 17px/17px "Fira Sans", sans-serif;
+  color: #5a97cb;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 15px 45px 15px 10px;
+}
+
 @media screen and (min-width: 480px) {
   .cover {
     min-width: 320px;
