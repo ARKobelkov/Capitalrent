@@ -309,25 +309,28 @@
                     <div class="modal-filter__main-wrapper">
                       <div class="modal-filter__selects">
                         <div class="modal-filter__select-wrapper">
-                          <select name="typeTransaction" id="typeTransaction" data-placeholder="Тип сделки" class="modal-filter__select">
+                          <select name="typeTransaction" id="typeTransaction" data-placeholder=" " class="modal-filter__select">
                             <option value="typeTransaction0"></option>
                             <option value="typeTransaction1">Купить</option>
                             <option value="typeTransaction2">Продать</option>
                           </select>
+                          <div class="modal-filter__placeholder">Тип сделки</div>
                         </div>
                         <div class="modal-filter__select-wrapper">
-                          <select name="typePremises" id="typePremises" data-placeholder="Тип помещения" class="modal-filter__select">
+                          <select name="typePremises" id="typePremises" data-placeholder=" " class="modal-filter__select">
                             <option value="typePremises0"></option>
                             <option value="typePremises1">Торговое помещение</option>
                             <option value="typePremises2">Офисное помещение</option>
                           </select>
+                          <div class="modal-filter__placeholder">Тип помещения</div>
                         </div>
                         <div class="modal-filter__select-wrapper">
-                          <select name="searchArea" id="searchArea" data-placeholder="Область поиска" class="modal-filter__select">
+                          <select name="searchArea" id="searchArea" data-placeholder=" " class="modal-filter__select">
                             <option value="searchArea0"></option>
                             <option value="searchArea1">Москва</option>
                             <option value="searchArea2">Санкт-Петербург</option>
                           </select>
+                          <div class="modal-filter__placeholder">Область поиска</div>
                         </div>
                       </div>
                       <div class="modal-filter__slider-selects">
@@ -338,11 +341,11 @@
                               <div class="modal-filter__sl-label">Стоимость</div>
                               <div class="modal-filter__sl-inputs">
                                 <div class="modal-filer__sl-input-wrapper">
-                                  <input type="text" name="costFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                                  <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-divider"></div>
                                 <div class="modal-filer__sl-input-wrapper">
-                                  <input type="text" name="costTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                                  <input type="text" name="costTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-currency__wrapper">
                                   <select name="currency" id="currency" class="modal-filter__sl-currency">
@@ -355,7 +358,7 @@
                             </div>
                             <div class="modal-filter__sl-item-bottom">
                               <div class="modal-filter__sl-strip">
-                                <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-type="double" readonly class="modal-filter__sl-strip-input">
+                                <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-from="18" data-before="106" class="modal-filter__sl-strip-input">
                               </div>
                             </div>
                           </div>
@@ -364,11 +367,11 @@
                               <div class="modal-filter__sl-label">Площадь</div>
                               <div class="modal-filter__sl-inputs">
                                 <div class="modal-filer__sl-input-wrapper">
-                                  <input type="text" name="squareFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                                  <input type="text" name="squareFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-divider"></div>
                                 <div class="modal-filer__sl-input-wrapper">
-                                  <input type="text" name="squareTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                                  <input type="text" name="squareTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-unit">
                                   <div class="modal-filter__sl-unit-text">м²</div>
@@ -377,7 +380,7 @@
                             </div>
                             <div class="modal-filter__sl-item-bottom">
                               <div class="modal-filter__sl-strip">
-                                <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-type="double" readonly class="modal-filter__sl-strip-input">
+                                <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-from="234" data-before="1133" class="modal-filter__sl-strip-input">
                               </div>
                             </div>
                           </div>
@@ -390,11 +393,11 @@
                                 <div class="modal-filter__sl-label">Комнаты</div>
                                 <div class="modal-filter__sl-inputs">
                                   <div class="modal-filer__sl-input-wrapper">
-                                    <input type="text" name="roomsFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                                    <input type="text" name="roomsFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-divider"></div>
                                   <div class="modal-filer__sl-input-wrapper">
-                                    <input type="text" name="roomsTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                                    <input type="text" name="roomsTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-unit">
                                     <div class="modal-filter__sl-unit-text">комн.</div>
@@ -403,7 +406,7 @@
                               </div>
                               <div class="modal-filter__sl-item-bottom">
                                 <div class="modal-filter__sl-strip">
-                                  <input type="hidden" name="roomsStrip" data-step="1" data-min="1" data-max="5" data-postfix=" комн." data-type="double" readonly class="modal-filter__sl-strip-input">
+                                  <input type="hidden" name="roomsStrip" data-step="1" data-min="1" data-max="5" data-postfix=" комн." data-from="" data-before="" class="modal-filter__sl-strip-input">
                                 </div>
                               </div>
                             </div>
@@ -412,11 +415,11 @@
                                 <div class="modal-filter__sl-label">Площадь</div>
                                 <div class="modal-filter__sl-inputs">
                                   <div class="modal-filer__sl-input-wrapper">
-                                    <input type="text" name="floorFrom" value="0" placeholder="От" readonly class="modal-filter__sl-input">
+                                    <input type="text" name="floorFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-divider"></div>
                                   <div class="modal-filer__sl-input-wrapper">
-                                    <input type="text" name="floorTo" value="0" placeholder="До" readonly class="modal-filter__sl-input">
+                                    <input type="text" name="floorTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-unit">
                                     <div class="modal-filter__sl-unit-text">этаж</div>
@@ -425,7 +428,7 @@
                               </div>
                               <div class="modal-filter__sl-item-bottom">
                                 <div class="modal-filter__sl-strip">
-                                  <input type="text" name="floorStrip" data-step="1" data-min="1" data-max="15" data-postfix=" этаж" data-type="double" readonly class="modal-filter__sl-strip-input">
+                                  <input type="text" name="floorStrip" data-step="1" data-min="1" data-max="15" data-postfix=" этаж" data-from="" data-before="" class="modal-filter__sl-strip-input">
                                 </div>
                               </div>
                             </div>
@@ -573,6 +576,17 @@
                   </div>
                   <!-- End (category) -->
                   </div>
+                  <div class="categories__long">
+                    <a href="#" class="categories__long-link">
+                      <div class="categories__long-img-wrapper">
+                        <img src="images/content/categories/rent-side.svg" alt="Аренда" class="categories__long-img">
+                      </div>
+                      <div class="categories__long-content">
+                        <h6 class="categories__long-title">арендный бизнес</h6>
+                        <p class="categories__long-descr">Поможем купить готовый арендный бизнес с минимальными рисками</p>
+                      </div>
+                    </a>
+                  </div>
                   <div class="categories__category">
                     <!-- (category) -->
                     <div class="category">
@@ -633,83 +647,6 @@
                     </div>
                     <!-- End (category) -->
                   </div>
-                  <div class="categories__category hidden">
-                    <!-- (category) -->
-                    <div class="category">
-                      <div class="category__name">
-                        <div class="category__img-wrapper">
-                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
-                        </div>
-                        <div class="category__text">Свободного назначаения</div>
-                      </div>
-                      <div class="category__links">
-                        <a href="#" class="category__link">Аренда</a>
-                        <a href="#" class="category__link">Продажа</a>
-                      </div>
-                    </div>
-                    <!-- End (category) -->
-                  </div>
-                  <div class="categories__category hidden">
-                    <!-- (category) -->
-                    <div class="category">
-                      <div class="category__name">
-                        <div class="category__img-wrapper">
-                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
-                        </div>
-                        <div class="category__text">Свободного назначаения</div>
-                      </div>
-                      <div class="category__links">
-                        <a href="#" class="category__link">Аренда</a>
-                        <a href="#" class="category__link">Продажа</a>
-                      </div>
-                    </div>
-                    <!-- End (category) -->
-                  </div>
-                  <div class="categories__category hidden">
-                    <!-- (category) -->
-                    <div class="category">
-                      <div class="category__name">
-                        <div class="category__img-wrapper">
-                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
-                        </div>
-                        <div class="category__text">Свободного назначаения</div>
-                      </div>
-                      <div class="category__links">
-                        <a href="#" class="category__link">Аренда</a>
-                        <a href="#" class="category__link">Продажа</a>
-                      </div>
-                    </div>
-                    <!-- End (category) -->
-                  </div>
-                  <div class="categories__category hidden">
-                    <!-- (category) -->
-                    <div class="category">
-                      <div class="category__name">
-                        <div class="category__img-wrapper">
-                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
-                        </div>
-                        <div class="category__text">Свободного назначаения</div>
-                      </div>
-                      <div class="category__links">
-                        <a href="#" class="category__link">Аренда</a>
-                        <a href="#" class="category__link">Продажа</a>
-                      </div>
-                    </div>
-                    <!-- End (category) -->
-                  </div>
-                </div>
-                <div class="categories__sideblock">
-                  <div class="categories__long">
-                    <a href="#" class="categories__long-link">
-                      <div class="categories__long-img-wrapper">
-                        <img src="images/content/categories/rent-side.svg" alt="Аренда" class="categories__long-img">
-                      </div>
-                      <div class="categories__long-content">
-                        <h6 class="categories__long-title">арендный бизнес</h6>
-                        <p class="categories__long-descr">Поможем купить готовый арендный бизнес с минимальными рисками</p>
-                      </div>
-                    </a>
-                  </div>
                   <div class="categories__long">
                     <a href="#" class="categories__long-link">
                       <div class="categories__long-img-wrapper">
@@ -721,7 +658,74 @@
                       </div>
                     </a>
                   </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
                 </div>
+                <!-- <div class="categories__sideblock">
+        
+                </div> -->
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@
     border-radius: 2px;
     box-shadow: none;
     height: 75px;
-    background: #fff;
+    background: none;
     padding: 0 45px 0 20px;
     font: 400 22px / 30px 'Fira Sans', sans-serif;
     color: #2c2f2e;
@@ -40,6 +40,12 @@
     }
   }
 }
+.jq-selectbox.modal-filter__select.changed {
+  .jq-selectbox__select-text {
+    margin-top: 31px;
+  }
+}
+
 .jq-selectbox.modal-filter__sl-currency {
   .jq-selectbox__select {
     background: #e1e4ec;

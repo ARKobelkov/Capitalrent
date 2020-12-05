@@ -49,8 +49,87 @@ $(function () {
     });
     $('.modal-filter__sl-currency').styler({
       selectSmartPositioning: false
+    }); // Настройка рэнджслайдера
+
+    $('.modal-filter__sl-strip-input').each(function () {
+      var slider = $(this);
+      var sliderContent = slider.closest('.modal-filter__sl-item');
+      var fromField = sliderContent.find('[data-field=from]');
+      var beforeField = sliderContent.find('[data-field=before]');
+      var minValue = parseInt(slider.attr('data-min'));
+      var maxValue = parseInt(slider.attr('data-max'));
+      var fromValue = parseInt(slider.attr('data-from'));
+      var beforeValue = parseInt(slider.attr('data-before'));
+      slider.ionRangeSlider({
+        type: 'double',
+        min: minValue,
+        max: maxValue,
+        from: fromValue,
+        to: beforeValue,
+        grid: false,
+        hide_min_max: false,
+        hide_from_to: true,
+        onStart: function onStart(data) {
+          if (fromField.length) {
+            fromField.attr('placeholder', data.min);
+            fromField.val(data.from);
+          }
+
+          if (beforeField.length) {
+            beforeField.attr('placeholder', data.max);
+            beforeField.val(data.to);
+          }
+        },
+        onChange: function onChange(data) {
+          if (fromField.length) {
+            fromField.val(data.from);
+          }
+
+          if (beforeField.length) {
+            beforeField.val(data.to);
+          }
+        },
+        onFinish: function onFinish(data) {
+          if (fromField.length) {
+            fromField.val(data.from);
+          }
+
+          if (beforeField.length) {
+            beforeField.val(data.to);
+          }
+        },
+        onUpdate: function onUpdate(data) {
+          if (fromField.length) {
+            fromField.val(data.from);
+          }
+
+          if (beforeField.length) {
+            beforeField.val(data.to);
+          }
+        }
+      });
     });
-    $('.modal-filter__sl-strip-input').ionRangeSlider();
+    $('[data-field=from], [data-field=before]').bind('input', function () {
+      if ($(this).val().match(/[^0-9]/g)) {
+        $(this).val($(this).val().replace(/[^0-9]/g, ''));
+      }
+    });
+    $('[data-field=from], [data-field=before]').on('blur', function () {
+      var currentField = $(this);
+      var valueField = parseInt(currentField.val());
+      var filterContent = currentField.closest('.modal-filter__sl-item');
+      var slider = filterContent.find('.modal-filter__sl-strip-input').data('ionRangeSlider');
+
+      if (currentField.attr('data-field') === 'from') {
+        slider.update({
+          from: valueField
+        });
+      } else if (currentField.attr('data-field') === 'before') {
+        slider.update({
+          to: valueField
+        });
+      }
+    });
   }); // Кнопка - открыть все фильтры
 
   $('#all-filters').on('click', function (event) {
@@ -159,4 +238,3 @@ $(function () {
 
   ;
 });
-//# sourceMappingURL=script.js.map

@@ -7,13 +7,14 @@
   min-height: 187px;
   &:not(&_noimg):hover &__name ,
   &:not(&_noimg):active &__name {
-    // opacity: 0;
-    display: none;
+    opacity: 0;
+    // display: none;
   }
   &:hover &__links,
   &:active &__links {
-    // opacity: 1;
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    // display: block;
   }
   &_noimg {
     &:hover .category__all-categories,
@@ -32,7 +33,7 @@
   }
   &__name {
     display: block;
-    // opacity: 1;
+    opacity: 1;
     height: 100%;
     text-decoration: none;
     font: 500 17px / 21px 'Fira Sans', sans-serif;
@@ -85,9 +86,10 @@
     }
   }
   &__links {
-    display: none;
-    // display: block;
-    // opacity: 0;
+    // display: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -105,18 +107,29 @@
     text-decoration: none;
     padding: 30px 40px 30px 35px;
     transition: all 0.3s ease;
-    &:hover,
-    &:active {
+    &:first-child {
       background: $phonecolor;
+    }
+    @media screen and (min-width: 1200px) {
+      &:first-child {
+        background: $categorybg1;
+      }
       &:before {
-        display: block;
+        display: none;
+      }
+      &:hover,
+      &:active {
+      background: $phonecolor;
+        &:before {
+          display: block;
+        }
       }
     }
     &:before {
       content: '';
       width: 7px;
       height: 7px;
-      display: none;
+      display: block;
       position: absolute;
       top: 50%;
       right: 33px;
