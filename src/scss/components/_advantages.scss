@@ -1,0 +1,43 @@
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  &__item {
+    padding: 0 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    @media screen and (min-width: 600px) {
+      width: 50%;
+      text-align: left;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 25%;
+    }
+  }
+  &__img-wrapper {
+    height: 76px;
+    position: relative;
+    margin-bottom: 18px;
+  }
+  &__img {
+    max-height: 100%;
+    margin: 0 auto;
+    @media screen and (min-width: 600px) {
+      margin: 0;
+    }
+  }
+  &__title {
+    font: 600 20px / 28px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: $footertitle;
+    margin-bottom: 12px;
+    @media screen and (min-width: 600px) {
+      padding-right: 40px;
+    }
+  }
+  &__descr {
+    font: 400 17px / 23px 'Fira Sans', sans-serif;
+    color: #97979d;
+    margin-bottom: 12px;
+  }
+}

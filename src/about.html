@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('./include/head.html');
+  <body>
+    <div class="wrapper">
+      <!-- (main) -->
+      <div class="wrapper__content">
+        <!-- (header) -->
+        @include('./include/header.html');
+        <!-- End (header) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <a href="#" class="location__link">О компании</a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Агентство недвижимости «CapitalRent»</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End (location) -->
+        <!-- (about-company) -->
+        <section class="about-company">
+          <div class="about-company__cover cover">
+            <div class="about-company__wrapper clearfix">
+              <main class="about-company__main">
+                <!-- (about-content) -->
+                <article class="about-content">
+                  <div class="about-content__text">
+                    <h1>Агентство недвижимости «CapitalRent»</h1>
+                    <p>«Capitalrent» – одно из старейших агентств недвижимости Москвы, основанное более 20 лет назад. Основная специализация агентства – аренда и продажа коммерческой недвижимости, а также – инвестиционный бизнес.</p>
+                    <p>В настоящее время в нашей базе находится одновременно более 2 000 актуальных объектов, над которыми ежедневно ведется работа. В штате компании трудятся профессиональные риэлторы и юристы, готовые придти на помощь в любых вопросах, связанных с покупкой, продажей и оформлением недвижимости, проведении оценки стоимости.</p>
+                    <br>
+                    <h2>Виды деятельности агентства:</h2>
+                    <ul class="marker">
+                      <li>помощь в продаже коммерческой и жилой недвижимости</li>
+                      <li>помощь в подборе подходящего объекта недвижимости</li>
+                      <li>сопровождение и оформление сделок</li>
+                      <li>оценка стоимости объектов</li>
+                      <li>консалтинговые услуги</li>
+                    </ul>
+                    <br>
+                    <p>Помимо кропотливой и эффективной работы с недвижимостью, мы стараемся постоянно повышать качество наших услуг, внедряя новые предложения и развивая профессионализм сотрудников. Мы ценим прозрачные взаимовыгодные отношения с клиентами, в чем уже убедились сотни наших клиентов и партнеров. Такой подход к делу позволяет даже в кризисное время находить успешные варианты решения сложных вопросов, а вам – максимально быстро и выгодно получать результат.</p>                 
+                    <q>Хотите совершить выгодную сделку и обрести надежного партнера в сфере работы с недвижимостью в нашем лице? Просто позвоните или <a href="#">оставьте заявку с сайта</a> – мы обсудим удобное для вас время встречи в нашем уютном офисе или в другом подходящем месте, либо проконсультируем вас по телефону.</q>
+                  </div>
+                  <!-- (advantages) -->
+                  <section class="advantages">
+                    <div class="advantages__item">
+                      <div class="advantages__img-wrapper">
+                        <img src="images/content/advantages/chain.png" alt="Иконка цепи" class="advantages__img">
+                      </div>
+                      <h4 class="advantages__title">Полный 
+                        цикл услуг</h4>
+                      <p class="advantages__descr">От поиска помещений до консалтинга и инвестиционного менеджмента.</p>
+                    </div>
+                    <div class="advantages__item">
+                      <div class="advantages__img-wrapper">
+                        <img src="images/content/advantages/wreath.png" alt="Иконка цепи" class="advantages__img">
+                      </div>
+                      <h4 class="advantages__title">Опыт работы
+                        более 20 лет</h4>
+                      <p class="advantages__descr">Одно из первых агентств коммерческой недвижимости в Москве.</p>
+                    </div>
+                    <div class="advantages__item">
+                      <div class="advantages__img-wrapper">
+                        <img src="images/content/advantages/shield.png" alt="Иконка цепи" class="advantages__img">
+                      </div>
+                      <h4 class="advantages__title">Ответственность 
+                        перед клиентами</h4>
+                      <p class="advantages__descr">Мы полностью страхуем свою ответственность перед клиентом.</p>
+                    </div>
+                    <div class="advantages__item">
+                      <div class="advantages__img-wrapper">
+                        <img src="images/content/advantages/box.png" alt="Иконка цепи" class="advantages__img">
+                      </div>
+                      <h4 class="advantages__title">Более 2000
+                        объектов а базе</h4>
+                      <p class="advantages__descr">В нашей базе более 2000 объектов, находящихся в одновременной работе.</p>
+                    </div>
+                  </section>
+                  <!-- End (advantages) -->
+                  <!-- (share) -->
+                  <div class="about-content__share">
+                    <div class="share">
+                      <div class="share__label">поделиться</div>
+                      <div class="pluso share__social" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,google"></div>
+                    </div>
+                  </div>
+                  <!--  End (share) -->
+                </article>
+                <!-- End (about-content) -->
+              </main>
+              <aside class="about-company__aside">
+                <!-- (nav-about) -->
+                <nav class="nav-about">
+                  <ul class="nav-about__list">
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link nav-about__link_active">О компании</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Наша команда</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Услуги</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Пресс-центр</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Новости компани</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- End (nav-about) -->
+                <!-- (side-banner) -->
+                <div class="side-banner">
+                  <a href="#" class="side-banner__link">
+                    <div class="side-banner__img-wrapper">
+                      <img src="images/content/categories/office.svg" alt="Аренда" class="side-banner__img">
+                    </div>
+                    <h5 class="side-banner__title">Готовый арендный бизнес в Москве</h5>
+                    <p class="side-banner__descr">прибыль до 
+                      <br>
+                      750 000 руб./мес</p>
+                  </a>
+                </div>
+                <!-- End (side-banner) -->
+                <!-- (side-banner) -->
+                <div class="side-banner">
+                  <a href="#" class="side-banner__link">
+                    <div class="side-banner__img-wrapper">
+                      <img src="images/content/categories/shop.svg" alt="Аренда" class="side-banner__img">
+                    </div>
+                    <h5 class="side-banner__title">Коммерческая недвижимость</h5>
+                    <p class="side-banner__descr">лучшие предложения
+                      по аренде и продаже</p>
+                  </a>
+                </div>
+                <!-- End (side-banner) -->
+              </aside>
+            </div>
+          </div>
+        </section>
+        <!-- End (about-company) -->
+      </div>
+      <!-- End (main) -->
+      <!-- (footer) -->
+      <div class="wrapper__footer">
+        @include('./include/footer.html');
+      </div>
+      <!-- End (footer) -->
+    </div>
+    <!-- (modal-phone) -->
+    @include('./include/modal-phone.html');
+    <!-- End (modal-phone) -->
+    <!-- (mobile-nav) -->
+    @include('./include/mobile-nav.html');
+    <!-- End (mobile-nav) -->
+    <!-- (scripts) -->
+    @include('./include/script.html');
+    <!-- End (scripts) -->
+  </body>
+</html>

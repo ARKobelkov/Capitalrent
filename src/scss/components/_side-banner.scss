@@ -1,0 +1,29 @@
+.side-banner {
+  margin-bottom: 30px;
+  &__link {
+    display: block;
+    background: $secondbg;
+    text-decoration: none;
+    text-align: center;
+    padding: 45px 45px 30px;
+  }
+  &__img-wrapper {
+    width: 93px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__title {
+    font: 500 20px / 24px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    margin-bottom: 12px;
+  }
+  &__descr {
+    font: 400 17px / 23px 'Fira Sans', sans-serif;
+    color: #b8b8b9;
+    margin-bottom: 7px;
+  }
+}

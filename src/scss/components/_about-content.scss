@@ -1,0 +1,19 @@
+.about-content {
+  &__text {
+    margin-bottom: 55px;
+    h1 {
+      font: 600 31px / 31px 'Fira Sans', sans-serif;
+      color: $titlecolor;
+    }
+    h2 {  
+      font: 400 24px / 29px 'Fira Sans', sans-serif;
+      color: $titlecolor;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+  }
+  &__share {
+    margin-bottom: 40px;
+  }
+}

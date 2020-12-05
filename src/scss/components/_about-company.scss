@@ -1,0 +1,21 @@
+.about-company {
+  &__wrapper {
+    padding: 40px 0 20px;
+  }
+  &__main {
+    @media screen and (min-width: 990px) {
+      padding-left: 320px;
+      min-height: 1px;
+      width: 100%;
+      float: left;
+    }
+  }
+  &__aside {
+    @media screen and (min-width: 990px) {
+      width: 320px;
+      margin-left: -100%;
+      float: left;
+      padding-right: 50px;
+    }
+  }
+}

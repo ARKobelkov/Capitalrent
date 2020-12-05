@@ -1,0 +1,28 @@
+.nav-about {
+  &__list {
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 3px;
+    border: 2px solid #e1e2e6;
+  }
+  &__item {
+    border-top: 2px solid #e1e2e6;
+    &:first-child {
+      border: none;
+    }
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    font: 400 18px / 20px 'Fira Sans', sans-serif;
+    color: #a7a8aa;
+    padding: 20px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active,
+    &_active {
+      background: #f2f3f7;
+      color: $titlecolor;
+    }
+  }
+}

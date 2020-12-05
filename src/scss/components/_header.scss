@@ -157,6 +157,7 @@
       justify-content: space-between;
       flex-direction: column;
       margin: 0 -20px;
+      height: 113px;
       @media screen and (min-width: 768px) {
         flex-direction: row;
       }
@@ -178,6 +179,7 @@
     align-items: center;
     padding: 10px 10px 20px 10px;
     order: 1;
+    height: 100%;
     @media screen and (min-width: 768px) {
       order: 0;
       padding: 0 10px;
@@ -185,7 +187,12 @@
   }
   &__btn {
     padding: 0 10px;
+    height: 100%;
+    position: relative;
     &-link {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       height: 57px;
       min-width: 57px;
       text-align: center;

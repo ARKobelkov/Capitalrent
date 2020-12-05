@@ -77,11 +77,6 @@ $(function () {
     $('.categories__btn-icon').toggleClass('hidden');
   });
 
-  // Отмена ссылки в категориях
-  $('.category__name').on('click', function (event) {
-    event.preventDefault();
-  });
-
   // Кнопка "Открыть все категории"
   $('#all-categories').on('click', function(event) {
     event.preventDefault();
@@ -131,7 +126,6 @@ $(function () {
   // });
 
   // Попап - обратный звонок
-  // Попап
 
   $('.modal').on('click', function (event) {
     event.preventDefault()
@@ -147,7 +141,7 @@ $(function () {
         keyboard: true,
         arrows: false,
         infobar: false,
-        smallBtn : false,
+        smallBtn : true,
         modal: false,
         touch: false,
         animationEffect: 'fade',
@@ -168,4 +162,20 @@ $(function () {
     });
   });
 
+  // Кнопки социальных сетей
+    if (window.pluso)
+    if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { 
+      window.ifpluso = 1;
+      var d = document,
+          s = d.createElement('script'),
+          g = 'getElementsByTagName';
+          s.type = 'text/javascript'; 
+          s.charset='UTF-8'; 
+          s.async = true;
+          s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+      var h=d[g]('body')[0];
+      h.appendChild(s);
+    };
+  
 });
