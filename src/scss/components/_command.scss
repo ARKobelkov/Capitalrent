@@ -1,0 +1,84 @@
+.command {
+  padding: 0 0 20px;
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #f2f3f7;
+    margin-bottom: 20px;
+    &-title {
+      font: 400 30px / 30px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 15px;
+      margin-right: 20px;
+    }
+    &-links {
+      display: flex;
+      margin: 15px -10px -2px;
+    }
+    &-item {
+      padding: 0 10px;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      font: 500 16px / 16px 'Fira Sans', sans-serif;
+      color: $shtabfont;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 14px;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        border-bottom: 2px solid $footertitle;
+        color: $footertitle;
+      }
+    }
+    &-link.active {
+      border-bottom: 2px solid $footertitle;
+      color: $footertitle;
+    }
+  }
+  &__command {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+  }
+  &__manager {
+    width: 100%;
+    padding: 20px 25px;
+    @media screen and (min-width: 480px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 768px) {
+      width: calc(100% / 3);
+    }
+  }
+  &__descr {
+    padding: 0 20px;
+  }
+  &__img-wrapper {
+    margin-bottom: 20px;
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+  }
+  &__name {
+    font: 400 24px / 24px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    margin-bottom: 6px;
+  }
+  &__position {
+    font: 400 16px / 20px 'Fira Sans', sans-serif;
+    color: #acacad;
+    margin-bottom: 9px;
+  }
+  &__phone,
+  &__mail {
+    display: block;
+    text-decoration: none;
+    font: 400 17px / 24px 'Fira Sans', sans-serif;
+    color: $titlecolor;
+    cursor: default;
+  }
+}

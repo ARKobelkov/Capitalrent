@@ -75,13 +75,6 @@
       color: $searchfont;
     }
   }
-  &__main {
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (min-width: 1440px) {
-      flex-wrap: nowrap;
-    }
-  }
   &__block {
     display: flex;
     flex-wrap: wrap;
@@ -102,15 +95,6 @@
   }
   &__category.hidden {
     display: none;
-  }
-  &__sideblock {
-    display: flex;
-    margin: 0 -10px;
-    flex-wrap: wrap;
-    @media screen and (min-width: 1440px) {
-      display: block;
-      margin: 0;
-    }
   }
   &__long {
     padding: 10px;

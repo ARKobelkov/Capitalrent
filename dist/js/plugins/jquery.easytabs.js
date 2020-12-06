@@ -618,3 +618,4 @@
     });
   };
 })(jQuery);
+//# sourceMappingURL=jquery.easytabs.js.map
