@@ -1,0 +1,81 @@
+.news-open {
+  padding: 10px 0 20px;
+  &__main {
+    @media screen and (min-width: 1200px) {
+      padding-right: 253px;
+      width: 100%;
+      min-height: 1px;
+      float: left;
+    }
+    h1 {
+      font: 500 30px / 30px 'Fira Sans', sans-serif;
+      color: $titlecolor;
+    }
+    span {
+      font: 400 14px / 29px 'Fira Sans', sans-serif;
+      color: #466a93;
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+    a {
+      text-decoration: none;
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+    img {
+      margin-bottom: 10px;
+    }
+    h2 {
+      font: 400 24px / 29px 'Fira Sans', sans-serif;
+      color: #0a1828;
+    }
+    ul {
+      margin-bottom: 30px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    q {
+      font-weight: 400;
+      color: #375172;
+    }
+  }
+  &__aside {
+    @media screen and (min-width: 1200px) {
+      width: 253px;
+      float: left;
+      margin-left: -253px;
+      padding-left: 45px;
+    }
+    &-title {
+      font: 500 16px / 28px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: #375172;
+      border-bottom: 1px solid #e1e4ec;
+      padding-bottom: 20px;
+      margin: 0;
+    }
+    &-item {
+      padding: 21px 0;
+      border-bottom: 1px solid #e1e4ec;
+    }
+    &-link {
+      text-decoration: none;
+      display: inline-block;
+      font: 400 16px / 24px 'Fira Sans', sans-serif;
+      color: $titlecolor;
+      margin-bottom: 12px;
+      @include texthover;
+    }
+    &-date {
+      font: 400 14px / 14px 'Fira Sans', sans-serif;
+      color: #466a93;
+      display: block;
+    }
+  }
+  &__share {
+    margin-bottom: 30px;
+  }
+}
