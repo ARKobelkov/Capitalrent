@@ -1,0 +1,113 @@
+.news {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid #f2f3f7;
+    &-title {
+      font: 400 30px / 30px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 15px;
+      margin-right: 20px;
+    }
+    &-links {
+      display: flex;
+      margin: 15px -10px -2px;
+    }
+    &-item {
+      padding: 0 10px;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      font: 500 16px / 16px 'Fira Sans', sans-serif;
+      color: $shtabfont;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 14px;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        border-bottom: 2px solid $footertitle;
+        color: $footertitle;
+      }
+    }
+    &-link.active {
+      border-bottom: 2px solid $footertitle;
+      color: $footertitle;
+    }
+  }
+  &__item {
+    padding: 30px 0;
+    border-bottom: 2px solid #f2f3f7;
+  }
+  &__item-link {
+    display: block;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    &:hover,
+    &:active {
+      .news__title {
+        color: $linkcolor;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__img-wrapper {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      width: 250px;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    max-width: none;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+  &__title {
+    font: 500 22px / 30px 'Fira Sans', sans-serif;
+    color: $headerbtnfont;
+    margin-bottom: 9px;
+    transition: all 0.3s ease;
+    @media screen and (min-width: 1440px) {
+      margin-top: 8px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    font: 400 14px / 14px 'Fira Sans', sans-serif;
+    color: #a5a7a9;
+    margin-bottom: 13px;
+  }
+  &__time {
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  &__views {
+    padding-left: 20px;
+    position: relative;
+    fill: #a5a7a9;
+  }
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+  &__descr {
+    font: 400 16px / 24px 'Fira Sans', sans-serif;  
+    color: #4b514f;
+    margin-bottom: 0;
+  }
+  &__pagination {
+    padding: 50px 0;
+    max-width: 444px;
+    margin: 0 auto;
+  }
+}
