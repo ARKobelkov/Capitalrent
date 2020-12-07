@@ -1533,6 +1533,67 @@ input::-ms-clear {
 .pagination__link_prev.disabled:before {
   border-color: #e1e2e6
 }
+.map {
+  position: relative
+}
+.map__navs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-bottom: 0;
+  z-index: 1
+}
+.map__nav {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
+.map__nav-link {
+  display: block;
+  text-decoration: none;
+  font: 500 14px/30px "Fira Sans",sans-serif;
+  color: #30322e;
+  background: #fff;
+  -webkit-border-radius: 0 22.5px 22.5px 0;
+  -moz-border-radius: 0 22.5px 22.5px 0;
+  border-radius: 0 22.5px 22.5px 0;
+  padding: 6px 32px 6px 25px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease
+}
+.map__nav-link:active,
+.map__nav-link:hover {
+  -webkit-box-shadow: 0 0 12px 1px rgba(75,75,75,.23);
+  -moz-box-shadow: 0 0 12px 1px rgba(75,75,75,.23);
+  box-shadow: 0 0 12px 1px rgba(75,75,75,.23)
+}
+.map__nav-link_left {
+  -webkit-border-radius: 22.5px 0 0 22.5px;
+  -moz-border-radius: 22.5px 0 0 22.5px;
+  border-radius: 22.5px 0 0 22.5px;
+  padding: 6px 25px 6px 32px
+}
+.map__nav-link.active {
+  background: #ea5c57;
+  color: #fff
+}
+.map__block {
+  height: 500px
+}
 .header__top {
   background: #0a1828;
   position: relative;
@@ -3626,6 +3687,183 @@ input::-ms-clear {
 .news-open__share {
   margin-bottom: 30px
 }
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.contacts__contacts {
+  width: 100%
+}
+.contacts__contacts-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.contacts__contacts-title {
+  font: 400 30px/30px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 35px
+}
+.contacts__contacts-item {
+  position: relative;
+  padding-left: 45px;
+  padding-right: 25px;
+  margin-bottom: 30px;
+  width: 100%
+}
+.contacts__contacts-icon {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  fill: #004b90
+}
+.contacts__contacts-label {
+  font: 400 18px/26px "Fira Sans",sans-serif;
+  color: #a7a8aa;
+  display: block;
+  margin-bottom: 9px
+}
+.contacts__contacts-link {
+  font: 500 22px/26px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  text-decoration: none;
+  cursor: default;
+  margin-bottom: 13px;
+  display: inline-block
+}
+.contacts__contacts-address {
+  font: 500 18px/26px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 13px;
+  display: inline-block
+}
+.contacts__form {
+  width: 100%
+}
+.contacts__form-title {
+  font: 400 24px/30px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 18px
+}
+.contacts__form-descr {
+  font: 400 18px/26px "Fira Sans",sans-serif;
+  color: #a7a8aa;
+  margin-bottom: 20px
+}
+.contacts__form-input-wrapper {
+  position: relative
+}
+.contacts__form-input-wrapper:focus-within .contacts__form-icon {
+  fill: #004b90
+}
+.contacts__form-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #e1e1e1;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  transition: all .2s ease
+}
+.contacts__form-input {
+  width: 100%;
+  background: #f2f3f7;
+  border: 2px solid #e1e2e6;
+  padding: 0 58px 0 22px;
+  height: 55px;
+  margin-bottom: 20px;
+  font: 400 15px/43px "Fira Sans",sans-serif;
+  color: #0a1828;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  transition: all .2s ease
+}
+.contacts__form-input:focus {
+  border-color: #004b90
+}
+.contacts__form-input:focus .contacts__form-icon {
+  fill: #004b90
+}
+.contacts__form-textarea {
+  width: 100%;
+  background: #f2f3f7;
+  border: 2px solid #e1e2e6;
+  padding: 18px 22px;
+  resize: none;
+  font: 400 15px/20px "Fira Sans",sans-serif;
+  color: #0a1828;
+  margin-bottom: 20px;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  transition: all .2s ease
+}
+.contacts__form-textarea:focus {
+  border-color: #004b90
+}
+.contacts__form-btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 20px
+}
+.contacts__form-btn {
+  margin: 0 15px;
+  background: #004b90;
+  border: none;
+  font: 500 15px/15px "Fira Sans",sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 25px 55px 21px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-bottom: 20px
+}
+.contacts__form-btn:active,
+.contacts__form-btn:hover {
+  background: #e83f33
+}
+.contacts__form-info {
+  margin: 0 15px;
+  font: 400 13px/19px "Fira Sans",sans-serif;
+  color: #888f98;
+  margin-bottom: 20px
+}
+.contacts__map {
+  margin-bottom: 40px
+}
 @media screen and (min-width:480px) {
   .cover {
     min-width: 320px
@@ -3736,6 +3974,14 @@ input::-ms-clear {
   }
   .advantages__title {
     padding-right: 40px
+  }
+  .contacts__contacts-item {
+    width: 50%
+  }
+  .contacts__form-btn-wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap
   }
 }
 @media screen and (min-width:768px) {
@@ -4199,6 +4445,22 @@ input::-ms-clear {
     margin-left: -253px;
     padding-left: 45px
   }
+  .contacts__wrapper {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap
+  }
+  .contacts__contacts {
+    width: 40%;
+    padding-right: 50px
+  }
+  .contacts__contacts-item {
+    width: 100%;
+    padding-right: 0
+  }
+  .contacts__form {
+    width: 60%
+  }
 }
 @media screen and (min-width:1440px) {
   .cover {
@@ -4295,5 +4557,11 @@ input::-ms-clear {
   }
   .news__title {
     margin-top: 8px
+  }
+  .contacts__contacts {
+    padding-right: 100px
+  }
+  .contacts__form-info {
+    padding-right: 60px
   }
 }

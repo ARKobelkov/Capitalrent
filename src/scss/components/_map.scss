@@ -1,0 +1,40 @@
+.map {
+  position: relative;
+  &__navs {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    z-index: 1;
+  }
+  &__nav {
+    flex: 0 0 auto;
+    &-link {
+      display: block;
+      text-decoration: none;
+      font: 500 14px / 30px 'Fira Sans', sans-serif;
+      color: #30322e;
+      background: #fff;
+      border-radius: 0 22.5px 22.5px 0;
+      padding: 6px 32px 6px 25px;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        box-shadow: 0px 0px 12px 1px rgba(75,75,75,0.23);
+      }
+      &_left {
+        border-radius: 22.5px 0 0 22.5px;
+        padding: 6px 25px 6px 32px;
+      }
+    }
+    &-link.active {
+      background: #ea5c57;
+      color: #fff;
+    }
+  }
+  &__block {
+    height: 500px;
+  }
+}

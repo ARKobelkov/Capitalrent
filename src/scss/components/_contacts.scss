@@ -1,0 +1,167 @@
+.contacts {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__contacts {
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+      padding-right: 50px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding-right: 100px;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-title {
+      font: 400 30px / 30px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 35px;
+    }
+    &-item {
+      position: relative;
+      padding-left: 45px;
+      padding-right: 25px;
+      margin-bottom: 30px;
+      width: 100%;
+      @media screen and (min-width: 600px) {
+        width: 50%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    &-icon {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      fill: #004b90;
+    }
+    &-label {
+      font: 400 18px / 26px 'Fira Sans', sans-serif;
+      color: #a7a8aa;
+      display: block;
+      margin-bottom: 9px;
+    }
+    &-link {
+      font: 500 22px / 26px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      text-decoration: none;
+      cursor: default;
+      margin-bottom: 13px;
+      display: inline-block;
+    }
+    &-address {
+      font: 500 18px / 26px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 13px;
+      display: inline-block;
+    }
+  }
+  &__form {
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 60%;
+    }
+    &-title {
+      font: 400 24px / 30px 'Fira Sans', sans-serif;
+      color: $footertitle;
+      margin-bottom: 18px;
+    }
+    &-descr {
+      font: 400 18px / 26px 'Fira Sans', sans-serif;
+      color: #a7a8aa;
+      margin-bottom: 20px;
+    }
+    &-input-wrapper {
+      position: relative;
+      &:focus-within .contacts__form-icon {
+        fill: #004b90;
+      }
+    }
+    &-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      fill: #e1e1e1;
+      transition: all 0.2s ease;
+    }
+    &-input {
+      width: 100%;
+      background: #f2f3f7;
+      border: 2px solid #e1e2e6;
+      padding: 0 58px 0 22px;
+      height: 55px;
+      margin-bottom: 20px;
+      font: 400 15px / 43px 'Fira Sans', sans-serif;
+      color: #0a1828;
+      transition: all 0.2s ease;
+      &:focus {
+        border-color: #004b90;
+      }
+      &:focus .contacts__form-icon {
+        fill: #004b90;
+      }
+    }
+    &-textarea {
+      width: 100%;
+      background: #f2f3f7;
+      border: 2px solid #e1e2e6;
+      padding: 18px 22px;
+      resize: none;
+      font: 400 15px / 20px 'Fira Sans', sans-serif;
+      color: #0a1828;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+      &:focus {
+        border-color: #004b90;
+      }
+    }
+    &-btn-wrapper {
+      display: flex;
+      margin: 0 -15px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      @media screen and (min-width: 600px) {
+        flex-wrap: nowrap;
+      }
+    }
+    &-btn {
+      margin: 0 15px;
+      background: #004b90;
+      border: none;
+      font: 500 15px / 15px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 25px 55px 21px;
+      flex: 0 0 auto;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      &:hover,
+      &:active {
+        background: $hovercolor;
+      }
+    }
+    &-info {
+      margin: 0 15px;
+      font: 400 13px / 19px 'Fira Sans', sans-serif;
+      color: #888f98;
+      margin-bottom: 20px;
+      @media screen and (min-width: 1440px) {
+        padding-right: 60px;
+      }
+    }
+  }
+  &__map {
+    margin-bottom: 40px;
+  }
+}

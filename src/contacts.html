@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('./include/head.html');
+  <body>
+    <div class="wrapper">
+      <!-- (main) -->
+      <div class="wrapper__content">
+        <!-- (header) -->
+        @include('./include/header.html');
+        <!-- End (header) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <a href="#" class="location__link">О компании</a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Контакты</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End (location) -->
+        <!-- (about-company) -->
+        <section class="about-company">
+          <div class="about-company__cover cover">
+            <div class="about-company__wrapper clearfix">
+              <main class="about-company__main">
+                <!-- (contacts) -->
+                <section class="contacts">
+                  <div class="contacts__wrapper">
+                    <div class="contacts__contacts">
+                      <h1 class="contacts__contacts-title">Контакты</h1>
+                      <ul class="contacts__contacts-list">
+                        <li class="contacts__contacts-item">
+                          <svg class="contacts__contacts-icon" width="19" height="19">
+                            <use xlink:href="images/icons.svg#phone-icon"></use>
+                          </svg>
+                          <span class="contacts__contacts-label">Поддержка клиентов:</span>
+                          <a href="tel:+74995515511" class="contacts__contacts-link">+7 (499) 551-551-1</a>
+                        </li>
+                        <li class="contacts__contacts-item">
+                          <svg class="contacts__contacts-icon" width="16" height="24">
+                            <use xlink:href="images/icons.svg#geo-icon"></use>
+                          </svg>
+                          <span class="contacts__contacts-label">Наш офис:</span>
+                          <address class="contacts__contacts-address">105120, г. Москва, ул. Земляной Вал,
+                            д. 35, стр. 1</address>
+                        </li>
+                        <li class="contacts__contacts-item">
+                          <svg class="contacts__contacts-icon" width="20" height="20">
+                            <use xlink:href="images/icons.svg#clock-icon"></use>
+                          </svg>
+                          <span class="contacts__contacts-label">Режим работы:</span>
+                          <span class="contacts__contacts-link">Пн-пт с 9-00 до 19-00</span>
+                        </li>
+                        <li class="contacts__contacts-item">
+                          <svg class="contacts__contacts-icon" width="19" height="19">
+                            <use xlink:href="images/icons.svg#mail-white-icon"></use>
+                          </svg>
+                          <span class="contacts__contacts-label">E-mail:</span>
+                          <a href="mailto:info@cr.ru" class="contacts__contacts-link">info@cr.ru</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="contacts__form">
+                      <form action="#" name="contactsForm" method="POST">
+                        <div class="contacts__form-wrapper">
+                          <h2 class="contacts__form-title">Обратная связь</h2>
+                          <p class="contacts__form-descr">Мы проконсультируем вас по всем интересующим вопросам</p>
+                          <div class="contacts__form-inputs">
+                            <div class="contacts__form-input-wrapper">
+                              <svg class="contacts__form-icon" width="14" height="16">
+                                <use xlink:href="images/icons.svg#user"></use>
+                              </svg>
+                              <input type="text" name="contactsName" placeholder="Ваше имя" class="contacts__form-input">
+                            </div>
+                            <div class="contacts__form-input-wrapper">
+                              <svg class="contacts__form-icon" width="14" height="15">
+                                <use xlink:href="images/icons.svg#call-icon"></use>
+                              </svg>
+                              <input type="tel" name="contactsPhone" placeholder="Номер телефона" class="contacts__form-input">
+                            </div>
+                            <div class="contacts__form-input-wrapper">
+                              <textarea name="contactsComment" id="contactsComment" cols="30" rows="5" placeholder="Здравствуйте, перезвоните мне, пожалуйста. Заранее спасибо." class="contacts__form-textarea"></textarea>
+                            </div>
+                          </div>
+                          <div class="contacts__form-btn-wrapper">
+                            <button type="submit" class="contacts__form-btn">оставить заявку</button>
+                            <p class="contacts__form-info">Отправляя данные, Вы подтверждаете ознакомление с <a href="#">пользовательским соглашением</a></p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="contacts__map">
+                    <!-- (map) -->
+                    <div class="map" id="map">
+                      <ul class="map__navs">
+                        <li class="map__nav">
+                          <a href="#map-ya" class="map__nav-link map__nav-link_left">На карте</a>
+                        </li>
+                        <li class="map__nav">
+                          <a href="#panorama" class="map__nav-link">Панорама</a>
+                        </li>
+                      </ul>
+                      <div class="map__content" id="map-tabs">
+                        <div class="map__block" id="map-ya">
+                        </div>
+                        <div class="map__block" id="panorama">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End (map) -->
+                  </div>
+                </section>
+                <!-- End (contacts) -->
+              </main>
+              <aside class="about-company__aside">
+                <!-- (nav-about) -->
+                <nav class="nav-about">
+                  <ul class="nav-about__list">
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">О компании</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Наша команда</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Услуги</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Пресс-центр</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Новости компани</a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link nav-about__link_active">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- End (nav-about) -->
+                <!-- (side-banner) -->
+                <div class="side-banner">
+                  <a href="#" class="side-banner__link">
+                    <div class="side-banner__img-wrapper">
+                      <img src="images/content/categories/office.svg" alt="Аренда" class="side-banner__img">
+                    </div>
+                    <h5 class="side-banner__title">Готовый арендный бизнес в Москве</h5>
+                    <p class="side-banner__descr">прибыль до 
+                      <br>
+                      750 000 руб./мес</p>
+                  </a>
+                </div>
+                <!-- End (side-banner) -->
+                <!-- (side-banner) -->
+                <div class="side-banner">
+                  <a href="#" class="side-banner__link">
+                    <div class="side-banner__img-wrapper">
+                      <img src="images/content/categories/shop.svg" alt="Аренда" class="side-banner__img">
+                    </div>
+                    <h5 class="side-banner__title">Коммерческая недвижимость</h5>
+                    <p class="side-banner__descr">лучшие предложения
+                      по аренде и продаже</p>
+                  </a>
+                </div>
+                <!-- End (side-banner) -->
+              </aside>
+            </div>
+          </div>
+        </section>
+        <!-- End (about-company) -->
+      </div>
+      <!-- End (main) -->
+      <!-- (footer) -->
+      <div class="wrapper__footer">
+        @include('./include/footer.html');
+      </div>
+      <!-- End (footer) -->
+    </div>
+    <!-- (modal-phone) -->
+    @include('./include/modal-phone.html');
+    <!-- End (modal-phone) -->
+    <!-- (mobile-nav) -->
+    @include('./include/mobile-nav.html');
+    <!-- End (mobile-nav) -->
+    <!-- (scripts) -->
+    @include('./include/script.html');
+    <!-- End (scripts) -->
+  </body>
+</html>
