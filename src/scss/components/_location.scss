@@ -43,11 +43,34 @@
     color: #6b6f73;
   }
   &__icon {
+    margin-top: 8px;
     fill: #6b6f73;
     transition: all 0.3s ease;
     &:hover,
     &:active {
       fill: $hovercolor;
+    }
+  }
+  &_white {
+    background: none;
+    .location__item {
+      &:before {
+        border-color: #fff;
+      }
+    }
+    .location__link,
+    .location__last {
+      color: #f3f7f8;
+    }
+    .location__link {
+      @include texthover;
+    }
+    .location__icon {
+      fill: #f3f7f8;
+      &:hover,
+      &:active {
+      fill: $hovercolor;
+      }
     }
   }
 }

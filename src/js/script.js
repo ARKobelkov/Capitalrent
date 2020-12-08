@@ -265,50 +265,55 @@ $(function () {
   });
 
 // Карта яндекса
-  ymaps.ready(init);
-  function init() {
-  
-  // Создание карты.
-  var myMap = new ymaps.Map("map-ya", {
-    center: [55.75624906897797,37.65862549999994], 
-    zoom: 16,
-    controls: []
-  }),
-    // Метка на карте
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'ул. Земляной Вал, д.35, стр.1',
-      balloonContent: 'CapitalRent'
-  }, {
-    // Опции.
-    // Необходимо указать данный тип макета.
-    iconLayout: 'default#image',
-    // Своё изображение иконки метки.
-    iconImageHref: 'images/pin.png',
-    // Размеры метки.
-    iconImageSize: [44, 52],
-    // Смещение левого верхнего угла иконки относительно
-    // её "ножки" (точки привязки).
-    iconImageOffset: [-22, -25]
-  })
-  
-  myMap.geoObjects.add(myPlacemark);
-  myMap.behaviors
-    // Отключаем часть включенных по умолчанию поведений:
-    .disable(['scrollZoom']);
-  };
+  if ($('#map').length) {
+    ymaps.ready(init);
 
-  ymaps.ready(function () {
-    // Ищем панораму в переданной точке.
-   ymaps.panorama.locate([55.75624906897797,37.65862549999994]).done(
-     function (panoramas) {
-       if (panoramas.length > 0) {
-           var player = new ymaps.panorama.Player('panorama', panoramas[0], {
-             controls: [],
-             suppressMapOpenBlock: true
-           });
-           player.lookAt([55.75624906897797,37.65862549999994]);
-       }
-     }
-    );
-  })
+    function init() {
+  
+    // Создание карты.
+    var myMap = new ymaps.Map("map-ya", {
+      center: [55.75624906897797,37.65862549999994], 
+      zoom: 16,
+      controls: []
+    }),
+      // Метка на карте
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'ул. Земляной Вал, д.35, стр.1',
+        balloonContent: 'CapitalRent'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'images/pin.png',
+      // Размеры метки.
+      iconImageSize: [44, 52],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-22, -25]
+    })
+    
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors
+      // Отключаем часть включенных по умолчанию поведений:
+      .disable(['scrollZoom']);
+    };
+  
+    ymaps.ready(function () {
+      // Ищем панораму в переданной точке.
+      ymaps.panorama.locate([55.75624906897797,37.65862549999994]).done(
+        function (panoramas) {
+          if (panoramas.length > 0) {
+              var player = new ymaps.panorama.Player('panorama', panoramas[0], {
+                controls: [],
+                suppressMapOpenBlock: true
+              });
+              player.lookAt([55.75624906897797,37.65862549999994]);
+          }
+        }
+      );
+    })
+  }
+ 
+  
 });

@@ -1,0 +1,23 @@
+.btn-show {
+  position: relative;
+  background: #fff;
+  border: 2px solid #e1e4ec;
+  border-radius: 2px;
+  font: 500 14px / 50px 'Fira Sans', sans-serif;
+  text-transform: uppercase;
+  color: #0f1c2c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 27px 0 55px;
+  &:hover,
+  &:active {
+    box-shadow: 0 0 13px 0 rgba(18,46,72,.1);
+  }
+  &__icon {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #f43c2e; 
+  }
+}

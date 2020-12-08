@@ -1,0 +1,102 @@
+.jl-post {
+  &__link {
+    display: block;
+    text-decoration: none;
+    &:hover .jl-post__title,
+    &:active .jl-post__title {
+      color: $linkcolor;
+    }
+  }
+  &__img-wrapper {
+    position: relative;
+    margin-bottom: 17px;
+  }
+  img {
+    max-width: none;
+    width: 100%;
+  }
+  &__label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font: 400 14px / 21px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: #f5f9fd;
+    background: #004b90;
+    border-radius: 14.5px;
+    padding: 5px 15px 3px;
+    text-align: center;
+    min-width: 112px;
+    &_red {
+      background: #f43c2e;
+    }
+    &_bottom {
+      top: auto;
+      bottom: 20px;
+    }
+  }
+  &__title {
+    font: 600 18px / 20px 'Fira Sans', sans-serif;
+    color: #2c2f2e;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    @media screen and (min-width: 1440px) {
+      font: 600 22px / 30px 'Fira Sans', sans-serif;
+    }
+  }
+  span {
+    display: block;
+    font: 400 14px / 23px 'Fira Sans', sans-serif;
+    color: #86888a;
+    margin-bottom: 5px;
+  }
+  p {
+    font: 400 16px / 24px 'Fira Sans', sans-serif;
+    color: #3d4140;
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+  }
+  &_big {
+    .jl-post__img-wrapper {
+      @media screen and (min-width: 480px) {
+        width: 50%;
+        padding-right: 25px;
+        float: left;
+      }
+      @media screen and (min-width: 768px) {
+        margin-right: 25px;
+        margin-bottom: 25px;
+      }
+    }
+    .jl-post__title {
+      @media screen and (min-width: 1440px) {
+        padding-top: 5px;
+      }
+    }
+  }
+  &_small {
+    .jl-post__img-wrapper {
+      margin-right: 20px;
+      margin-bottom: 0px;
+      width: 145px;
+      float: left;
+      @media screen and (min-width: 600px) {
+        width: 185px;
+        margin-bottom: 14px;
+      }
+      @media screen and (min-width: 768px) {
+        width: 47%;
+      }
+    }
+    .jl-post__title {
+      @media screen and (min-width: 1440px) {
+        padding-top: 5px;
+      }
+    }
+    p {
+      @media screen and (min-width: 1200px) {
+        float: left;
+      }
+    }
+  }
+}
