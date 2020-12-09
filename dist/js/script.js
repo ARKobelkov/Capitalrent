@@ -20,17 +20,17 @@ $(function () {
 
     if ($('#filter-btn').hasClass('active')) {
       $('#filter-btn').removeClass('active');
-      $('#modal-filter').fadeOut();
+      $('#modal-filter').stop(true, true).fadeOut();
     }
 
     $(this).toggleClass('active');
-    $('#modal-catalog').fadeToggle();
+    $('#modal-catalog').stop(true, true).fadeToggle();
   }); // Кнопка закрытия окна - каталог
 
   $('#catalog-close').on('click', function (event) {
     event.preventDefault();
     $('#catalog-btn').removeClass('active');
-    $('#modal-catalog').fadeOut();
+    $('#modal-catalog').stop(true, true).fadeOut();
   }); // Модальное окно - фильтр
 
   $('#filter-btn').on('click', function (event) {
@@ -38,11 +38,11 @@ $(function () {
 
     if ($('#catalog-btn').hasClass('active')) {
       $('#catalog-btn').removeClass('active');
-      $('#modal-catalog').fadeOut();
+      $('#modal-catalog').stop(true, true).fadeOut();
     }
 
     $(this).toggleClass('active');
-    $('#modal-filter').fadeToggle(); // Селекты в фильтре
+    $('#modal-filter').stop(true, true).fadeToggle(); // Селекты в фильтре
 
     $('.modal-filter__select').styler({
       selectSmartPositioning: false
@@ -135,13 +135,13 @@ $(function () {
   $('#all-filters').on('click', function (event) {
     event.preventDefault();
     $(this).toggleClass('active');
-    $('#hiddenFilters').slideToggle();
+    $('#hiddenFilters').stop(true, true).slideToggle();
   }); // Кнопка закрытия окна - фильтр
 
   $('#filter-close').on('click', function (event) {
     event.preventDefault();
     $('#filter-btn').removeClass('active');
-    $('#modal-filter').fadeOut();
+    $('#modal-filter').stop(true, true).fadeOut();
   }); // Кнопка поиска
 
   $('#search-btn').on('click', function (event) {
@@ -161,38 +161,20 @@ $(function () {
     }
 
     ;
-    $('.categories__category.hidden').slideToggle();
+    $('.categories__category.hidden').stop(true, true).slideToggle();
   }); // Табы
 
   function tabsActive(tabsNavBlock, tabsBlock) {
     $(tabsNavBlock).easytabs({
       updateHash: false,
-      animate: true,
+      animate: false,
       panelContext: $(tabsBlock)
     });
   }
 
   tabsActive('#journal-nav', '#journal-tabs');
   tabsActive('#interview-nav', '#interview-tabs');
-  tabsActive('#reviews-nav', '#reviews-tabs'); // Табы - блок "Журнал"
-  // $('#journal-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#journal-tabs')
-  // });
-  // Табы - блок "Интервью"
-  // $('#interview-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#interview-tabs')
-  // });
-  // Табы - блок "Обзоры"
-  // $('#reviews-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#reviews-tabs')
-  // });
-  // Попап - обратный звонок
+  tabsActive('#reviews-nav', '#reviews-tabs'); // Попап - обратный звонок
 
   $('.modal').on('click', function (event) {
     event.preventDefault();
@@ -221,22 +203,23 @@ $(function () {
     });
   }); // Кнопки социальных сетей
 
-  if (window.pluso) if (typeof window.pluso.start == "function") return;
+  (function () {
+    if (window.pluso) if (typeof window.pluso.start == "function") return;
 
-  if (window.ifpluso == undefined) {
-    window.ifpluso = 1;
-    var d = document,
-        s = d.createElement('script'),
-        g = 'getElementsByTagName';
-    s.type = 'text/javascript';
-    s.charset = 'UTF-8';
-    s.async = true;
-    s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
-    var h = d[g]('body')[0];
-    h.appendChild(s);
-  }
+    if (window.ifpluso == undefined) {
+      window.ifpluso = 1;
+      var d = document,
+          s = d.createElement('script'),
+          g = 'getElementsByTagName';
+      s.type = 'text/javascript';
+      s.charset = 'UTF-8';
+      s.async = true;
+      s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+      var h = d[g]('body')[0];
+      h.appendChild(s);
+    }
+  })(); // Табы в карте
 
-  ; // Табы в карте
 
   $('#map').easytabs({
     updateHash: false,
@@ -244,7 +227,7 @@ $(function () {
     panelContext: $('#map-tabs')
   }); // Карта яндекса
 
-  if ($('#map').length) {
+  if ($('div').is('#map')) {
     var init = function init() {
       // Создание карты.
       var myMap = new ymaps.Map("map-ya", {
@@ -287,5 +270,22 @@ $(function () {
         }
       });
     });
-  }
+  } // Кнопка копии
+
+
+  var clipboard = new ClipboardJS('.copy__btn');
+  clipboard.on('success', function (e) {
+    function hideToolTip() {
+      $(e.trigger).siblings('.copy__tooltip').stop(true, true).fadeOut();
+    }
+
+    $(e.trigger).siblings('.copy__tooltip').stop(true, true).fadeIn();
+    $(e.trigger).mouseleave(function () {
+      hideToolTip();
+    });
+    setTimeout(function () {
+      hideToolTip();
+    }, 3000);
+    e.clearSelection();
+  });
 });

@@ -102,7 +102,6 @@
       display: block;
       text-decoration: none;
       display: flex;
-      align-items: center;
       &:hover .jl-content__aside-label,
       &:active .jl-content__aside-label {
         color: #E83F33;
@@ -128,6 +127,8 @@
       color: #2c2f2e;
       margin-bottom: 13px;
       transition: all 0.3s ease;
+      max-height: 86px;
+      overflow: hidden;
     }
     &-date {
       font: 400 14px / 14px 'Fira Sans', sans-serif;

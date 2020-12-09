@@ -481,168 +481,323 @@
           <!-- End (modal-filter) -->
         </section>
         <!-- End (header) -->
-        <!-- (location) -->
-        <section class="location">
-          <div class="location__cover cover">
-            <ul class="location__list">
-              <li class="location__item">
-                <a href="/" class="location__link">
-                  <svg class="location__icon" width="15" height="14">
-                    <use xlink:href="images/icons.svg#house-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="location__item">
-                <a href="#" class="location__link">О компании</a>
-              </li>
-              <li class="location__item">
-                <span href="#" class="location__last">Агентство недвижимости «CapitalRent»</span>
-              </li>
-            </ul>
+        <!-- (jl-header) -->
+        <section class="jl-header">
+          <img src="images/content/home.jpg" alt="Фото города" class="jl-header__img">
+          <div class="jl-header__location">
+            <!-- (location) -->
+            <section class="location location_white">
+              <div class="location__cover cover">
+                <ul class="location__list">
+                  <li class="location__item">
+                    <a href="/" class="location__link">
+                      <svg class="location__icon" width="15" height="14">
+                        <use xlink:href="images/icons.svg#house-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="location__item">
+                    <a href="/" class="location__link">журнал</a>
+                  </li>
+                  <li class="location__item">
+                    <span href="#" class="location__last">новости недвижимости</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- End (location) -->
           </div>
-        </section>
-        <!-- End (location) -->
-        <!-- (about-company) -->
-        <section class="about-company">
-          <div class="about-company__cover cover">
-            <div class="about-company__wrapper clearfix">
-              <main class="about-company__main">
-                <!-- (news-open) -->
-                <section class="news-open clearfix">
-                  <div class="news-open__main">
-                    <h1>Обновление сайта АН CapitalRent</h1>
-                    <span>Опубликовано 28.11.2017</span>
-                    <br>
-                    <p>Агентство недвижимости CapitalRent обновляет официальный сайт, где с этого
-                      момента будут размещены все актуальные предложения коммерческой
-                      недвижимости Москвы и Подмосковья.</p>
-                    <p>Мы осознаем, что необходимо идти в ногу со временем, и поэт ому распространение
-                      информации в интернете – необходимость, к реализации которой мы подошли
-                      серьезно. В нашем каталоге вы найдете офисы в аренду и на продажу, торговые
-                      площади и помещения свободного назначения. Не остались без внимания
-                      и складские и производственные площади, а также земельные участки.</p>
-                    <p>По всем возникающим вопросам – звоните нам или оставляйте <a href="#">заявку с сайта</a>, мы оперативно свяжемся с вами!</p>
-                    <br>
-                    <img src="images/content/notebook.jpg" alt="Фото ноутбука">
-                    <br>
-                    <h2>Виды деятельности агентства:</h2>
-                    <ul class="marker">
-                      <li>помощь в продаже коммерческой и жилой недвижимости</li>
-                      <li>помощь в подборе подходящего объекта недвижимости</li>
-                      <li>сопровождение и оформление сделок</li>
-                      <li>оценка стоимости объектов</li>
-                      <li>консалтинговые услуги</li>
-                    </ul>
-                    <p>Помимо кропотливой и эффективной работы с недвижимостью, мы стараемся
-                      постоянно повышать качество наших услуг, внедряя новые предложения и развивая профессионализм сотрудников.</p>
-                    <p>Мы ценим прозрачные взаимовыгодные отношения с клиентами, в чем уже
-                      убедились сотни наших клиентов и партнеров. Такой подход к делу позволяет даже
-                      в кризисное время находить успешные варианты решения сложных вопросов,
-                      а вам – максимально быстро и выгодно получать результат.</p>
-                    <q>Хотите совершить выгодную сделку и обрести надежного партнера в сфере работы
-                      с недвижимостью в нашем лице? Просто позвоните или оставьте заявку с сайта – мы обсудим
-                      удобное для вас время встречи в нашем уютном офисе или в другом подходящем месте, либо
-                      проконсультируем вас по телефону.</q>
-                    <!-- (share) -->
-                    <div class="news-open__share">
-                      <div class="share">
-                        <div class="share__label">поделиться</div>
-                        <div class="pluso share__social" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,google"></div>
-                      </div>
+          <div class="jl-header__cover cover">
+            <div class="jl-header__text jl-header__text_open">
+              <h1 class="jl-header__title">Как сделать и узаконить перепланировку в новостройке</h1>
+            </div>
+            <div class="jl-header__info">
+              <div class="jl-header__copy">
+                <!-- (copy) -->
+                <div class="copy">
+                  <form action="#" method="POST" name="copyForm">
+                    <div class="copy__field">
+                      <input type="text" id="siteAddress" name="copyText" placeholder="Ссылка на страницу" value="cr.ru/journal/11262" readonly class="copy__text">
+                      <div class="copy__tooltip">Скопировано!</div>
+                      <button name="copyText" type="button" class="copy__btn" data-clipboard-target="#siteAddress">
+                        <svg class="copy__icon" width="16" height="18">
+                          <use xlink:href="images/icons.svg#copy-icon"></use>
+                        </svg>
+                      </button>
                     </div>
-                    <!--  End (share) -->
+                  </form>
+                </div>
+                <!-- End (copy) -->
+              </div>
+              <div class="jl-header__view-block">
+                <div class="jl-header__date">21 июля 2017</div>
+                <div class="jl-header__views">2 457
+                  <svg class="jl-header__icon" width="15" height="10">
+                    <use xlink:href="images/icons.svg#eye-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="jl-header__share">
+                <!-- (share) -->
+                <div class="share share_black">
+                  <div class="share__img">
+                    <svg class="share__icon" width="21" height="17">
+                      <use xlink:href="images/icons.svg#share-arrow-icon"></use>
+                    </svg>
                   </div>
-                  <aside class="news-open__aside">
-                    <h6 class="news-open__aside-title">свежие новости</h6>
-                    <ul class="news-open__aside-list">
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">Почему надо работать с CapitalRent?</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">Интервью с Анжеликой Беляниной, уководителем отдела продаж коммерческой недвижимости CapitalRent</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">Почему надо работать с CapitalRent?</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">XYII Всероссийский саммит Рестораторов и Отельеров</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">Открытие ресторана «Nofar» на Кутузовском проспекте</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">Объекты коммерческого назначения в кварталах реновации</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                      <li class="news-open__aside-item">
-                        <a href="#" class="news-open__aside-link">В столичном правительстве рассказали о компенсации за коммерческие точки в сносимых пятиэтажка</a>
-                        <span class="news-open__aside-date">28.11.2017</span>
-                      </li>
-                    </ul>
-                  </aside>
-                </section>
-                <!-- End (news-open) -->
-              </main>
-              <aside class="about-company__aside">
-                <!-- (nav-about) -->
-                <nav class="nav-about">
-                  <ul class="nav-about__list">
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link">О компании</a>
-                    </li>
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link">Наша команда</a>
-                    </li>
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link">Услуги</a>
-                    </li>
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link">Пресс-центр</a>
-                    </li>
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link nav-about__link_active">Новости компани</a>
-                    </li>
-                    <li class="nav-about__item">
-                      <a href="#" class="nav-about__link">Контакты</a>
-                    </li>
-                  </ul>
-                </nav>
-                <!-- End (nav-about) -->
-                <!-- (side-banner) -->
-                <div class="side-banner">
-                  <a href="#" class="side-banner__link">
-                    <div class="side-banner__img-wrapper">
-                      <img src="images/content/categories/office.svg" alt="Аренда" class="side-banner__img">
-                    </div>
-                    <h5 class="side-banner__title">Готовый арендный бизнес в Москве</h5>
-                    <p class="side-banner__descr">прибыль до 
-                      <br>
-                      750 000 руб./мес</p>
-                  </a>
+                  <div class="pluso share__social" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,google"></div>
                 </div>
-                <!-- End (side-banner) -->
-                <!-- (side-banner) -->
-                <div class="side-banner">
-                  <a href="#" class="side-banner__link">
-                    <div class="side-banner__img-wrapper">
-                      <img src="images/content/categories/shop.svg" alt="Аренда" class="side-banner__img">
-                    </div>
-                    <h5 class="side-banner__title">Коммерческая недвижимость</h5>
-                    <p class="side-banner__descr">лучшие предложения
-                      по аренде и продаже</p>
-                  </a>
-                </div>
-                <!-- End (side-banner) -->
-              </aside>
+                <!-- End (share) -->
+              </div>
             </div>
           </div>
         </section>
-        <!-- End (about-company) -->
+        <!-- End (jl-header) -->
+        <!-- (jl-open) -->
+        <section class="jl-open">
+          <div class="jl-open__cover cover">
+            <main class="jl-open__content">
+              <article class="jl-open__article">
+                <div class="jl-open__left-block">
+                  <!-- (article-left-block) -->
+                  <div class="article-left-block__img-wrapper">
+                    <img src="images/content/jl-page/author.jpg" alt="Фото автора" class="article-left-block__img">
+                  </div>
+                  <div class="article-left-block__name">Ника Троицкая</div>
+                  <div class="article-left-block__position">маркетолог в недвижимости</div>
+                   <!-- End (article-left-block) -->
+                </div>
+                <h6>Вот сдал вам застройщик новую квартиру со стенами.</h6>
+                <p>Вы подписали акты и оформили право собственности. А потом решили сделать в коридоре
+                  гардеробную. Просто так построить стену нельзя: надо делать перепланировку.</p>
+                <p>По закону любые новые стены в квартире надо узаконить в БТИ и районном отделе
+                  архитектуры. На новые стены получают техпаспорт, и тогда перепланировка законна.</p>
+                <br>
+                <h3>Зачем согласовывать перепланировку</h3>
+                <div class="jl-open__right-block">
+                  <!-- (article-right-block) -->
+                  <a href="#" class="article-right-block">
+                    <div class="article-right-block__img-wrapper">
+                      <img src="images/content/jl-page/right-side1.jpg" alt="Фото автора" class="article-right-block__img">
+                    </div>
+                    <div class="article-right-block__label">CR Journal</div>
+                    <div class="article-right-block__title">ВТБ продал три гостинницы в Москве</div>
+                  </a>
+                  <!-- End (article-right-block) -->
+                </div>
+                <p>Эта процедура нужна с одной целью: чтобы жильцы не построили у себя в квартире чего-то   такого, от чего рухнет весь дом. Есть риск, что новые стены создадут лишнюю нагрузку на что-то важное, дом покосится и упадет. Или жилец решит разобрать кусок стены, а там        вентиляционный короб или трубы.</p>
+                <p>Государство не доверяет жильцам вопросы архитектуры многоквартирного дома —
+                  и правильно делает. В реальности согласовывают перепланировку далеко не всегда: слишком много бюрократии, пройти которую выйдет дороже. Чаще всего просто на этапе ремонта зовут бригаду, самостоятельно всё строят и спокойно живут. Перепланировка получается
+                  незаконной.</p>
+                <p>Если о незаконной перепланировке узнают, то собственника оштрафуют на 2500 рублей
+                  и потребуют за свой счет всё вернуть как было. Если собственник не вернет, квартиру отберут и выставят на торги. В этой ситуации всем плевать на право собственности: собственник
+                  получит только сумму с торгов за вычетом расходов на их проведение.</p>
+                <p>Чтобы такого не произошло, важно делать перепланировку по закону. Сегодня разбираемся,
+                  как сделать перепланировку и узаконить ее. В отдельной статье напишем, что делать, если
+                  вы уже всё перестроили, а документы не собирали.</p>
+                <h6>Перепланировку делают в три этапа:</h6>
+                <ol class="marker">
+                  <li>Готовят проект и согласовывают его в администрации района.</li>
+                  <li>Ломают старое и строят новое.</li>
+                  <li>Сдают администрации новое и получают на него документы.</li>
+                </ol>
+                <br>
+                <h3>Закажите проект перепланировки</h3>
+                <p>Проект перепланировки заказывают в компании, у которой есть допуски СРО на выполнение
+                  проектных работ. СРО — это саморегулируемая организация, по факту — реестр всех
+                  порядочных строителей. Раньше строителям выдавали лицензии на проектирование, а теперь выдают допуск на проектирование, свидетельство о допуске и вносят в реестр этой СРО.</p>
+                <p>Чтобы убедиться, что у компании действительно есть допуски СРО, запросите у них
+                  свидетельство о допуске к работам. В свидетельстве посмотрите, в какой СРО состоит
+                  компания и за каким номером в реестре она числится.</p>
+                <img src="images/content/jl-page/room-plan.jpg" alt="План комнаты">
+                <span>3d-модель перепланировки квартиры. Источник: <a href="#">Мосэнергострой</a></span>
+                <div class="jl-open__right-block">
+                  <!-- (article-right-block) -->
+                  <a href="#" class="article-right-block">
+                    <div class="article-right-block__img-wrapper">
+                      <img src="images/content/jl-page/right-side1.jpg" alt="Фото автора" class="article-right-block__img">
+                    </div>
+                    <div class="article-right-block__label">CR Journal</div>
+                    <div class="article-right-block__title">ВТБ продал три гостинницы в Москве</div>
+                  </a>
+                  <!-- End (article-right-block) -->
+                </div>
+                <p>Найдите сайт этой СРО и проверьте, есть ли в реестре членов интересующая вас компания. Если всё в порядке, несите им техпаспорт квартиры и заказывайте проект. Проект
+                  перепланировки нужен, чтобы в отделе архитектуры убедились, что перекрытия способны выдержать нагрузку, которую создадут ваши дополнительные кирпичи.</p>
+                <p>Пока вам в компании сделают проект перепланировки, пройдет 5 дней. В случае
+                  с гардеробной проект стоил бы 5 тысяч рублей. Некоторые компании берут дороже,
+                  некоторые дешевле. Ограничений цен и СРОков нет, так что ищите компанию, которая
+                  устроит именно вас. Компания согласовывает и готовит техническое заключение
+                  о допустимости и безопасности работ по перепланировке. Это заключение вы получаете вместе с готовым проектом.</p>
+                <br>
+                <h3>Согласуйте проект с местной администрацией</h3>
+                <p>Готовый проект надо предоставить районному отделу архитектуры. Кроме проекта возьмите
+                  с собой такие документы:
+                  <span class="jl-open__side-descr">С собой на всякий случай берите и оригиналы, и копии</span>
+                </p>
+                <ul class="marker">
+                  <li>заявление на перепланировку;</li>
+                  <li>если собственников несколько — их письменное согласие на перепланировку, заверенное
+                    у нотариуса;</li>
+                  <li>договор долевого участия и акт приемки-передачи квартиры, если квартиру покупали по ДДУ, или договор купли-продажи;</li>
+                  <li>согласованный проект перепланировки;</li>
+                  <li>техническое заключение о допустимости и безопасности работ.
+                    <span class="jl-open__side-descr jl-open__side-descr_ul">Правильное название —  «заключение о техническом состоянии конструкций здания и возможности производства планируемых работ»</span>
+                  </li>
+                </ul>
+                <p>У вас могут запросить свидетельство о праве собственности и техпаспорт на квартиру.
+                  Их можно не приносить, а выучить фразу: «В соответствии с частью 2.1 статьи 26 Жилищного кодекса Российской Федерации вы запрашиваете эти документы самостоятельно — в рамках межведомственного взаимодействия».</p>
+                <p>После этого в местной администрации вам выдадут расписку, что приняли ваши документы. Если всё в порядке, через 45 дней вам выдадут разрешение на проведение работ. Если нет, придется переделывать проект или судиться с отделом архитектуры.
+                  <span class="jl-open__side-descr">В некоторых регионах срок согласования отличается. Например, в Новосибирской области это не 45, а 48 дней. Чтобы узнать точный срок, обратитесь в отдел архитектуры или МФЦ</span>
+                </p>
+                <p>Разрешение не выкидывайте: оно понадобится для согласования готовой перепланировки</p>
+                <img src="images/content/jl-page/document.jpg" alt="Документ">
+                <span>Разрешение на перепланировку. Источник: <a href="#">«Жилэкспертиза»</a></span>
+                <h3>Ввод в эксплуатацию и кадастр недвижимости</h3>
+                <p>Приносите копии в администрацию района, оригиналы возьмите с собой: копии заберут,
+                  но сначала сверят с оригиналом. В итоге через 30 дней вам выдадут разрешение на ввод
+                  в эксплуатацию.</p>
+                <p>Вам осталось обновить информацию о вашей квартире в кадастре недвижимости. Обратитесь в Росреестр или МФЦ. С собой берите заявление о внесении изменений в кадастр, техплан на диске, разрешение на ввод и <a href="#">пачку документов</a>, которую вместе с проектом сдавали в отдел архитектуры для согласования перепланировки. Через неделю вам выдадут выписку из ЕГРН с новым планом квартиры.</p>
+                <p>Теперь перепланировка узаконена, а информация о ней записана в государственный реестр. Поздравляем!</p>
+                <div class="jl-open__share">
+                  <!-- (share) -->
+                  <div class="share">
+                    <div class="share__label">поделиться</div>
+                    <div class="pluso share__social" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,google"></div>
+                  </div>
+                  <!-- End (share) -->
+                </div>
+              </article>
+              <section class="jl-open__articles">
+                <h6 class="jl-open__articles-title">Статьи по теме</h6>
+                <div class="jl-open__articles-content">
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card1.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">С 1 июля в России ужесточатся требования к застройщикам жилья</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">11 часов назад</div>
+                          <div class="article-card__views">2 457
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card2.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">ВТБ продал три гостиницы в Москве</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">27 мая 2017</div>
+                          <div class="article-card__views">457
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card3.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">«Азбука Вкуса» арендовала 18 площадок «Седьмого
+                          континента»</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">14 августа 2017</div>
+                          <div class="article-card__views">57
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card4.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">Universal Studios переносят в новую Москву</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">1 час назад</div>
+                          <div class="article-card__views">2 457
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card5.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">«Лента» арендует 14 гипермаркетов на 78 тыс м2</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">27 мая 2017</div>
+                          <div class="article-card__views">134
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                  <div class="jl-open__articles-item">
+                    <!-- (article-card) -->
+                    <a href="#" class="article-card">
+                      <div class="article-card__img-wrapper">
+                        <img src="images/content/jl-page/article-card6.jpg" alt="Фото из статьи" class="article-card__img">
+                      </div>
+                      <div class="article-card__text">
+                        <div class="article-card__title">«Горбушкин двор» застроят жильем</div>
+                        <div class="article-card__info">
+                          <div class="article-card__date">31 июля 2017</div>
+                          <div class="article-card__views">2 457
+                            <svg class="article-card__icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- End (article-card) -->
+                  </div>
+                </div>
+              </section>
+            </main>
+          </div>
+        </section>
+        <!-- End (jl-open) -->
       </div>
       <!-- End (main) -->
       <!-- (footer) -->

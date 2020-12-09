@@ -1,4 +1,5 @@
 .jl-header {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.33);
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
@@ -16,6 +17,19 @@
   &__text {
     padding: 20px 0 90px;
     text-align: center;
+    &_open {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 75px 0 90px;
+      .jl-header__title {
+        font: 700 35px / 40px 'Fira Sans', sans-serif;
+        color: #fff;
+        letter-spacing: 1px;
+        @media screen and (min-width: 480px) {
+          font: 700 46px / 59px 'Fira Sans', sans-serif;
+        }
+      }
+    }
   }
   &__title {
     font: 700 70px / 70px 'Fira Sans', sans-serif;
@@ -31,5 +45,54 @@
     color: #fff;
     letter-spacing: 0.4px;
     margin-bottom: 10px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -10px;
+    @media screen and (min-width: 990px) {
+      flex-direction: row;
+    }
+  }
+  &__copy {
+    margin-bottom: 20px;
+    min-width: 250px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  &__view-block {
+    display: flex;
+    font: 400 14px / 14px 'Fira Sans', sans-serif;
+    color: #d6d8d9;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    order: 1;
+    @media screen and (min-width: 990px) {
+      order: 0;
+    }
+  }
+  &__date {
+    margin: 0 20px 10px 20px;
+  }
+  &__views {
+    position: relative;
+    padding-left: 20px;
+    margin: 0 20px 10px 20px;
+  }
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    fill: #acacad;
+  }
+  &__share {
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }

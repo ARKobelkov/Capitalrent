@@ -59,7 +59,7 @@ h2 {
 }
 h3 {
   font-size: 31px;
-  line-height: 26px
+  line-height: 31px
 }
 h4 {
   font-size: 30px;
@@ -1073,7 +1073,11 @@ input::-ms-clear {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease
 }
 .category__link {
   display: block;
@@ -1391,33 +1395,40 @@ input::-ms-clear {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  width: 123px;
+  position: relative
 }
 .share__social.pluso .pluso-wrap > div a {
   height: 33px;
-  width: 33px;
-  margin: 0
+  margin: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease
 }
 .share__social.pluso .pluso-wrap > div a.pluso-vkontakte {
-  background: url(../images/social/vk-icon.svg)
+  background: no-repeat url(../images/social/vk-icon.svg)
 }
 .share__social.pluso .pluso-wrap > div a.pluso-vkontakte + b {
   background: #44678d
 }
 .share__social.pluso .pluso-wrap > div a.pluso-facebook {
-  background: url(../images/social/facebook-icon.svg)
+  background: no-repeat url(../images/social/facebook-icon.svg)
 }
 .share__social.pluso .pluso-wrap > div a.pluso-facebook + b {
   background: #3a559f
 }
 .share__social.pluso .pluso-wrap > div a.pluso-twitter {
-  background: url(../images/social/twitter-icon.svg)
+  background: no-repeat url(../images/social/twitter-icon.svg)
 }
 .share__social.pluso .pluso-wrap > div a.pluso-twitter + b {
   background: #50abf1
 }
 .share__social.pluso .pluso-wrap > div a.pluso-google {
-  background: url(../images/social/google-plus-icon.svg)
+  background: no-repeat url(../images/social/google-plus-icon.svg)
 }
 .share__social.pluso .pluso-wrap > div a.pluso-google + b {
   background: #dd4b39
@@ -1428,10 +1439,75 @@ input::-ms-clear {
   height: 100%;
   font: 400 15px/33px "Fira Sans",sans-serif;
   text-transform: uppercase;
-  float: none
+  float: none;
+  position: absolute;
+  left: 33px;
+  padding: 0 5px
 }
 .share__social.pluso .pluso-more {
   display: none
+}
+.share_black {
+  padding: 0;
+  background: 0 0;
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  max-width: 860px
+}
+.share_black .share__img {
+  position: relative;
+  height: 45px;
+  width: 70px;
+  border: 1px solid #434547;
+  background: rgba(0,0,0,.65);
+  margin-top: -1px
+}
+.share_black .share__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  fill: #9ca0a2
+}
+.share_black .share__social.pluso .pluso-wrap {
+  padding: 0
+}
+.share_black .share__social.pluso .pluso-wrap > div {
+  margin: 0;
+  width: 45px;
+  height: 45px;
+  margin-left: -1px;
+  margin-top: -1px
+}
+.share_black .share__social.pluso .pluso-wrap > div a {
+  height: 45px;
+  border: 1px solid #434547;
+  background: rgba(0,0,0,.65)
+}
+.share_black .share__social.pluso .pluso-wrap > div a:active,
+.share_black .share__social.pluso .pluso-wrap > div a:hover {
+  opacity: .7
+}
+.share_black .share__social.pluso .pluso-wrap > div b {
+  display: none
+}
+.share_black .share__social.pluso .pluso-wrap > div a.pluso-vkontakte {
+  background: rgba(0,0,0,.65) center no-repeat url(../images/social/black-vk.svg)
+}
+.share_black .share__social.pluso .pluso-wrap > div a.pluso-facebook {
+  background: rgba(0,0,0,.65) center no-repeat url(../images/social/black-facebook.svg)
+}
+.share_black .share__social.pluso .pluso-wrap > div a.pluso-twitter {
+  background: rgba(0,0,0,.65) center no-repeat url(../images/social/black-twitter.svg)
+}
+.share_black .share__social.pluso .pluso-wrap > div a.pluso-google {
+  background: rgba(0,0,0,.65) center no-repeat url(../images/social/black-google.svg)
 }
 .pagination {
   display: -webkit-box;
@@ -1709,6 +1785,160 @@ input::-ms-clear {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   fill: #f43c2e
+}
+.copy__field {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #434547;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px
+}
+.copy__text {
+  font: 300 14px/39px "Fira Sans",sans-serif;
+  color: #9ca0a2;
+  background: rgba(0,0,0,.65);
+  border: none;
+  padding: 0 14px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+.copy__btn {
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 45px;
+  width: 45px;
+  border: none;
+  background: rgba(67,69,71,.65);
+  cursor: pointer;
+  padding: 0 5px
+}
+.copy__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  fill: #9ca0a2;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%)
+}
+.copy__tooltip {
+  display: none;
+  font: 400 15px/25px "Fira Sans",sans-serif;
+  padding: 5px;
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  color: #fff
+}
+.article-left-block__img-wrapper {
+  margin-bottom: 15px;
+  width: 210px
+}
+.article-left-block__img {
+  max-width: none;
+  width: 100%
+}
+.article-left-block__name {
+  font: 500 19px/21px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 6px
+}
+.article-left-block__position {
+  font: 400 14px/18px "Fira Sans",sans-serif;
+  color: #757d7a;
+  margin-bottom: 6px
+}
+.article-right-block {
+  text-decoration: none
+}
+.article-right-block:active .article-right-block__img,
+.article-right-block:hover .article-right-block__img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: .8
+}
+.article-right-block__img-wrapper {
+  margin-bottom: 17px;
+  overflow: hidden;
+  background: #000
+}
+.article-right-block__img {
+  min-width: none;
+  width: 100%;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease
+}
+.article-right-block__label {
+  font: 500 14px/18px "Fira Sans",sans-serif;
+  font-style: italic;
+  color: #e03621;
+  margin-bottom: 10px
+}
+.article-right-block__title {
+  font: 400 15px/18px "Fira Sans",sans-serif;
+  color: #232625;
+  margin-bottom: 9px
+}
+.article-card {
+  display: block;
+  text-decoration: none
+}
+.article-card__img-wrapper {
+  margin-bottom: 18px
+}
+.article-card__img {
+  max-width: none;
+  width: 100%
+}
+.article-card__title {
+  font: 400 18px/23px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 12px
+}
+.article-card__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font: 400 14px/14px "Fira Sans",sans-serif;
+  color: #a5a7a9
+}
+.article-card__date {
+  margin-right: 20px;
+  margin-bottom: 5px
+}
+.article-card__views {
+  padding-left: 20px;
+  position: relative;
+  fill: #a5a7a9
+}
+.article-card__icon {
+  position: absolute;
+  left: 0;
+  top: 1px
 }
 .header__top {
   background: #0a1828;
@@ -4009,6 +4239,9 @@ input::-ms-clear {
   margin-bottom: 40px
 }
 .jl-header {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.33);
+  -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.33);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.33);
   position: relative;
   background-position: top center;
   background-repeat: no-repeat;
@@ -4034,6 +4267,16 @@ input::-ms-clear {
   padding: 20px 0 90px;
   text-align: center
 }
+.jl-header__text_open {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 75px 0 90px
+}
+.jl-header__text_open .jl-header__title {
+  font: 700 35px/40px "Fira Sans",sans-serif;
+  color: #fff;
+  letter-spacing: 1px
+}
 .jl-header__title {
   font: 700 70px/70px "Fira Sans",sans-serif;
   color: #fefefe;
@@ -4048,6 +4291,77 @@ input::-ms-clear {
   color: #fff;
   letter-spacing: .4px;
   margin-bottom: 10px
+}
+.jl-header__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 -10px
+}
+.jl-header__copy {
+  margin-bottom: 20px;
+  min-width: 250px;
+  margin-right: 10px;
+  margin-left: 10px
+}
+.jl-header__view-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 14px/14px "Fira Sans",sans-serif;
+  color: #d6d8d9;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1
+}
+.jl-header__date {
+  margin: 0 20px 10px 20px
+}
+.jl-header__views {
+  position: relative;
+  padding-left: 20px;
+  margin: 0 20px 10px 20px
+}
+.jl-header__icon {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  fill: #acacad
+}
+.jl-header__share {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px
 }
 .jl-content__main-wrapper {
   padding-top: 50px;
@@ -4158,12 +4472,7 @@ input::-ms-clear {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
+  display: flex
 }
 .jl-content__aside-link:active .jl-content__aside-label,
 .jl-content__aside-link:hover .jl-content__aside-label {
@@ -4195,13 +4504,83 @@ input::-ms-clear {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   -moz-transition: all .3s ease;
-  transition: all .3s ease
+  transition: all .3s ease;
+  max-height: 86px;
+  overflow: hidden
 }
 .jl-content__aside-date {
   font: 400 14px/14px "Fira Sans",sans-serif;
   color: #86888a;
   display: block;
   margin-bottom: 10px
+}
+.jl-open__content {
+  padding-top: 38px;
+  padding-bottom: 20px;
+  position: relative
+}
+.jl-open__left-block {
+  margin-bottom: 20px
+}
+.jl-open__right-block {
+  display: none;
+  position: absolute;
+  right: -230px;
+  padding-left: 20px;
+  width: 230px
+}
+.jl-open__article {
+  position: relative
+}
+.jl-open__article p {
+  position: relative
+}
+.jl-open__article img {
+  max-width: none;
+  width: 100%
+}
+.jl-open__article span {
+  display: block;
+  font: 400 15px/20px "Fira Sans",sans-serif;
+  color: #9ca2a0;
+  padding: 10px 10px 20px
+}
+.jl-open__article ul.marker li {
+  position: relative
+}
+.jl-open span.jl-open__side-descr {
+  display: block;
+  font: 400 14px/20px "Fira Sans",sans-serif;
+  font-style: italic;
+  color: #58615e;
+  padding: 5px 0 0 0
+}
+.jl-open__share {
+  padding: 50px 0
+}
+.jl-open__articles {
+  padding-bottom: 30px
+}
+.jl-open__articles-title {
+  font: 700 28px/30px "Fira Sans",sans-serif;
+  color: #2c2f2e;
+  margin-bottom: 24px
+}
+.jl-open__articles-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -15px
+}
+.jl-open__articles-item {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 22px
 }
 @media screen and (min-width:480px) {
   .cover {
@@ -4294,6 +4673,12 @@ input::-ms-clear {
     margin-bottom: 80px
   }
   .command__manager {
+    width: 50%
+  }
+  .jl-header__text_open .jl-header__title {
+    font: 700 46px/59px "Fira Sans",sans-serif
+  }
+  .jl-open__articles-item {
     width: 50%
   }
 }
@@ -4521,6 +4906,11 @@ input::-ms-clear {
   .jl-content__aside-item {
     width: 50%
   }
+  .jl-open__articles-item {
+    width: -webkit-calc(100% / 3);
+    width: -moz-calc(100% / 3);
+    width: calc(100% / 3)
+  }
 }
 @media screen and (min-width:990px) {
   .cover {
@@ -4669,10 +5059,32 @@ input::-ms-clear {
     float: left;
     padding-right: 50px
   }
+  .jl-header__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .jl-header__view-block {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0
+  }
   .jl-content__aside-item {
     width: -webkit-calc(100% / 3);
     width: -moz-calc(100% / 3);
     width: calc(100% / 3)
+  }
+  .jl-open__content {
+    margin-right: 230px
+  }
+  .jl-open__right-block {
+    display: block
   }
 }
 @media screen and (min-width:1200px) {
@@ -4850,6 +5262,29 @@ input::-ms-clear {
   .jl-content__aside-item {
     width: 100%
   }
+  .jl-open__content {
+    margin-left: 270px
+  }
+  .jl-open__left-block {
+    position: absolute;
+    width: 270px;
+    left: -270px;
+    padding-right: 60px
+  }
+  .jl-open__article ul.marker {
+    margin-left: -17px;
+    margin-right: -17px
+  }
+  .jl-open span.jl-open__side-descr {
+    position: absolute;
+    left: -270px;
+    top: 0;
+    width: 270px;
+    padding: 5px 60px 0 0
+  }
+  .jl-open span.jl-open__side-descr_ul {
+    left: -253px
+  }
 }
 @media screen and (min-width:1440px) {
   .cover {
@@ -4866,6 +5301,9 @@ input::-ms-clear {
     -moz-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row
+  }
+  .share__social.pluso .pluso-wrap > div {
+    width: 133px
   }
   .share__social.pluso .pluso-wrap > div b {
     width: 100px

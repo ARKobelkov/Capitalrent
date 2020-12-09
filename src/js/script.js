@@ -18,18 +18,18 @@ $(function () {
     event.preventDefault();
     if ($('#filter-btn').hasClass('active')) {
       $('#filter-btn').removeClass('active');
-      $('#modal-filter').fadeOut();
+      $('#modal-filter').stop(true, true).fadeOut();
     }
     
     $(this).toggleClass('active');
-    $('#modal-catalog').fadeToggle();
+    $('#modal-catalog').stop(true, true).fadeToggle();
   });
 
   // Кнопка закрытия окна - каталог
   $('#catalog-close').on('click', function (event) {
     event.preventDefault();
     $('#catalog-btn').removeClass('active');
-    $('#modal-catalog').fadeOut();
+    $('#modal-catalog').stop(true, true).fadeOut();
   })
 
   // Модальное окно - фильтр
@@ -37,11 +37,11 @@ $(function () {
     event.preventDefault();
     if ($('#catalog-btn').hasClass('active')) {
       $('#catalog-btn').removeClass('active');
-      $('#modal-catalog').fadeOut();
+      $('#modal-catalog').stop(true, true).fadeOut();
     }
   
     $(this).toggleClass('active');
-    $('#modal-filter').fadeToggle();
+    $('#modal-filter').stop(true, true).fadeToggle();
     
   // Селекты в фильтре
     $('.modal-filter__select').styler({
@@ -139,14 +139,14 @@ $(function () {
   $('#all-filters').on('click', function(event) {
     event.preventDefault();
     $(this).toggleClass('active');
-    $('#hiddenFilters').slideToggle();
+    $('#hiddenFilters').stop(true, true).slideToggle();
   });
 
    // Кнопка закрытия окна - фильтр
   $('#filter-close').on('click', function (event) {
     event.preventDefault();
     $('#filter-btn').removeClass('active');
-    $('#modal-filter').fadeOut();
+    $('#modal-filter').stop(true, true).fadeOut();
   });
 
   // Кнопка поиска
@@ -167,14 +167,14 @@ $(function () {
       $('.category__all-categories').html('скрыть <br> категории');
     };
     
-    $('.categories__category.hidden').slideToggle();
+    $('.categories__category.hidden').stop(true, true).slideToggle();
   });
 
   // Табы
   function tabsActive (tabsNavBlock, tabsBlock) {
     $(tabsNavBlock).easytabs({
       updateHash: false,
-      animate: true,
+      animate: false,
       panelContext: $(tabsBlock)
     });
   }
@@ -182,27 +182,6 @@ $(function () {
   tabsActive('#journal-nav', '#journal-tabs');
   tabsActive('#interview-nav', '#interview-tabs');
   tabsActive('#reviews-nav', '#reviews-tabs');
-
-  // Табы - блок "Журнал"
-  // $('#journal-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#journal-tabs')
-  // });
-
-  // Табы - блок "Интервью"
-  // $('#interview-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#interview-tabs')
-  // });
-
-  // Табы - блок "Обзоры"
-  // $('#reviews-nav').easytabs({
-  //   updateHash: false,
-  //   animate: true,
-  //   panelContext: $('#reviews-tabs')
-  // });
 
   // Попап - обратный звонок
 
@@ -242,20 +221,15 @@ $(function () {
   });
 
   // Кнопки социальных сетей
-  if (window.pluso)
-  if (typeof window.pluso.start == "function") return;
-  if (window.ifpluso == undefined) { 
-    window.ifpluso = 1;
-    var d = document,
-        s = d.createElement('script'),
-        g = 'getElementsByTagName';
-        s.type = 'text/javascript'; 
-        s.charset='UTF-8'; 
-        s.async = true;
-        s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-    var h=d[g]('body')[0];
-    h.appendChild(s);
-  };
+  (function() {
+    if (window.pluso)if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { window.ifpluso = 1;
+      var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+      s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+      s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+      var h=d[g]('body')[0];
+      h.appendChild(s);
+    }})();
 
 // Табы в карте
    $('#map').easytabs({
@@ -265,7 +239,7 @@ $(function () {
   });
 
 // Карта яндекса
-  if ($('#map').length) {
+  if ($('div').is('#map')) {
     ymaps.ready(init);
 
     function init() {
@@ -315,5 +289,20 @@ $(function () {
     })
   }
  
+  // Кнопка копии
+  var clipboard = new ClipboardJS('.copy__btn');
+
+  clipboard.on('success', function(e) {
+    function hideToolTip() {
+      $(e.trigger).siblings('.copy__tooltip').stop(true, true).fadeOut()
+    }
+
+    $(e.trigger).siblings('.copy__tooltip').stop(true, true).fadeIn();
+    $(e.trigger).mouseleave(function () {
+      hideToolTip();
+    })
+    setTimeout(() => { hideToolTip() }, 3000);
+    e.clearSelection();
+  });
   
 });

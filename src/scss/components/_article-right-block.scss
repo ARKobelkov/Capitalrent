@@ -1,0 +1,29 @@
+.article-right-block {
+  text-decoration: none;
+  &:hover &__img,
+  &:active &__img{
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  &__img-wrapper {
+    margin-bottom: 17px;
+    overflow: hidden;
+    background: #000;
+  }
+  &__img {
+    min-width: none;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  &__label {
+    font: 500 14px / 18px 'Fira Sans', sans-serif;
+    font-style: italic;
+    color: #e03621;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font: 400 15px / 18px 'Fira Sans', sans-serif;
+    color: #232625;
+    margin-bottom: 9px;
+  }
+}

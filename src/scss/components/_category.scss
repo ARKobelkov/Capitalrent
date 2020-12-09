@@ -86,7 +86,6 @@
     }
   }
   &__links {
-    // display: none;
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -95,6 +94,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 0.3s ease;
   }
   &__link {
     display: block;
