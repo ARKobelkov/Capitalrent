@@ -1,0 +1,12 @@
+.favorites {
+  padding-bottom: 40px;
+  &__tab {
+    display: none;
+  }
+  &__block {
+    margin-bottom: 40px;
+  }
+  &__delete-all {
+    margin-left: 27px;
+  }
+}

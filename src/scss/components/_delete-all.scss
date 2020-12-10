@@ -1,0 +1,23 @@
+.delete-all {
+  background: none;
+  border: none;
+  position: relative;
+  font: 500 16px / 20px 'Fira Sans', sans-serif;
+  color: #e03621;
+  cursor: pointer;
+  padding: 0 0 0 21px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    background: #e03621;
+    top: 8px;
+    left: 0;
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

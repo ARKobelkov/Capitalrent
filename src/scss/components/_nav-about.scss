@@ -4,6 +4,12 @@
     background: #ffffff;
     border-radius: 3px;
     border: 2px solid #e1e2e6;
+    &_with-icon {
+      .nav-about__link {
+        display: flex;
+        align-items: baseline;
+      }
+    }
   }
   &__item {
     border-top: 2px solid #e1e2e6;
@@ -12,6 +18,7 @@
     }
   }
   &__link {
+    position: relative;
     display: block;
     text-decoration: none;
     font: 400 18px / 20px 'Fira Sans', sans-serif;
@@ -23,6 +30,25 @@
     &_active {
       background: #f2f3f7;
       color: $titlecolor;
+      .nav-about__icon {
+        fill: #2c2f2e;
+      }
+      .nav-about__count {
+        color: #0a1828;
+      }
     }
+  }
+  &__icon {
+    fill: #cbcbcb;
+    order: -1;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    flex: 0 0 auto;
+  }
+  &__count {
+    font: 500 13px / 13px 'Fira Sans', sans-serif;
+    color: #909195;
+    margin-left: auto;
+    transition: all 0.3s ease;
   }
 }

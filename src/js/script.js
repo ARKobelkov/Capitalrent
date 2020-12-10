@@ -174,7 +174,7 @@ $(function () {
   function tabsActive (tabsNavBlock, tabsBlock) {
     $(tabsNavBlock).easytabs({
       updateHash: false,
-      animate: false,
+      animate: true,
       panelContext: $(tabsBlock)
     });
   }
@@ -305,4 +305,10 @@ $(function () {
     e.clearSelection();
   });
   
+  // Табы в избранном
+  $('#favorites-nav').easytabs({
+    updateHash: false,
+    animate: true,
+    panelContext: $('#favorites-tabs')
+  });
 });

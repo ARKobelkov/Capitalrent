@@ -1,0 +1,42 @@
+.user-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid #f2f3f7;
+  margin-bottom: 20px;
+  &__title {
+    font: 400 30px / 30px 'Fira Sans', sans-serif;
+    color: $footertitle;
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px -25px -2px;
+  }
+  &__item {
+    padding: 0 25px;
+  }
+  &__link {
+    display: flex;
+    text-decoration: none;
+    font: 500 16px / 16px 'Fira Sans', sans-serif;
+    color: $shtabfont;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 14px;
+    transition: all 0.3s ease;
+    &:hover,
+    &:active {
+      border-bottom: 2px solid $footertitle;
+      color: $footertitle;
+    }
+  }
+  &__count {
+    margin-left: 10px;
+  }
+  &__link.active {
+    border-bottom: 2px solid $footertitle;
+    color: $footertitle;
+  }
+}

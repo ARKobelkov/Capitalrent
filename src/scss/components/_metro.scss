@@ -1,0 +1,39 @@
+.metro {
+  padding-left: 20px;
+  position: relative;
+  &__station {
+    font: 400 16px / 21px 'Fira Sans', sans-serif;
+    color: #0a1828;
+    margin-bottom: 5px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #000;
+    }
+    &_violet {
+      &:before {
+        background: #8d63a8;
+      }
+    }
+    &_orange {
+      &:before {
+        background: #ff7c38;
+      }
+    }
+    &_green {
+      &:before {
+        background: #62d07e;
+      }
+    }
+  }
+  &__time {
+    font: 400 16px / 21px 'Fira Sans', sans-serif;
+    color: #a6a7ab;
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('./include/head.html');
+  <body>
+    <div class="wrapper">
+      <!-- (main) -->
+      <div class="wrapper__content">
+        <!-- (header) -->
+        @include('./include/header.html');
+        <!-- End (header) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Избранное</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End (location) -->
+        <!-- (about-company) -->
+        <section class="about-company">
+          <div class="about-company__cover cover">
+            <div class="about-company__wrapper clearfix">
+              <main class="about-company__main">
+                <!-- (user-header) -->
+                <div class="user-header" id="favorites-nav">
+                  <h1 class="user-header__title">Избранное</h1>
+                  <ul class="user-header__links">
+                    <li class="user-header__item">
+                      <a href="#user-rent" class="user-header__link">Аренда
+                        <div class="user-header__count">4</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#user-sale" class="user-header__link">Продажа
+                        <div class="user-header__count">1</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#user-rental" class="user-header__link">Арендный бизнес</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End (user-header) -->
+                <!-- (favorites) -->
+                <section class="favorites" id="favorites-tabs">
+                  <div class="favorites__tab" id="user-rent">
+                    <div class="favorites__tab-content">
+                      <div class="favorites__block">
+                        <div class="favorites__favorite">
+                          <!-- (favorite) -->
+                          <div class="favorite">
+                            <div class="favorite__item">
+                              <a href="#" class="favorite__link">
+                                <div class="favorite__img-wrapper">
+                                  <img src="images/content/favorites/favorite1.jpg" alt="Офис" class="favorite__img">
+                                </div>
+                                <div class="favorite__info">
+                                  <div class="favorite__premises">Офис</div>
+                                  <div class="favorite__address">ЦАО, Никитский бульвар, д. 12</div>
+                                </div>
+                                <div class="favorite__metro">
+                                  <!-- (metro) -->
+                                  <div class="metro">
+                                    <div class="metro__station metro__station_violet">Китай-город</div>
+                                    <div class="metro__time">10 мин пешком</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                                <div class="favorite__square">
+                                  <div class="favorite__count">45</div>
+                                  <div class="favorite__unit">м²</div>
+                                </div>
+                                <div class="favorite__price">
+                                  <div class="favorite__count">135 000</div>
+                                  <div class="favorite__unit">руб./мес</div>
+                                </div>
+                              </a>
+                            </div>
+                            <button class="favorite__delete"></button>
+                          </div>
+                          <!-- End (favorite) -->
+                        </div>
+                        <div class="favorites__favorite">
+                          <!-- (favorite) -->
+                          <div class="favorite">
+                            <div class="favorite__item">
+                              <a href="#" class="favorite__link">
+                                <div class="favorite__img-wrapper">
+                                  <img src="images/content/favorites/favorite2.jpg" alt="Офис" class="favorite__img">
+                                </div>
+                                <div class="favorite__info">
+                                  <div class="favorite__premises">Торговое помещение</div>
+                                  <div class="favorite__address">ЦАО, Никитский бульвар, д. 12</div>
+                                </div>
+                                <div class="favorite__metro">
+                                  <!-- (metro) -->
+                                  <div class="metro">
+                                    <div class="metro__station metro__station_orange">Ленинский пр-т</div>
+                                    <div class="metro__time">5 мин пешком</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                                <div class="favorite__square">
+                                  <div class="favorite__count">150</div>
+                                  <div class="favorite__unit">м²</div>
+                                </div>
+                                <div class="favorite__price">
+                                  <div class="favorite__count">250 000</div>
+                                  <div class="favorite__unit">руб./мес</div>
+                                </div>
+                              </a>
+                            </div>
+                            <button class="favorite__delete"></button>
+                          </div>
+                          <!-- End (favorite) -->
+                        </div>
+                        <div class="favorites__favorite">
+                          <!-- (favorite) -->
+                          <div class="favorite">
+                            <div class="favorite__item">
+                              <a href="#" class="favorite__link">
+                                <div class="favorite__img-wrapper">
+                                  <img src="images/content/favorites/favorite3.jpg" alt="Офис" class="favorite__img">
+                                </div>
+                                <div class="favorite__info">
+                                  <div class="favorite__premises">Банк</div>
+                                  <div class="favorite__address">ЦАО, Никитский бульвар, д. 12</div>
+                                </div>
+                                <div class="favorite__metro">
+                                  <!-- (metro) -->
+                                  <div class="metro">
+                                    <div class="metro__station metro__station_green">Автозаводская</div>
+                                    <div class="metro__time">10 мин пешком</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                                <div class="favorite__square">
+                                  <div class="favorite__count">245</div>
+                                  <div class="favorite__unit">м²</div>
+                                </div>
+                                <div class="favorite__price">
+                                  <div class="favorite__count">500 000</div>
+                                  <div class="favorite__unit">руб./мес</div>
+                                </div>
+                              </a>
+                            </div>
+                            <button class="favorite__delete"></button>
+                          </div>
+                          <!-- End (favorite) -->
+                        </div>
+                        <div class="favorites__favorite">
+                          <!-- (favorite) -->
+                          <div class="favorite">
+                            <div class="favorite__item">
+                              <a href="#" class="favorite__link">
+                                <div class="favorite__img-wrapper">
+                                  <img src="images/content/favorites/favorite4.jpg" alt="Офис" class="favorite__img">
+                                </div>
+                                <div class="favorite__info">
+                                  <div class="favorite__premises">Торговое помещение</div>
+                                  <div class="favorite__address">ЦАО, Никитский бульвар, д. 12</div>
+                                </div>
+                                <div class="favorite__metro">
+                                  <!-- (metro) -->
+                                  <div class="metro">
+                                    <div class="metro__station metro__station_orange">Ленинский пр-т</div>
+                                    <div class="metro__time">10 мин пешком</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                                <div class="favorite__square">
+                                  <div class="favorite__count">50</div>
+                                  <div class="favorite__unit">м²</div>
+                                </div>
+                                <div class="favorite__price">
+                                  <div class="favorite__count">150 000</div>
+                                  <div class="favorite__unit">руб./мес</div>
+                                </div>
+                              </a>
+                            </div>
+                            <button class="favorite__delete"></button>
+                          </div>
+                          <!-- End (favorite) -->
+                        </div>
+                      </div>
+                      <div class="favorites__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="favorites__tab" id="user-sale">
+                    <div class="favorites__tab-content">
+                      <div class="favorites__block">
+                        <div class="favorites__favorite">
+                          <!-- (favorite) -->
+                          <div class="favorite">
+                            <div class="favorite__item">
+                              <a href="#" class="favorite__link">
+                                <div class="favorite__img-wrapper">
+                                  <img src="images/content/favorites/favorite1.jpg" alt="Офис" class="favorite__img">
+                                </div>
+                                <div class="favorite__info">
+                                  <div class="favorite__premises">Офис</div>
+                                  <div class="favorite__address">ЦАО, Никитский бульвар, д. 12</div>
+                                </div>
+                                <div class="favorite__metro">
+                                  <!-- (metro) -->
+                                  <div class="metro">
+                                    <div class="metro__station metro__station_violet">Китай-город</div>
+                                    <div class="metro__time">10 мин пешком</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                                <div class="favorite__square">
+                                  <div class="favorite__count">45</div>
+                                  <div class="favorite__unit">м²</div>
+                                </div>
+                                <div class="favorite__price">
+                                  <div class="favorite__count">135 000</div>
+                                  <div class="favorite__unit">руб./мес</div>
+                                </div>
+                              </a>
+                            </div>
+                            <button class="favorite__delete"></button>
+                          </div>
+                          <!-- End (favorite) -->
+                        </div>
+                      </div>
+                      <div class="favorites__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="favorites__tab" id="user-rental">
+                    <div class="favorites__tab-content">
+                      <div class="favorites__block">
+                      </div>
+                      <div class="favorites__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- End (favorites) -->
+              </main>
+              <aside class="about-company__aside">
+                <!-- (nav-about) -->
+                <nav class="nav-about">
+                  <ul class="nav-about__list nav-about__list_with-icon">
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link nav-about__link_active">О компании
+                        <svg class="nav-about__icon" width="17" height="17">
+                          <use xlink:href="images/icons.svg#star"></use>
+                        </svg>
+                        <span class="nav-about__count">4</span>
+                      </a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Наша команда
+                        <svg class="nav-about__icon" width="19" height="16">
+                          <use xlink:href="images/icons.svg#heart"></use>
+                        </svg>
+                        <span class="nav-about__count">3</span>
+                      </a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Услуги
+                        <svg class="nav-about__icon" width="18" height="17">
+                          <use xlink:href="images/icons.svg#libra"></use>
+                        </svg>
+                        <span class="nav-about__count">9</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- End (nav-about) -->
+              </aside>
+            </div>
+          </div>
+        </section>
+        <!-- End (about-company) -->
+      </div>
+      <!-- End (main) -->
+      <!-- (footer) -->
+      <div class="wrapper__footer">
+        @include('./include/footer.html');
+      </div>
+      <!-- End (footer) -->
+    </div>
+    <!-- (modal-phone) -->
+    @include('./include/modal-phone.html');
+    <!-- End (modal-phone) -->
+    <!-- (mobile-nav) -->
+    @include('./include/mobile-nav.html');
+    <!-- End (mobile-nav) -->
+    <!-- (scripts) -->
+    @include('./include/script.html');
+    <!-- End (scripts) -->
+  </body>
+</html>
