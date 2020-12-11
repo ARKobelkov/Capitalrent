@@ -288,7 +288,14 @@ $(function () {
       );
     })
   }
- 
+  
+  // Табы в избранном
+  $('#favorites-nav').easytabs({
+    updateHash: false,
+    animate: true,
+    panelContext: $('#favorites-tabs')
+  });
+
   // Кнопка копии
   var clipboard = new ClipboardJS('.copy__btn');
 
@@ -298,17 +305,9 @@ $(function () {
     }
 
     $(e.trigger).siblings('.copy__tooltip').stop(true, true).fadeIn();
-    $(e.trigger).mouseleave(function () {
-      hideToolTip();
-    })
-    setTimeout(() => { hideToolTip() }, 3000);
+    $(e.trigger).mouseleave(hideToolTip());
+
+    setTimeout(() => hideToolTip(), 3000);
     e.clearSelection();
-  });
-  
-  // Табы в избранном
-  $('#favorites-nav').easytabs({
-    updateHash: false,
-    animate: true,
-    panelContext: $('#favorites-tabs')
   });
 });

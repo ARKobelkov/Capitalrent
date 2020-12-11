@@ -1,0 +1,40 @@
+.switcher {
+  &__label {
+    display: block;
+    font: 400 14px / 27px 'Fira Sans', sans-serif;
+    color: #2c2f2e;
+    padding-right: 51px;
+    position: relative;
+  }
+  &__slider {
+    position: absolute;
+    width: 38px;
+    height: 23px;
+    top: 0;
+    right: 0;
+    background: #e03621;
+    border-radius: 11.5px;
+    transition: all 0.3s ease;
+    &:before {
+      content: '';
+      display: block;
+      width: 19px;
+      height: 19px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      transition: all 0.3s ease;
+    }
+  }
+  &__input {
+    display: none;
+    &:checked + .switcher__slider {
+      background: #62d07e;
+      &:before {
+       transform: translateX(-15px);
+      }
+    }
+  }
+}

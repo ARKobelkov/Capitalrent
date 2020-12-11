@@ -1,0 +1,110 @@
+.search {
+  padding-bottom: 40px;
+  &__block {
+    margin-bottom: 40px;
+  }
+  &__delete-all {
+    margin-left: 27px;
+  }
+  &__type {
+    font: 500 16px / 25px 'Fira Sans', sans-serif;
+    color: #009349;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      width: 17%;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 12%;
+    }
+    &_red {
+      color: #d13421;
+    }
+  }
+  &__premises {
+    font: 400 18px / 25px 'Fira Sans', sans-serif;
+    color: #30322e;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      width: 25%;
+      margin-bottom: 0;
+    }
+  }
+  &__square {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      width: 25%;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 35%;
+    }
+  }
+  &__count {
+    font: 500 20px / 25px 'Fira Sans', sans-serif;
+    color: #30322e;
+    margin-right: 5px;
+  }
+  &__unit {
+    font: 400 18px / 25px 'Fira Sans', sans-serif;
+    color: #30322e;
+  }
+  &__options {
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      width: 21%;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 20%;
+    }
+    &-count {
+      font: 400 16px / 25px 'Fira Sans', sans-serif;
+      color: #004b90;
+      text-decoration: underline;
+    }
+    &-nocount {
+      font: 400 16px / 25px 'Fira Sans', sans-serif;
+      color: #cecdcc;
+    }
+  }
+  &__quantity {
+    padding: 0 15px;
+    text-align: center;
+    min-width: 65px;
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      width: 11%;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 8%;
+    }
+    &-count {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: #e03621;
+      font: 500 15px / 36px 'Fira Sans', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('./include/head.html');
+  <body>
+    <div class="wrapper">
+      <!-- (main) -->
+      <div class="wrapper__content">
+        <!-- (header) -->
+        @include('./include/header.html');
+        <!-- End (header) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Мои поиски</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End (location) -->
+        <!-- (about-company) -->
+        <section class="about-company">
+          <div class="about-company__cover cover">
+            <div class="about-company__wrapper clearfix">
+              <main class="about-company__main">
+                <!-- (user-header) -->
+                <div class="user-header">
+                  <h1 class="user-header__title">Сохраненные поиски</h1>
+                  <div class="user-header__switcher">
+                    <!-- (switcher) -->
+                    <div class="switcher">
+                      <label class="switcher__label">оповещать по e-mail
+                        <input type="checkbox" class="switcher__input">
+                        <span class="switcher__slider"></span>
+                      </label>
+                    </div>
+                    <!-- End (switcher) -->
+                  </div>
+                </div>
+                <!-- End (user-header) -->
+                <!-- (search) -->
+                <section class="search">
+                  <div class="search__block">
+                    <div class="search__item">
+                      <!-- (favorite) -->
+                      <div class="favorite">
+                        <div class="favorite__item">
+                          <a href="#" class="favorite__link favorite__link_column">
+                            <div class="search__type">Аренда</div>
+                            <div class="search__premises">Банк</div>
+                            <div class="search__square">
+                              <div class="search__count">200 000 - 300 000</div>
+                              <div class="search__unit">руб/мес</div>
+                            </div>
+                            <div class="search__options">
+                              <div class="search__options-count">+3 параметра</div>
+                            </div>
+                            <div class="search__quantity">
+                              <div class="search__quantity-count">+5</div>
+                            </div>
+                          </a>
+                        </div>
+                        <button class="favorite__delete"></button>
+                      </div>
+                      <!-- End (favorite) -->
+                    </div>
+                    <div class="search__item">
+                      <!-- (favorite) -->
+                      <div class="favorite">
+                        <div class="favorite__item">
+                          <a href="#" class="favorite__link favorite__link_column">
+                            <div class="search__type search__type_red">Продажа</div>
+                            <div class="search__premises">Кафе/ресторан</div>
+                            <div class="search__square">
+                              <div class="search__count">1 200 000 - 25 000 000</div>
+                              <div class="search__unit">руб.</div>
+                            </div>
+                            <div class="search__options">
+                              <div class="search__options-count">+1 параметр</div>
+                            </div>
+                            <div class="search__quantity">
+                            </div>
+                          </a>
+                        </div>
+                        <button class="favorite__delete"></button>
+                      </div>
+                      <!-- End (favorite) -->
+                    </div>
+                    <div class="search__item">
+                      <!-- (favorite) -->
+                      <div class="favorite">
+                        <div class="favorite__item">
+                          <a href="#" class="favorite__link favorite__link_column">
+                            <div class="search__type search__type_red">Продажа</div>
+                            <div class="search__premises">Торговое помещение</div>
+                            <div class="search__square">
+                              <div class="search__count">5 000 000 - 7 000 000</div>
+                              <div class="search__unit">руб.</div>
+                            </div>
+                            <div class="search__options">
+                              <div class="search__options-count">+2 параметра</div>
+                            </div>
+                            <div class="search__quantity">
+                            </div>
+                          </a>
+                        </div>
+                        <button class="favorite__delete"></button>
+                      </div>
+                      <!-- End (favorite) -->
+                    </div>
+                    <div class="search__item">
+                      <!-- (favorite) -->
+                      <div class="favorite">
+                        <div class="favorite__item">
+                          <a href="#" class="favorite__link favorite__link_column">
+                            <div class="search__type">Аренда</div>
+                            <div class="search__premises">Офис</div>
+                            <div class="search__square">
+                              <div class="search__count">20 000 - 50 000</div>
+                              <div class="search__unit">руб/мес</div>
+                            </div>
+                            <div class="search__options">
+                              <div class="search__options-nocount">нет доп. параметров</div>
+                            </div>
+                            <div class="search__quantity">
+                              <div class="search__quantity-count">+12</div>
+                            </div>
+                          </a>
+                        </div>
+                        <button class="favorite__delete"></button>
+                      </div>
+                      <!-- End (favorite) -->
+                    </div>
+                    <div class="search__item">
+                      <!-- (favorite) -->
+                      <div class="favorite">
+                        <div class="favorite__item">
+                          <a href="#" class="favorite__link favorite__link_column">
+                            <div class="search__type">Аренда</div>
+                            <div class="search__premises">Торговое помещение</div>
+                            <div class="search__square">
+                              <div class="search__count">100 000 - 750 000</div>
+                              <div class="search__unit">руб/мес</div>
+                            </div>
+                            <div class="search__options">
+                              <div class="search__options-count">+1 параметр</div>
+                            </div>
+                            <div class="search__quantity">
+                            </div>
+                          </a>
+                        </div>
+                        <button class="favorite__delete"></button>
+                      </div>
+                      <!-- End (favorite) -->
+                    </div>
+                  </div>
+                  <div class="search__delete-all">
+                    <!-- (delete-all) -->
+                    <button class="delete-all">Очистить поиски</button>
+                    <!-- End (delete-all) -->
+                  </div>
+                </section>
+                <!-- End (search) -->
+              </main>
+              <aside class="about-company__aside">
+                <!-- (nav-about) -->
+                <nav class="nav-about">
+                  <ul class="nav-about__list nav-about__list_with-icon">
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link nav-about__link_active">Избранное
+                        <svg class="nav-about__icon" width="17" height="17">
+                          <use xlink:href="images/icons.svg#star"></use>
+                        </svg>
+                        <span class="nav-about__count">4</span>
+                      </a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Мои поиски
+                        <svg class="nav-about__icon" width="19" height="16">
+                          <use xlink:href="images/icons.svg#heart"></use>
+                        </svg>
+                        <span class="nav-about__count">5</span>
+                      </a>
+                    </li>
+                    <li class="nav-about__item">
+                      <a href="#" class="nav-about__link">Сравнение
+                        <svg class="nav-about__icon" width="18" height="17">
+                          <use xlink:href="images/icons.svg#libra"></use>
+                        </svg>
+                        <span class="nav-about__count">9</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- End (nav-about) -->
+              </aside>
+            </div>
+          </div>
+        </section>
+        <!-- End (about-company) -->
+      </div>
+      <!-- End (main) -->
+      <!-- (footer) -->
+      <div class="wrapper__footer">
+        @include('./include/footer.html');
+      </div>
+      <!-- End (footer) -->
+    </div>
+    <!-- (modal-phone) -->
+    @include('./include/modal-phone.html');
+    <!-- End (modal-phone) -->
+    <!-- (mobile-nav) -->
+    @include('./include/mobile-nav.html');
+    <!-- End (mobile-nav) -->
+    <!-- (scripts) -->
+    @include('./include/script.html');
+    <!-- End (scripts) -->
+  </body>
+</html>
