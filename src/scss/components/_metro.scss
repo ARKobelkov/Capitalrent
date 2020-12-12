@@ -9,7 +9,7 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 5px;
+      top: 4px;
       display: block;
       width: 10px;
       height: 10px;
@@ -31,9 +31,26 @@
         background: #62d07e;
       }
     }
+    &_blue {
+      &:before {
+        background: #3545a7;
+      }
+    }
+    &_grey {
+      &:before {
+        background: #9b9b9b;
+      }
+    }
   }
   &__time {
     font: 400 16px / 21px 'Fira Sans', sans-serif;
     color: #a6a7ab;
+  }
+  &_compare {
+    .metro__station {
+      color: #626366;
+      font-size: 15px;
+      margin-bottom: 0;
+    }
   }
 }

@@ -1,0 +1,149 @@
+.comparison {
+  &__content {
+    padding: 40px 0;
+  }
+  &__main-wrapper {
+    padding-top: 25px;
+  }
+  &__main {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    padding-left: 135px;
+    @media screen and (min-width: 768px) {
+      padding-left: 215px;
+    }
+  }
+  &__tab {
+    position: relative;
+    &-content {
+      display: flex;
+      margin-bottom: 35px;
+    }
+    &-arrow {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        top: 75px;
+        left: -145px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 3px solid #004672; 
+        border-left: 3px solid #004672; 
+        transform: rotate(-45deg);
+        transition: all 0.3s ease;
+        @media screen and (min-width: 1440px) {
+          top: 45px;
+          left: -32px;
+        }
+        &:hover,
+        &:active {
+          border-color: #E83F33;
+        }
+        span {
+          display: none;
+        }
+      }
+      .owl-next {
+        left: -80px;
+        transform: rotate(135deg);
+        @media screen and (min-width: 1440px) {
+          top: 45px;
+          right: -32px;
+          left: auto;
+        }
+      }
+      .owl-prev.disabled,
+      .owl-next.disabled {
+        border-color: #e5e8e9;
+      }
+    }
+  }
+  &__item {
+    // width: 20%;
+    width: 100%;
+    // margin-left: -2px;
+  }
+
+  &__aside {
+    width: 135px;
+    float: left;
+    margin-left: -100%;
+    padding-right: 25px;
+    @media screen and (min-width: 768px) {
+      padding-right: 50px;
+      width: 215px;
+    }
+    &-column {
+      margin-top: 103px;
+      @media screen and (min-width: 600px) {
+        margin-top: 135px;
+      }
+      @media screen and (min-width: 768px) {
+        margin-top: 161px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-top: 154px;
+      }
+    }
+    &-row {
+      height: 65px;
+      font: 400 15px / 21px 'Fira Sans', sans-serif;
+      color: #0a1828;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      &_high {
+        height: 85px;
+      }
+    }
+    &-price {
+      display: inline-block;
+      line-height: 21px;
+      text-decoration: none;
+      position: relative;
+      padding-right: 15px;
+      font-weight: 500;
+      color: #0a5092;
+      @include texthover;
+      &:hover .comparison__aside-icon div,
+      &:active .comparison__aside-icon div {
+        background: #E83F33;
+      }
+    }
+    &-icon {
+      position: absolute;
+      width: 10px;
+      height: 15px;
+      right: 0;
+      top: 0;
+      div {
+        height: 2px;
+        background: #0a5092;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease;
+        &:first-child {
+          width: 4px;
+          bottom: 6.5px;
+        }
+        &:nth-child(2) {
+          width: 7px;
+          bottom: 3px;
+        }
+      }
+    }
+  }
+  &__delete-all {
+    text-align: end;
+    margin-bottom: 15px;
+  }
+}

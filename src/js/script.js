@@ -310,4 +310,65 @@ $(function () {
     setTimeout(() => hideToolTip(), 3000);
     e.clearSelection();
   });
+
+  /* Табы для сравнения объектов */
+  $('#compare-nav').easytabs({
+		updateHash: false,
+		animate: false,
+		// tabs: '.tabs__nav > li',
+		panelContext: $('#compare-tabs'),
+	})
+  .bind('easytabs:before', function(event, $clicked, $targetPanel, settings) {
+    if ($('.comparison__tab .owl-loaded').length) {
+    	$('.comparison__tab .owl-loaded').trigger('destroy.owl.carousel')
+    }
+  })
+  .bind('easytabs:after', function(event, $clicked, $targetPanel, settings) {
+    carouselInit($('#' + $targetPanel[0].id).children('.comparison__tab-content'))
+  });
+
+  $('.comparison__tab.active .comparison__tab-content').each(function() {
+    carouselInit($(this));
+  });
+  
+  function carouselInit(thisObjects) {
+
+    thisObjects.owlCarousel({
+      items: 1,
+      nav: false,
+      slideBy: 1,
+      autoplay: false,
+      loop: false,
+      dots: true,
+      margin: -2,
+      responsive: {
+        480:{
+          items: 2,
+          nav: false,
+        },
+        600:{
+          items: 2,
+          nav: false,
+        },
+        990:{
+          nav: true,
+          navContainer: '#tab-arrow',
+          items: 3,
+          dots: false,
+        },
+        1200:{
+          nav: true,
+          navContainer: '#tab-arrow',
+          items: 4,
+          dots: false,
+        },
+        1440:{
+          nav: true,
+          navContainer: '#tab-arrow',
+          items: 5,
+          dots: false,
+        }
+      }
+    });
+  }
 });

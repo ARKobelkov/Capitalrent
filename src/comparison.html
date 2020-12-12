@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('./include/head.html');
+  <body>
+    <div class="wrapper">
+      <!-- (main) -->
+      <div class="wrapper__content">
+        <!-- (header) -->
+        @include('./include/header.html');
+        <!-- End (header) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Сравнение объектов</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- End (location) -->
+        <section class="comparison">
+          <div class="comparison__cover cover">
+            <div class="comparison__content">
+              <div class="comparison__header">
+                <!-- (user-header) -->
+                <div class="user-header" id="compare-nav">
+                  <h1 class="user-header__title">Сравнение объектов</h1>
+                  <ul class="user-header__links">
+                    <li class="user-header__item">
+                      <a href="#compare-rent" class="user-header__link">Аренда
+                        <div class="user-header__count">6</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#compare-sale" class="user-header__link">Продажа
+                        <div class="user-header__count">3</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#compare-rental-business" class="user-header__link">Арендный бизнес</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End (user-header) -->
+              </div>
+              <div class="comparison__main-wrapper clearfix">
+                <div class="comparison__main">  
+                  <div class="comparison__tabs" id="compare-tabs">
+                    <div class="comparison__tab" id="compare-rent">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object2.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">ПСН</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Автозаводская ул, д.13/1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">595 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_blue">Мякинино</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">465</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                            
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object4.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Кафе/ресторан</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Ямского поля 3-я ул., д. 9</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">900 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_green">Автозаводская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">5 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">480</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">120</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object5.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Банк</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">ул. Новослободская, д. 34</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">2 500 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_grey">Менделеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">350</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                    <div class="comparison__tab" id="compare-sale">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object2.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">ПСН</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Автозаводская ул, д.13/1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">595 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_blue">Мякинино</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">465</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                            
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                    <div class="comparison__tab" id="compare-rental-business">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison__aside">
+                  <ul class="comparison__aside-column">
+                    <li class="comparison__aside-row">Тип помещения</li>
+                    <li class="comparison__aside-row comparison__aside-row_high">Адрес</li>
+                    <li class="comparison__aside-row">
+                      <a href="#" class="comparison__aside-price">Стоимость
+                        <div class="comparison__aside-icon">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="comparison__aside-row">Метро</li>
+                    <li class="comparison__aside-row">Расстояние от метро</li>
+                    <li class="comparison__aside-row">Общая площадь</li>
+                    <li class="comparison__aside-row">С отделкой</li>
+                    <li class="comparison__aside-row">Эл. мощность</li>
+                    <li class="comparison__aside-row">Этаж</li>
+                    <li class="comparison__aside-row">Этажность</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- End (main) -->
+      <!-- (footer) -->
+      <div class="wrapper__footer">
+        @include('./include/footer.html');
+      </div>
+      <!-- End (footer) -->
+    </div>
+    <!-- (modal-phone) -->
+    @include('./include/modal-phone.html');
+    <!-- End (modal-phone) -->
+    <!-- (mobile-nav) -->
+    @include('./include/mobile-nav.html');
+    <!-- End (mobile-nav) -->
+    <!-- (scripts) -->
+    @include('./include/script.html');
+    <!-- End (scripts) -->
+  </body>
+</html>

@@ -182,3 +182,29 @@ input::-ms-clear {
     max-width: 1390px;
   }
 }
+// Owl -карусель
+.owl-dots {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .owl-dot {
+    flex: 0 0 auto;
+    span {
+      display: block;
+      padding: 0;
+      margin: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      border: 1px solid #004672;
+    }
+  }
+  .owl-dot.active {
+    span {
+      background: #004672;
+    }
+  }
+}

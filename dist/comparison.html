@@ -482,569 +482,680 @@
           <!-- End (modal-filter) -->
         </section>
         <!-- End (header) -->
-        <!-- (jl-header) -->
-        <section class="jl-header">
-          <img src="images/content/city.jpg" alt="Фото города" class="jl-header__img">
-          <div class="jl-header__location">
-            <!-- (location) -->
-            <section class="location location_white">
-              <div class="location__cover cover">
-                <ul class="location__list">
-                  <li class="location__item">
-                    <a href="/" class="location__link">
-                      <svg class="location__icon" width="15" height="14">
-                        <use xlink:href="images/icons.svg#house-icon"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="location__item">
-                    <span href="#" class="location__last">Журнал</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <!-- End (location) -->
+        <!-- (location) -->
+        <section class="location">
+          <div class="location__cover cover">
+            <ul class="location__list">
+              <li class="location__item">
+                <a href="/" class="location__link">
+                  <svg class="location__icon" width="15" height="14">
+                    <use xlink:href="images/icons.svg#house-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="location__item">
+                <span href="#" class="location__last">Сравнение объектов</span>
+              </li>
+            </ul>
           </div>
-          <div class="jl-header__cover cover">
-            <div class="jl-header__text">
-              <h1 class="jl-header__title"><span class="jl-header__title_red">CR</span> Journal</h1>
-              <p class="jl-header__subtitle">Новости рынка недвижимости в России</p>
+        </section>
+        <!-- End (location) -->
+        <section class="comparison">
+          <div class="comparison__cover cover">
+            <div class="comparison__content">
+              <div class="comparison__header">
+                <!-- (user-header) -->
+                <div class="user-header" id="compare-nav">
+                  <h1 class="user-header__title">Сравнение объектов</h1>
+                  <ul class="user-header__links">
+                    <li class="user-header__item">
+                      <a href="#compare-rent" class="user-header__link">Аренда
+                        <div class="user-header__count">6</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#compare-sale" class="user-header__link">Продажа
+                        <div class="user-header__count">3</div>
+                      </a>
+                    </li>
+                    <li class="user-header__item">
+                      <a href="#compare-rental-business" class="user-header__link">Арендный бизнес</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End (user-header) -->
+              </div>
+              <div class="comparison__main-wrapper clearfix">
+                <div class="comparison__main">  
+                  <div class="comparison__tabs" id="compare-tabs">
+                    <div class="comparison__tab" id="compare-rent">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object2.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">ПСН</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Автозаводская ул, д.13/1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">595 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_blue">Мякинино</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">465</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                            
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object4.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Кафе/ресторан</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Ямского поля 3-я ул., д. 9</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">900 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_green">Автозаводская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">5 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">480</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">120</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object5.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Банк</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">ул. Новослободская, д. 34</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">2 500 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_grey">Менделеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">350</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                    <div class="comparison__tab" id="compare-sale">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object2.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">ПСН</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Автозаводская ул, д.13/1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">595 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_blue">Мякинино</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">8 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">465</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                            
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">80</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">2</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object3.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Офисное помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">г. Красногорск, мр-н 15, ул. Центральная д. 7</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">780 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_orange">Алексеевская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">25 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">460</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                         
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                              <div class="compare-object__row">
+                           
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                    <div class="comparison__tab" id="compare-rental-business">
+                      <div class="comparison__tab-arrow" id="tab-arrow"></div>
+                      <div class="comparison__tab-content owl-carousel">
+                        <div class="comparison__item">
+                          <!-- (compare-object) -->
+                          <div class="compare-object">
+                            <a href="#" class="compare-object__link">
+                              <div class="compare-object__img-wrapper">
+                                <img src="images/content/compare/object1.jpg" alt="Объект" class="compare-object__img">
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">Торговое помещение</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_high">
+                                <div class="compare-object__text">Проспект Мира ул., д. 102 корп. 1А</div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">375 000</div>
+                                  <div class="compare-object__unit">руб./мес</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">
+                                  <!-- (metro) -->
+                                  <div class="metro metro_compare">
+                                    <div class="metro__station metro__station_violet">Белорусская</div>
+                                  </div>
+                                  <!-- End (metro) -->
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">30 мин. пешком</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">104</div>
+                                  <div class="compare-object__unit">м²</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__checked"></div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__square">
+                                  <div class="compare-object__count">35</div>
+                                  <div class="compare-object__unit">кВт</div>
+                                </div>
+                              </div>
+                              <div class="compare-object__row compare-object__row_best">
+                                <div class="compare-object__text">1</div>
+                              </div>
+                              <div class="compare-object__row">
+                                <div class="compare-object__text">6</div>
+                              </div>
+                            </a>
+                            <button class="compare-object__close-btn"></button>
+                          </div>
+                          <!-- End (compare-object) -->
+                        </div>
+                      </div>
+                      <div class="comparison__delete-all">
+                        <!-- (delete-all) -->
+                        <button class="delete-all">Удалить все объекты</button>
+                        <!-- End (delete-all) -->
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comparison__aside">
+                  <ul class="comparison__aside-column">
+                    <li class="comparison__aside-row">Тип помещения</li>
+                    <li class="comparison__aside-row comparison__aside-row_high">Адрес</li>
+                    <li class="comparison__aside-row">
+                      <a href="#" class="comparison__aside-price">Стоимость
+                        <div class="comparison__aside-icon">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="comparison__aside-row">Метро</li>
+                    <li class="comparison__aside-row">Расстояние от метро</li>
+                    <li class="comparison__aside-row">Общая площадь</li>
+                    <li class="comparison__aside-row">С отделкой</li>
+                    <li class="comparison__aside-row">Эл. мощность</li>
+                    <li class="comparison__aside-row">Этаж</li>
+                    <li class="comparison__aside-row">Этажность</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <!-- End (jl-header) -->
-        <!-- (jl-content) -->
-        <div class="jl-content">
-          <div class="jl-content__cover cover">
-            <div class="jl-content__wrapper clearfix">
-              <main class="jl-content__main">
-               <div class="jl-content__main-wrapper">
-                <div class="jl-content__main-header">
-                  <h2 class="jl-content__main-title">Популярное</h2>
-                  <div class="jl-content__search">
-                    <a href="#" class="jl-content__search-link">
-                      <svg class="jl-content__search-icon" width="16" height="17">
-                        <use xlink:href="images/icons.svg#search-icon"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="jl-content__main-content">
-                  <div class="jl-content__post">
-                    <!-- (jl-post) -->
-                    <article class="jl-post jl-post_big">
-                      <a href="#" class="jl-post__link clearfix">
-                        <div class="jl-post__img-wrapper">
-                          <img src="images/content/jl-page/post1.jpg" alt="Фото">
-                          <div class="jl-post__label jl-post__label_red">тема дня</div>
-                        </div>
-                        <h6 class="jl-post__title">На Никольской улице в Москве
-                          появится гостиница, строительством которой займется группа «Гута».</h6>
-                        <span>11 часов назад</span>
-                        <p>ГЗК Москвы одобрила проект строительства гостиничного комплекса на 20 800 кв. м на Никольской улице в Москве, сообщают «Ведомости». Сейчас по этому адресу расположено нежилое здание на 15 000 кв. м, которое ранее планировалось реконструировать под офисы. Инвестором проекта является ЗАО «Маура», которое связано с группой «Гута». Здание Шевалдышевского подворья было построено во второй половине XVIII в. Оно не является объектом культурного наследия и не имеет охранного статуса. С 2006 г. собственник («Гута») сдавал его в аренду под офисы. Первые этажи были отданы под стрит-ретейл.</p>
-                      </a>
-                    </article>
-                    <!-- End (jl-post) -->
-                  </div>
-                  <div class="jl-content__posts">
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post2.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">PRIDEX подготовил офис Maxxium Russia в «Демидове»</h6>
-                            <span>22.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia
-                              площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post3.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">«Группа ЛСР» начала строить ЖК на 120 тыс кв м в Петербурге</h6>
-                            <span>23.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post4.jpg" alt="Фото">
-                              <div class="jl-post__label jl-post__label_bottom">мнение эксперта</div>
-                            </div>
-                            <span>23.07.2017</span>
-                            <h6 class="jl-post__title">Проектом Neva Haus предусмотрен паркинг на 907 машиномест</h6>
-                            <p>Началось строительство нового элитного жилого комплекса Neva Haus в Петроградском районе Петербурга, сообщает пресс-служба «Группы ...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="jl-content__posts jl-content__posts_reverse">
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post5.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">PRIDEX подготовил офис Maxxium Russia в «Демидове»</h6>
-                            <span>22.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia
-                              площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post6.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">«Группа ЛСР» начала строить ЖК на 120 тыс кв м в Петербурге</h6>
-                            <span>23.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post7.jpg" alt="Фото">
-                            </div>
-                            <span>23.07.2017</span>
-                            <h6 class="jl-post__title">Проектом Neva Haus предусмотрен паркинг на 907 машиномест</h6>
-                            <p>Началось строительство нового элитного жилого комплекса Neva Haus в Петроградском районе Петербурга, сообщает пресс-служба «Группы ...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="jl-content__post">
-                    <!-- (jl-post) -->
-                    <article class="jl-post jl-post_big">
-                      <a href="#" class="jl-post__link clearfix">
-                        <div class="jl-post__img-wrapper">
-                          <img src="images/content/jl-page/post8.jpg" alt="Фото">
-                          <div class="jl-post__label">рекомендуем</div>
-                        </div>
-                        <h6 class="jl-post__title">На Никольской улице в Москве
-                          появится гостиница, строительством которой займется группа «Гута».</h6>
-                        <span>11 часов назад</span>
-                        <p>ГЗК Москвы одобрила проект строительства гостиничного комплекса на 20 800 кв. м на Никольской улице в Москве, сообщают «Ведомости». Сейчас по этому адресу расположено нежилое здание на 15 000 кв. м, которое ранее планировалось реконструировать под офисы. Инвестором проекта является ЗАО «Маура», которое связано с группой «Гута». Здание Шевалдышевского подворья было построено во второй половине XVIII в. Оно не является объектом культурного наследия и не имеет охранного статуса. С 2006 г. собственник («Гута») сдавал его в аренду под офисы. Первые этажи были отданы под стрит-ретейл.</p>
-                      </a>
-                    </article>
-                    <!-- End (jl-post) -->
-                  </div>
-                  <div class="jl-content__posts">
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post9.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">PRIDEX подготовил офис Maxxium Russia в «Демидове»</h6>
-                            <span>22.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia
-                              площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post10.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">«Группа ЛСР» начала строить ЖК на 120 тыс кв м в Петербурге</h6>
-                            <span>23.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post11.jpg" alt="Фото">
-                              <div class="jl-post__label jl-post__label_bottom">мнение эксперта</div>
-                            </div>
-                            <span>23.07.2017</span>
-                            <h6 class="jl-post__title">Проектом Neva Haus предусмотрен паркинг на 907 машиномест</h6>
-                            <p>Началось строительство нового элитного жилого комплекса Neva Haus в Петроградском районе Петербурга, сообщает пресс-служба «Группы ...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="jl-content__posts jl-content__posts_reverse">
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post12.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">PRIDEX подготовил офис Maxxium Russia в «Демидове»</h6>
-                            <span>22.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia
-                              площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post jl-post_small">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post13.jpg" alt="Фото">
-                            </div>
-                            <h6 class="jl-post__title">«Группа ЛСР» начала строить ЖК на 120 тыс кв м в Петербурге</h6>
-                            <span>23.07.2017</span>
-                            <p>Строительная компания PRIDEX завершила реализацию офиса компании Maxxium Russia площадью 1,7 тыс. кв. м, расположенного...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                    <div class="jl-content__block">
-                      <div class="jl-content__post">
-                        <!-- (jl-post) -->
-                        <article class="jl-post">
-                          <a href="#" class="jl-post__link clearfix">
-                            <div class="jl-post__img-wrapper">
-                              <img src="images/content/jl-page/post14.jpg" alt="Фото">
-                            </div>
-                            <span>23.07.2017</span>
-                            <h6 class="jl-post__title">Проектом Neva Haus предусмотрен паркинг на 907 машиномест</h6>
-                            <p>Началось строительство нового элитного жилого комплекса Neva Haus в Петроградском районе Петербурга, сообщает пресс-служба «Группы ...</p>
-                          </a>
-                        </article>
-                        <!-- End (jl-post) -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="jl-content__btn">
-                    <!-- (btn-show) -->
-                    <button class="btn-show">показать ещё
-                      <svg class="btn-show__icon" width="15" height="15">
-                        <use xlink:href="images/icons.svg#loading-icon"></use>
-                      </svg>
-                    </button>
-                    <!-- (btn-show) -->
-                  </div>
-                </div>
-               </div>
-              </main>
-              <aside class="jl-content__aside">
-                <h3 class="jl-content__aside-title">Новое в журнале</h3>
-                <ul class="jl-content__aside-list">
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal1.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal2.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal3.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="jl-content__aside-item">
-                    <a href="#" class="jl-content__aside-link">
-                      <div class="jl-content__aside-img-wrapper">
-                        <img src="images/content/jl-page/journal4.jpg" alt="Фото" class="jl-content__aside-img">
-                      </div>
-                      <div class="jl-content__aside-text">
-                        <h6 class="jl-content__aside-label">Cтроительство парка Universal Studios переносится</h6>
-                        <span class="jl-content__aside-date">24.08.2017</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </aside>
-            </div>
-          </div>
-        </div>
-        <!-- End (jl-content) -->
       </div>
       <!-- End (main) -->
       <!-- (footer) -->
