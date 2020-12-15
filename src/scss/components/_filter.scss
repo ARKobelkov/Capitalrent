@@ -203,4 +203,36 @@
     fill: #dedfe5;
     transition: all 0.3s ease;
   }
+  &__switcher {
+    display: flex;
+    border: 1px solid #e1e7e8;
+    border-radius: 20px;
+    margin: 10px 27px 30px;
+    @media screen and (min-width: 480px) {
+      margin: 0 13px 30px;
+    }
+    &-label {
+      display: block;
+    }
+    &-input {
+      display: none;
+      &:checked + .filter__switcher-text {
+        background: #004b90;
+        color: #fff;
+      }
+    }
+    &-text {
+      display: block;
+      font: 500 14px / 20px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: #64676d;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      padding: 11px 29px 8px;
+      @media screen and (min-width: 480px) {
+        padding: 11px 36px 8px;
+      }
+    }
+  }
 }

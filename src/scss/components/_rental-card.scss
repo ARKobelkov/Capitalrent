@@ -25,6 +25,10 @@
     // max-width: 310px;
     width: 100%;
     // flex: 0 0 auto;
+    min-height: 210px;
+    @media screen and (min-width: 480px) {
+      min-height: 185px;
+    }
     .catalog__list_horizontal & {
       @media screen and (min-width: 990px) {
         max-width: 310px;
@@ -36,9 +40,22 @@
       }
     }
   }
+  &__img-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font: 500 18px / 21px 'Fira Sans', sans-serif;
+    color: #0a1828;
+    background: #fff;
+    box-shadow: 0px 0px 9px 1px rgba(75,75,75,0.05);
+    border-radius: 19px;
+    padding: 10px 21px 7px;
+  }
   &__img {
     max-width: none;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     .catalog__item_long & {
       @media screen and (min-width: 600px) {
         height: 100%;
@@ -63,6 +80,13 @@
     visibility: hidden;
     &:hover .rental-card__icon,
     &:active .rental-card__icon {
+      fill: #ffd84f;
+    }
+  }
+  &__favorite-btn.active {
+    opacity: 1;
+    visibility: visible;
+    .rental-card__icon {
       fill: #ffd84f;
     }
   }

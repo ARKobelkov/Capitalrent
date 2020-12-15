@@ -2830,6 +2830,10 @@ input::-ms-clear {
   background: #9b9b9b;
 }
 
+.metro__station_red:before {
+  background: #f7685c;
+}
+
 .metro__time {
   font: 400 16px/21px "Fira Sans", sans-serif;
   color: #a6a7ab;
@@ -3304,11 +3308,31 @@ input::-ms-clear {
 .rental-card__img-wrapper {
   position: relative;
   width: 100%;
+  min-height: 210px;
+}
+
+.rental-card__img-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font: 500 18px/21px "Fira Sans", sans-serif;
+  color: #0a1828;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 9px 1px rgba(75, 75, 75, 0.05);
+  -moz-box-shadow: 0px 0px 9px 1px rgba(75, 75, 75, 0.05);
+  box-shadow: 0px 0px 9px 1px rgba(75, 75, 75, 0.05);
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  border-radius: 19px;
+  padding: 10px 21px 7px;
 }
 
 .rental-card__img {
   max-width: none;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .rental-card__favorite-btn {
@@ -3337,6 +3361,15 @@ input::-ms-clear {
 
 .rental-card__favorite-btn:hover .rental-card__icon,
 .rental-card__favorite-btn:active .rental-card__icon {
+  fill: #ffd84f;
+}
+
+.rental-card__favorite-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.rental-card__favorite-btn.active .rental-card__icon {
   fill: #ffd84f;
 }
 
@@ -3842,6 +3875,48 @@ input::-ms-clear {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.filter__switcher {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #e1e7e8;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 10px 27px 30px;
+}
+
+.filter__switcher-label {
+  display: block;
+}
+
+.filter__switcher-input {
+  display: none;
+}
+
+.filter__switcher-input:checked + .filter__switcher-text {
+  background: #004b90;
+  color: #fff;
+}
+
+.filter__switcher-text {
+  display: block;
+  font: 500 14px/20px "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  color: #64676d;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 11px 29px 8px;
 }
 
 .header__top {
@@ -7516,8 +7591,20 @@ input::-ms-clear {
     width: 35%;
   }
 
+  .rental-card__img-wrapper {
+    min-height: 185px;
+  }
+
   .filter__main {
     padding: 28px;
+  }
+
+  .filter__switcher {
+    margin: 0 13px 30px;
+  }
+
+  .filter__switcher-text {
+    padding: 11px 36px 8px;
   }
 
   .header__social-block {
@@ -7812,6 +7899,11 @@ input::-ms-clear {
 
   .catalog__item_long {
     width: 100%;
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -moz-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
   }
 }
 
@@ -8466,6 +8558,11 @@ input::-ms-clear {
 
   .catalog__item_long {
     width: 66.6666666667%;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
   }
 }
 

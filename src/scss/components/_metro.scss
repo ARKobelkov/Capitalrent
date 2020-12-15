@@ -46,6 +46,11 @@
         background: #9b9b9b;
       }
     }
+    &_red {
+      &:before {
+        background: #f7685c;
+      }
+    }
   }
   &__time {
     font: 400 16px / 21px 'Fira Sans', sans-serif;

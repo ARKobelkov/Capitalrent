@@ -573,65 +573,140 @@
               </div>
               <div class="catalog__wrapper clearfix">
                 <div class="catalog__aside">
+                  <button class="catalog__open-filter" id="filter-switcher">показать/скрыть фильтр</button>
                   <div class="catalog__filter">
                     <!-- (filter) -->
                     <div class="filter">
                       <form action="#" name="filterRent" method="POST">
                         <div class="filter__field">
                           <div class="filter__main">
-                            <div class="filter__select-wrapper">
-                              <select name="typeInvestment" id="typeInvestment" data-placeholder=" " class="filter__select">
-                                <option value="typeInvestment0"></option>
-                                <option value="typeInvestment1">Бизнес в продаже</option>
-                                <option value="typeInvestment2">Бизнес в аренде</option>
-                              </select>
-                              <div class="filter__placeholder">Тип инвестирования</div>
-                            </div>
-                            <div class="filter__sl-item">
-                              <div class="filter__sl-item-top">
-                                <div class="filter__sl-label">Стоимость</div>
-                                <div class="filter__sl-inputs">
-                                  <div class="filter__sl-input-wrapper">
-                                    <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
-                                  </div>
-                                  <div class="filter__sl-divider"></div>
-                                  <div class="filter__sl-input-wrapper">
-                                    <input type="text" name="costTo" value="" placeholder="" data-field="before" class="filter__sl-input">
-                                  </div>
-                                  <div class="filter__sl-currency-wrapper">
-                                    <select name="currency" id="currency" class="filter__sl-currency">
-                                      <option value="ruble">₽</option>
-                                      <option value="euro">€</option>
-                                      <option value="dollar">$</option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="filter__sl-item-bottom">
-                                <div class="filter__sl-strip">
-                                  <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-from="18" data-before="106" class="filter__sl-strip-input">
-                                </div>
+                            <div class="filter__block">
+                              <div class="filter__select-wrapper">
+                                <select name="typeInvestment" id="typeInvestment" data-placeholder=" " class="filter__select">
+                                  <option value="typeInvestment0"></option>
+                                  <option value="typeInvestment1">Бизнес в продаже</option>
+                                  <option value="typeInvestment2">Бизнес в аренде</option>
+                                </select>
+                                <div class="filter__placeholder">Тип инвестирования</div>
                               </div>
                             </div>
-                            <div class="filter__sl-item">
-                              <div class="filter__sl-item-top">
-                                <div class="filter__sl-label">Площадь</div>
-                                <div class="filter__sl-inputs">
-                                  <div class="filter__sl-input-wrapper">
-                                    <input type="text" name="squareFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
+                            <div class="filter__block">
+                              <div class="filter__sl-item">
+                                <div class="filter__sl-item-top">
+                                  <div class="filter__sl-label">Стоимость</div>
+                                  <div class="filter__sl-inputs">
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
+                                    </div>
+                                    <div class="filter__sl-divider"></div>
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="costTo" value="" placeholder="" data-field="before" class="filter__sl-input">
+                                    </div>
+                                    <div class="filter__sl-currency-wrapper">
+                                      <select name="currency" class="filter__sl-currency">
+                                        <option value="ruble">₽</option>
+                                        <option value="euro">€</option>
+                                        <option value="dollar">$</option>
+                                      </select>
+                                    </div>
                                   </div>
-                                  <div class="filter__sl-divider"></div>
-                                  <div class="filter__sl-input-wrapper">
-                                    <input type="text" name="squareTo" value="" placeholder="" data-field="before" class="filter__sl-input">
-                                  </div>
-                                  <div class="filter__sl-unit">
-                                    <div class="filter__sl-unit-text">м²</div>
+                                </div>
+                                <div class="filter__sl-item-bottom">
+                                  <div class="filter__sl-strip">
+                                    <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-from="18" data-before="106" class="filter__sl-strip-input">
                                   </div>
                                 </div>
                               </div>
-                              <div class="filter__sl-item-bottom">
-                                <div class="filter__sl-strip">
-                                  <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-from="234" data-before="1133" class="filter__sl-strip-input">
+                            </div>
+                            <div class="filter__block">
+                              <div class="filter__sl-item">
+                                <div class="filter__sl-item-top">
+                                  <div class="filter__sl-label">Чистая прибыль</div>
+                                  <div class="filter__sl-inputs filter__sl-inputs_long">
+                                    <div class="filter__sl-prefix">
+                                      <div class="filter__sl-prefix-text">от</div>
+                                    </div>
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="profit" value="" placeholder="100 000"  class="filter__sl-input" data-number="number">
+                                    </div>
+                                    <div class="filter__sl-currency-wrapper">
+                                      <select name="currency-month" class="filter__sl-currency filter__sl-currency_long">
+                                        <option value="ruble">руб./мес</option>
+                                        <option value="euro">долл./мес</option>
+                                        <option value="dollar">евро/мес</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="filter__radio-btns">
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="priceValue" class="filter__radio-input" value="50 000">
+                                      <span class="filter__radio-text">от 50 000</span>
+                                    </label>
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="priceValue" class="filter__radio-input" value="100 000" checked>
+                                      <span class="filter__radio-text">от 100 000</span>
+                                    </label>
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="priceValue" class="filter__radio-input" value="300 000">
+                                      <span class="filter__radio-text">от 300 000</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="filter__block">
+                              <div class="filter__sl-item">
+                                <div class="filter__sl-item-top">
+                                  <div class="filter__sl-label">Окупаемость</div>
+                                  <div class="filter__sl-inputs filter__sl-inputs_long">
+                                    <div class="filter__sl-prefix">
+                                      <div class="filter__sl-prefix-text">от</div>
+                                    </div>
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="payback" value="" placeholder="20"  class="filter__sl-input" data-number="number">
+                                    </div>
+                                    <div class="filter__sl-unit">
+                                      <div class="filter__sl-unit-text">месяцев</div>
+                                    </div>
+                                  </div>
+                                  <div class="filter__radio-btns">
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="6">
+                                      <span class="filter__radio-text">до 6 мес.</span>
+                                    </label>
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="12">
+                                      <span class="filter__radio-text">до 12 мес.</span>
+                                    </label>
+                                    <label class="filter__radio-label">
+                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="24">
+                                      <span class="filter__radio-text">до 24 мес.</span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="filter__block hidden">
+                              <div class="filter__sl-item">
+                                <div class="filter__sl-item-top">
+                                  <div class="filter__sl-label">Площадь</div>
+                                  <div class="filter__sl-inputs">
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="squareFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
+                                    </div>
+                                    <div class="filter__sl-divider"></div>
+                                    <div class="filter__sl-input-wrapper">
+                                      <input type="text" name="squareTo" value="" placeholder="" data-field="before" class="filter__sl-input">
+                                    </div>
+                                    <div class="filter__sl-unit">
+                                      <div class="filter__sl-unit-text">м²</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="filter__sl-item-bottom">
+                                  <div class="filter__sl-strip">
+                                    <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-from="234" data-before="1133" class="filter__sl-strip-input">
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1163,63 +1238,6 @@
           </div>
         </section>
         <!-- End (catalog) -->
-        <div class="catalog__item catalog__item_long">
-          <!-- (rental-card) -->
-          <a href="#" class="rental-card">
-            <div class="rental-card__img-wrapper">
-              <img src="images/content/catalog/rental1.jpg" alt="Фото объекта" class="rental-card__img">
-              <button class="rental-card__favorite-btn">
-                <svg class="rental-card__icon" width="20" height="19">
-                  <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="rental-card__content">
-              <h6 class="rental-card__title">Готовый арендный бизнес - Бизнес-Центр - 14 520 м²</h6>
-              <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                <svg class="rental-card__geo-icon" width="10" height="12">
-                  <use xlink:href="images/icons.svg#icon-map"></use>
-                </svg>
-              </div>
-              <div class="rental-card__metro">
-                <!-- (metro) -->
-                <div class="metro">
-                  <div class="metro__station metro__station_orange">Ленинский проспект </div>
-                  <div class="metro__time">- 10 мин пешком</div>
-                </div>
-                <!-- End (metro) -->
-              </div>
-              <div class="rental-card__option rental-card__option_profit">
-                <div class="rental-card__option-descr">Чистая прибыль</div>
-                <div class="rental-card__square">
-                  <div class="rental-card__count">870 000</div>
-                  <div class="rental-card__unit">руб./мес</div>
-                </div>
-              </div>
-              <div class="rental-card__option rental-card__option_payback">
-                <div class="rental-card__option-descr">Окупаемость</div>
-                <div class="rental-card__square">
-                  <div class="rental-card__count">24</div>
-                  <div class="rental-card__unit">мес</div>
-                </div>
-              </div>
-              <div class="rental-card__option rental-card__option_cost">
-                <div class="rental-card__option-descr">Стоимость</div>
-                <div class="rental-card__square">
-                  <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 2 940 000 000</div>
-                  <div class="rental-card__unit">руб.</div>
-                </div>
-              </div>
-              <div class="rental-card__option rental-card__option_space">
-                <div class="rental-card__square">
-                  <div class="rental-card__count">343</div>
-                  <div class="rental-card__unit">м²</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- End (rental-card) -->
-        </div>
       </div>
       <!-- End (main) -->
       <!-- (footer) -->
