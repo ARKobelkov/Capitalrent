@@ -85,4 +85,10 @@
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 12" id="share-arrow-icon">
     <path d="M8.8 3.2C3.2 4 .8 8 0 12c2-2.8 4.8-4.08 8.8-4.08v3.28l5.6-5.6L8.8 0v3.2zm0 0"></path>
   </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.59 14.86" id="favorite-star-icon">
+    <path d="M8.16.25l2 4.69 5.07.43a.4.4 0 01.23.7L11.6 9.41l1.15 5a.39.39 0 01-.59.43l-4.37-2.67-4.36 2.63a.4.4 0 01-.59-.43L4 9.41.14 6.07a.4.4 0 01.23-.7l5.07-.43 2-4.69a.39.39 0 01.73 0zm0 0"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.18 341.45" id="valentines-heart-icon">
+    <path d="M394.18 106.45a106.36 106.36 0 00-197.09-55.59A106.36 106.36 0 1036.53 186.59l150.84 150.84a13.75 13.75 0 0019.43 0l150.84-150.84a106.08 106.08 0 0036.54-80.14zm0 0"></path>
+  </symbol>
 </svg>

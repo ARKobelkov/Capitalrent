@@ -1,24 +1,22 @@
 .modal-catalog {
   display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 335px;
   background: rgba(22,26,31,0.94);
   z-index: 999;
-  @media screen and (min-width: 480px) {
-    padding-top: 337px;
-  }
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding-top: 178px;
   }
   &__block {
     border-top: 2px solid $headerbtn;
     background: $firstbackground;
-    padding: 15px 0 25px 0;
-    @media screen and (min-width: 768px) {
+    padding: 60px 0 110px;
+    @media screen and (min-width: 1200px) {
       padding: 60px 0;
     }
   }
@@ -115,7 +113,7 @@
     position: absolute;
     bottom: -70px;
     right: 15px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
       bottom: -117px;
     }
   }

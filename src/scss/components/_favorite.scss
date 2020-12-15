@@ -3,6 +3,7 @@
   border: 2px solid #f2f3f7;
   margin-top: -2px;
   transition: all 0.3s ease;
+  position: relative;
   &:hover,
   &:active {
     box-shadow: 0 0 13px 0 rgba(18,46,72,.09);
@@ -33,12 +34,18 @@
       flex-wrap: nowrap;
     }
     &_column {
+      padding: 22px 28px 12px 28px;
       flex-direction: column;
       @media screen and (min-width: 480px) {
         flex-direction: column;
       }
       @media screen and (min-width: 768px) {
         flex-direction: row;
+        flex-wrap: wrap;
+        padding: 22px 38px 12px 12px;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 12px;
       }
     }
   }
@@ -48,7 +55,7 @@
     margin: 10px 0;
     @media screen and (min-width: 480px) {
       width: 33%;
-      margin: 0;
+      margin: 0 0 10px;
     }
     @media screen and (min-width: 600px) {
       width: 22%;
@@ -73,12 +80,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px 0;
+    margin: 0 0 10px;
     text-align: center;
     @media screen and (min-width: 480px) {
       width: 67%;
-      height: 96px;
-      margin: 0;
       text-align: left;
     }
     @media screen and (min-width: 600px) {
@@ -89,6 +94,7 @@
     }
     @media screen and (min-width: 1200px) {
       width: 170px;
+      margin: 0;
     }
     @media screen and (min-width: 1440px) {
       width: 285px;
@@ -110,11 +116,9 @@
     padding: 0 10px;
     width: 100%;
     overflow: hidden;
-    margin: 10px 0;
+    margin: 0 0 10px;
     @media screen and (min-width: 480px) {
       width: 40%;
-      height: 96px;
-      margin: 0;
     }
     @media screen and (min-width: 600px) {
       width: 34%;
@@ -124,6 +128,7 @@
     }
     @media screen and (min-width: 1200px) {
       width: 180px;
+      margin: 0;
     }
     @media screen and (min-width: 1440px) {
       width: 215px;
@@ -136,11 +141,9 @@
     width: 100%;
     justify-content: center;
     overflow: hidden;
-    margin: 10px;
+    margin: 0 0 10px;
     @media screen and (min-width: 480px) {
       width: 25%;
-      margin: 0;
-      height: 96px;
     }
     @media screen and (min-width: 600px) {
       width: 22%;
@@ -150,6 +153,7 @@
     }
     @media screen and (min-width: 1200px) {
       width: 90px;
+      margin: 0;
     }
     @media screen and (min-width: 1440px) {
       width: 150px;
@@ -174,11 +178,9 @@
     width: 100%;
     overflow: hidden;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 0 0 10px;
     @media screen and (min-width: 480px) {
       width: 35%;
-      height: 96px;
-      margin: 0;
     }
     @media screen and (min-width: 600px) {
       width: 40%;
@@ -188,15 +190,20 @@
     }
     @media screen and (min-width: 1200px) {
       width: 215px;
+      margin: 0;
     }
   }
   &__delete {
     flex: 0 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
     background: none;
-    position: relative;
     border: none;
     border-left: 2px solid #f2f3f7;
-    width: 38px;
+    border-bottom: 2px solid #f2f3f7;
+    width: 36px;
+    height: 38px;
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover,
@@ -215,12 +222,24 @@
       height: 2px;
       background: #4d5155;
       top: 50%;
-      left: 11px;
+      left: 9px;
       transform: rotate(45deg) translateY(-50%);
     }
     &:after {
       transform: rotate(-45deg) translateY(-50%);
-      left: 12px;
+      left: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      width: 36px;
+      height: auto;
+      border-bottom: none;
+      &:before {
+        left: 11px;
+      }
+      &:after {
+        left: 12px;
+      }
     }
   }
 }

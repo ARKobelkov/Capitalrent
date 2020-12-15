@@ -6,6 +6,10 @@
     justify-content: space-between;
     border-bottom: 2px solid #f2f3f7;
     margin-bottom: 20px;
+    flex-direction: column;
+    @media screen and (min-width: 480px) {
+      flex-direction: row;
+    }
     &-title {
       font: 400 30px / 30px 'Fira Sans', sans-serif;
       color: $footertitle;
@@ -14,7 +18,11 @@
     }
     &-links {
       display: flex;
-      margin: 15px -10px -2px;
+      flex-wrap: wrap;
+      margin: 15px -10px 10px;
+      @media screen and (min-width: 480px) {
+        margin: 15px -10px -2px;
+      }
     }
     &-item {
       padding: 0 10px;
@@ -34,27 +42,37 @@
       }
     }
     &-link.active {
-      border-bottom: 2px solid $footertitle;
       color: $footertitle;
+      @media screen and (min-width: 480px) {
+        border-bottom: 2px solid $footertitle;
+      }
     }
   }
   &__command {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -25px;
+    margin: 0 -15px;
+    @media screen and (min-width: 768px) {
+      margin: 0 -25px;
+    }
   }
   &__manager {
     width: 100%;
-    padding: 20px 25px;
+    padding: 20px 15px;
     @media screen and (min-width: 480px) {
       width: 50%;
     }
     @media screen and (min-width: 768px) {
-      width: calc(100% / 3);
+      padding: 20px 25px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: (100% / 3);
     }
   }
   &__descr {
-    padding: 0 20px;
+    @media screen and (min-width: 1440px) {
+      padding: 0 20px;
+    }
   }
   &__img-wrapper {
     margin-bottom: 20px;

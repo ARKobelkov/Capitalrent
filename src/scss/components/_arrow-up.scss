@@ -1,0 +1,29 @@
+.arrow-up {
+  display: block;
+  width: 60px;
+  height: 55px;
+  border: 2px solid #e1e4ec;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 9px;
+    width: 9px;
+    top: 20px;
+    left: 24px;
+    border-right: 2px solid #e03621;
+    border-top: 2px solid #e03621;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    top: 26px;
+  }
+  &:hover,
+  &:active {
+    box-shadow: 0 0 13px 0 rgba(18, 46, 72, 0.1);
+  }
+}

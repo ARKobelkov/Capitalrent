@@ -6,6 +6,9 @@
     align-items: center;
     padding: 25px 0;
     margin: 0;
+    &_narrow {
+      padding-bottom: 0;
+    }
   }
   &__item {
     position: relative;

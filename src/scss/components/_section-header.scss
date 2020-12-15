@@ -17,21 +17,29 @@
   }
   &__tabs {
     margin-right: auto;
-    margin-bottom: -2px;
+    margin-bottom: 5px;
     order: 1;
     @media screen and (min-width: 768px) {
       order: 0;
+      margin-bottom: -2px;
     }
     &-text {
       font: 300 14px / 23px 'Fira Sans', sans-serif;
       color: $shtext;
+      margin-bottom: 5px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
     }
     &-list {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -8px 0 -8px;
+      margin: 0 -8px 5px -8px;
       @media screen and (min-width: 480px) {
         margin: 0 -10px;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0 -8px 0 -8px;
       }
     }
     &-item {
@@ -51,12 +59,16 @@
       &:hover,
       &:active {
         color: $footertitle;
-        border-color: $footertitle;
+        @media screen and (min-width: 768px) {
+          border-color: $footertitle;
+        }
       }
     }
     &-link.active {
       color: $footertitle;
-      border-color: $footertitle;
+      @media screen and (min-width: 768px) {
+        border-color: $footertitle;
+      }
     }
   }
   &__link-wrapper {

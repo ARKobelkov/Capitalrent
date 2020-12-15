@@ -7,31 +7,37 @@
   align-self: center;
   max-width: 860px;
   flex-wrap: wrap;
-  justify-content: center;
   &__label {
     font: 400 16px / 16px 'Fira Sans', sans-serif;
     text-transform: uppercase;
     color: #3d4140;
     padding: 9px 0;
-    margin-right: 22px;
-    margin-left: 22px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: 10px;
+    @media screen and (min-width: 600px) {
+      margin-right: 22px;
+      margin-left: 22px;
+    }
   }
   &__social.pluso {
     .pluso-wrap {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
     }
     .pluso-wrap > div {
       height: 33px;
-      margin: 0 17px;
+      margin: 0 10px;
       border-radius: 0;
       margin-bottom: 10px;
       background: none!important;
       display: flex;
-      width: 123px;
+      width: 113px;
       position: relative;
+      @media screen and (min-width: 600px) {
+        margin: 0 17px;
+        margin-bottom: 10px;
+      }
       @media screen and (min-width: 1440px) {
         width: 133px;
       }
@@ -67,7 +73,7 @@
         background: #dd4b39;
       }
       b {
-        width: 90px;
+        width: 80px;
         text-align: center;
         height: 100%;
         font: 400 15px / 33px 'Fira Sans', sans-serif;

@@ -10,8 +10,8 @@
     text-align: center;
     display: block;
     font: 600 18px / 55px 'Fira Sans', sans-serif;
-    height: 57px;
-    min-width: 57px;
+    height: 55px;
+    min-width: 55px;
     padding: 0 5px;
     text-transform: uppercase;
     color: #313c47;
@@ -60,7 +60,6 @@
     &_prev.disabled,
     &_next.disabled {
       cursor: default;
-      background: #fff;
       border-color: #e1e2e6;
       &:before {
         border-color: #e1e2e6;

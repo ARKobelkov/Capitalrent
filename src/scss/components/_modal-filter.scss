@@ -1,22 +1,30 @@
 .modal-filter {
   display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 335px;
+  // padding-top: 335px;
   background: rgba(22,26,31,0.94);
   z-index: 999;
-  @media screen and (min-width: 480px) {
-    padding-top: 337px;
-  }
-  @media screen and (min-width: 768px) {
+  // @media screen and (min-width: 480px) {
+  //   padding-top: 337px;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   padding-top: 178px;
+  // }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding-top: 178px;
   }
   &__block {
     border-top: 2px solid $headerbtn;
     background: $firstbackground;
+    padding-bottom: 80px;
+    @media screen and (min-width: 1200px) {
+     padding-bottom: 0;
+    }
   }
   &__main {
     &-wrapper {

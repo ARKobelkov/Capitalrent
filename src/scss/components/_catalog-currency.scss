@@ -1,0 +1,35 @@
+.catalog-currency {
+  display: flex;
+  &__item {
+    margin-left: -2px;
+    width: 55px;
+    height: 55px;
+    border: 2px solid #e6e9f2;
+    &:first-child {
+      border-radius: 5px 0px 0px 5px;
+    }
+    &:last-child {
+      border-radius: 0px 5px 5px 0px;
+    }
+  }
+  &__label {
+    display: block;
+    height: 100%;
+    cursor: pointer;
+    
+  }
+  &__input {
+    display: none;
+    &:checked +.catalog-currency__text {
+      background: #fff;
+      color: #2c2f2e;
+    }
+  }
+  &__text {
+    font: 400 22px / 51px 'Fira Sans', sans-serif;
+    color: #d5d8e0;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+}

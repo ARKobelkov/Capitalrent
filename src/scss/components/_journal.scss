@@ -3,6 +3,9 @@
   &__tabs {
     padding: 30px 0;
   }
+  &__tab {
+    display: none;
+  }
   &__main {
     display: flex;
     flex-wrap: wrap;
@@ -20,9 +23,6 @@
     @media screen and (min-width: 480px) {
       width: 50%;
     }
-    @media screen and (min-width: 990px) {
-      width: calc(100%/3);
-    }
     @media screen and (min-width: 1200px) {
       width: 25%;
     }
@@ -34,6 +34,8 @@
       text-decoration: none;
       position: relative;
       height: 100%;
+      display: flex;
+      flex-direction: column;
       &:hover .journal__news-img,
       &:active .journal__news-img {
         transform: scale(1.2);
@@ -42,6 +44,10 @@
     }
     &-content {
       padding: 14px 10px 9px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 auto;
     }
     &-label {
       position: absolute;
@@ -68,7 +74,7 @@
       font: 400 18px / 25px 'Fira Sans', sans-serif;
       color: $footertitle;
       margin-bottom: 15px;
-      max-height: 50px;
+      max-height: 75px;
       overflow: hidden;
     }
     &-descr {
@@ -77,12 +83,6 @@
       font: 400 14px / 14px 'Fira Sans', sans-serif;
       color: $jldescrfont;
       flex-direction: row;
-      @media screen and (min-width: 990px) {
-        flex-direction: column;
-      }
-      @media screen and (min-width: 1440px) {
-        flex-direction: row;
-      }
     }
     &-time {
       margin-right: 20px;
@@ -125,6 +125,7 @@
       }
       .journal__news-img-wrapper {
         height: 100%;
+        min-height: 210px;
       }
       .journal__news-img {
         height: 100%;
@@ -143,9 +144,8 @@
         font: 700 18px / 25px 'Fira Sans', sans-serif;
         color: $topbtns;
         margin-bottom: 10px;
-        max-height: 50px;
         @media screen and (min-width: 480px) {
-          max-height: 62px;
+          max-height: none;
           margin-bottom: 20px;
           font: 700 26px / 31px 'Fira Sans', sans-serif;
         }

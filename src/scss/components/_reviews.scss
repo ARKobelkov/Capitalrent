@@ -22,10 +22,13 @@
     }
   }
   &__tab {
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (min-width: 1200px) {
-      flex-wrap: nowrap;
+    display: none;
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+      }
     }
   }
   &__big {

@@ -5,6 +5,11 @@
     font: 400 16px / 21px 'Fira Sans', sans-serif;
     color: #0a1828;
     margin-bottom: 5px;
+    .catalog__list_horizontal & {
+      @media screen and (min-width: 990px) {
+        color: #a6a7ab;
+      }
+    }
     &:before {
       content: '';
       position: absolute;
@@ -51,6 +56,11 @@
       color: #626366;
       font-size: 15px;
       margin-bottom: 0;
+    }
+  }
+  .catalog__list_horizontal & {
+    @media screen and (min-width: 990px) {
+      display: flex;
     }
   }
 }

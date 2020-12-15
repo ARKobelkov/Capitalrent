@@ -47,9 +47,6 @@
       }
       &-icon {
         fill: $topbtns;
-        @media screen and (min-width: 1440px) {
-          margin-right: 10px;
-        }
         &_grey {
           fill: $topbtnsnotactive;
         }
@@ -70,6 +67,7 @@
           right: auto;
           padding: 4px 13px;
           font: 500 15px / 19px 'Fira Sans', sans-serif;
+          margin-left: 10px;
         }
         &_blue {
           background: $libra;

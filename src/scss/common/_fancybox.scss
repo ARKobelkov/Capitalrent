@@ -1,0 +1,22 @@
+.fancybox-container {
+  .fancybox-bg {
+    background: #fff;
+    opacity: 1;
+  }
+  .fancybox-content {
+    overflow: visible;
+    padding: 0 10px;
+    position: static;
+  }
+  .fancybox-button {
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      right: 90px;
+      top: 53px;
+    }
+  }
+}

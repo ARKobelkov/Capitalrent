@@ -167,7 +167,7 @@ $(function () {
   function tabsActive(tabsNavBlock, tabsBlock) {
     $(tabsNavBlock).easytabs({
       updateHash: false,
-      animate: true,
+      animate: false,
       panelContext: $(tabsBlock)
     });
   }
@@ -275,7 +275,7 @@ $(function () {
 
   $('#favorites-nav').easytabs({
     updateHash: false,
-    animate: true,
+    animate: false,
     panelContext: $('#favorites-tabs')
   }); // Кнопка копии
 
@@ -292,7 +292,7 @@ $(function () {
     }, 3000);
     e.clearSelection();
   });
-  /* Табы для сравнения объектов */
+  /* Табы для сравнения объектов и карусель */
 
   $('#compare-nav').easytabs({
     updateHash: false,
@@ -313,40 +313,169 @@ $(function () {
   function carouselInit(thisObjects) {
     thisObjects.owlCarousel({
       items: 1,
-      nav: false,
+      navContainer: '#tab-arrow',
+      nav: true,
       slideBy: 1,
       autoplay: false,
       loop: false,
-      dots: true,
+      dots: false,
       margin: -2,
+      center: true,
       responsive: {
         480: {
           items: 2,
-          nav: false
+          nav: true,
+          navContainer: '#tab-arrow'
         },
         600: {
           items: 2,
-          nav: false
+          nav: true,
+          navContainer: '#tab-arrow',
+          center: false
+        },
+        768: {
+          items: 2,
+          nav: true,
+          navContainer: '#tab-arrow',
+          center: false
         },
         990: {
+          items: 3,
           nav: true,
           navContainer: '#tab-arrow',
-          items: 3,
-          dots: false
+          center: false
         },
         1200: {
+          items: 4,
           nav: true,
           navContainer: '#tab-arrow',
-          items: 4,
-          dots: false
+          center: false
         },
         1440: {
+          items: 5,
           nav: true,
           navContainer: '#tab-arrow',
-          items: 5,
-          dots: false
+          center: false
         }
       }
     });
-  }
+  } // Селекты в каталоге
+
+
+  $('.catalog-select__select').styler({
+    selectSmartPositioning: false
+  }); // Селекты в боковом фильтре
+
+  $('.filter__select').styler({
+    selectSmartPositioning: false
+  });
+  $('.filter__sl-currency').styler({
+    selectSmartPositioning: false
+  }); // Настройка рэнджслайдера
+
+  $('.filter__sl-strip-input').each(function () {
+    var slider = $(this);
+    var sliderContent = slider.closest('.filter__sl-item');
+    var fromField = sliderContent.find('[data-field=from]');
+    var beforeField = sliderContent.find('[data-field=before]');
+    var minValue = parseInt(slider.attr('data-min'));
+    var maxValue = parseInt(slider.attr('data-max'));
+    var fromValue = parseInt(slider.attr('data-from'));
+    var beforeValue = parseInt(slider.attr('data-before'));
+    slider.ionRangeSlider({
+      type: 'double',
+      min: minValue,
+      max: maxValue,
+      from: fromValue,
+      to: beforeValue,
+      grid: false,
+      hide_min_max: false,
+      hide_from_to: true,
+      onStart: function onStart(data) {
+        if (fromField.length) {
+          fromField.attr('placeholder', data.min);
+          fromField.val(data.from);
+        }
+
+        if (beforeField.length) {
+          beforeField.attr('placeholder', data.max);
+          beforeField.val(data.to);
+        }
+      },
+      onChange: function onChange(data) {
+        if (fromField.length) {
+          fromField.val(data.from);
+        }
+
+        if (beforeField.length) {
+          beforeField.val(data.to);
+        }
+      },
+      onFinish: function onFinish(data) {
+        if (fromField.length) {
+          fromField.val(data.from);
+        }
+
+        if (beforeField.length) {
+          beforeField.val(data.to);
+        }
+      },
+      onUpdate: function onUpdate(data) {
+        if (fromField.length) {
+          fromField.val(data.from);
+        }
+
+        if (beforeField.length) {
+          beforeField.val(data.to);
+        }
+      }
+    });
+  });
+  $('[data-field=from], [data-field=before]').bind('input', function () {
+    if ($(this).val().match(/[^0-9]/g)) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    }
+  });
+  $('[data-field=from], [data-field=before]').on('blur', function () {
+    var currentField = $(this);
+    var valueField = parseInt(currentField.val());
+    var filterContent = currentField.closest('.filter__sl-item');
+    var slider = filterContent.find('.filter__sl-strip-input').data('ionRangeSlider');
+
+    if (currentField.attr('data-field') === 'from') {
+      slider.update({
+        from: valueField
+      });
+    } else if (currentField.attr('data-field') === 'before') {
+      slider.update({
+        to: valueField
+      });
+    }
+  }); // Открыть еще фильтры в боковом меню
+
+  $('.filter__all-filters').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+
+    if (!$(this).hasClass('active')) {
+      $('.filter__all-filters-text').html('еще фильтры');
+    } else {
+      $('.filter__all-filters-text').html('скрыть фильтры');
+    }
+
+    ;
+    $('.filter__block.hidden').stop(true, true).slideToggle();
+  }); // Кнопка - открыть/показать фильтр
+
+  $('#filter-switcher').on('click', function (e) {
+    e.preventDefault();
+    $('.catalog__filter').stop(true, true).slideToggle();
+  }); // Валидация инпутов с радио кнопками
+
+  $('[data-number="number"]').bind('input', function () {
+    if ($(this).val().match(/[^0-9]/g)) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    }
+  });
 });
+//# sourceMappingURL=script.js.map

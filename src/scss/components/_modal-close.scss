@@ -3,7 +3,7 @@
     display: block;
     text-decoration: none;
     font: 400 18px / 18px 'Fira Sans', sans-serif;
-    color: $navcolor;
+    color: $hovercolor;
     padding-left: 25px;
     @include texthover;
     &:hover,
@@ -22,12 +22,19 @@
       top: 8px;
       width: 17px;
       height: 2px;
-      background: $navcolor;
+      background: $hovercolor;
       transform: rotate(45deg);
       transition: all 0.3s ease;
     }
     &:after {
       transform: rotate(-45deg);
+    }
+    @media screen and (min-width: 1200px) {
+      color: $navcolor;
+      &:before,
+      &:after {
+        background: $navcolor;
+      }
     }
   }
 }

@@ -1,6 +1,13 @@
 .article-card {
   display: block;
   text-decoration: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &:hover .article-card__title,
+  &:active .article-card__title {
+    color: $hovercolor;
+  }
   &__img-wrapper {
     margin-bottom: 18px;
   }
@@ -12,6 +19,13 @@
     font: 400 18px / 23px 'Fira Sans', sans-serif;
     color: #2c2f2e;
     margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
   }
   &__info {
     display: flex;

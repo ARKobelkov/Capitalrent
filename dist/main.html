@@ -341,14 +341,14 @@
                             <div class="modal-filter__sl-item-top">
                               <div class="modal-filter__sl-label">Стоимость</div>
                               <div class="modal-filter__sl-inputs">
-                                <div class="modal-filer__sl-input-wrapper">
+                                <div class="modal-filter__sl-input-wrapper">
                                   <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-divider"></div>
-                                <div class="modal-filer__sl-input-wrapper">
+                                <div class="modal-filter__sl-input-wrapper">
                                   <input type="text" name="costTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                 </div>
-                                <div class="modal-filter__sl-currency__wrapper">
+                                <div class="modal-filter__sl-currency-wrapper">
                                   <select name="currency" id="currency" class="modal-filter__sl-currency">
                                     <option value="ruble">₽</option>
                                     <option value="euro">€</option>
@@ -367,11 +367,11 @@
                             <div class="modal-filter__sl-item-top">
                               <div class="modal-filter__sl-label">Площадь</div>
                               <div class="modal-filter__sl-inputs">
-                                <div class="modal-filer__sl-input-wrapper">
+                                <div class="modal-filter__sl-input-wrapper">
                                   <input type="text" name="squareFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-divider"></div>
-                                <div class="modal-filer__sl-input-wrapper">
+                                <div class="modal-filter__sl-input-wrapper">
                                   <input type="text" name="squareTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                 </div>
                                 <div class="modal-filter__sl-unit">
@@ -393,11 +393,11 @@
                               <div class="modal-filter__sl-item-top">
                                 <div class="modal-filter__sl-label">Комнаты</div>
                                 <div class="modal-filter__sl-inputs">
-                                  <div class="modal-filer__sl-input-wrapper">
+                                  <div class="modal-filter__sl-input-wrapper">
                                     <input type="text" name="roomsFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-divider"></div>
-                                  <div class="modal-filer__sl-input-wrapper">
+                                  <div class="modal-filter__sl-input-wrapper">
                                     <input type="text" name="roomsTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-unit">
@@ -415,11 +415,11 @@
                               <div class="modal-filter__sl-item-top">
                                 <div class="modal-filter__sl-label">Площадь</div>
                                 <div class="modal-filter__sl-inputs">
-                                  <div class="modal-filer__sl-input-wrapper">
+                                  <div class="modal-filter__sl-input-wrapper">
                                     <input type="text" name="floorFrom" value="" placeholder="" data-field="from" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-divider"></div>
-                                  <div class="modal-filer__sl-input-wrapper">
+                                  <div class="modal-filter__sl-input-wrapper">
                                     <input type="text" name="floorTo" value="" placeholder="" data-field="before" class="modal-filter__sl-input">
                                   </div>
                                   <div class="modal-filter__sl-unit">
@@ -1170,223 +1170,229 @@
             <!-- End (section-header) -->
             <div class="interview__tabs" id="interview-tabs">
               <div class="interview__tab" id="interview-new">
-                <div class="interview__big">
-                  <div class="interview__big-one">
-                    <a href="#" class="interview__big-video">
-                      <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
-                      <div class="interview__big-time">25:46</div>
-                    </a>
-                    <div class="interview__big-content">
-                      <div class="interview__big-person">
-                        <div class="interview__big-person-img-wrapper">
-                          <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
+                      </a>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
                         </div>
-                        <div class="interview__big-person-text">
-                          <h6 class="interview__big-person-name">Вероника Лежнева</h6>
-                          <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
-                        </div>
-                      </div>
-                      <div class="interview__big-descr">
-                        <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
-                        <div class="interview__big-info">
-                          <div class="interview__big-info-time">11 часов назад</div>
-                          <div class="interview__big-info-views">2 457
-                            <svg class="interview__big-info-icon" width="15" height="10">
-                              <use xlink:href="images/icons.svg#eye-icon"></use>
-                            </svg>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="interview__small">
-                  <div class="interview__small-wrapper">
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Дмитрий Михайлов</h6>
-                          <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
-                          <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <div class="interview__small-play"></div>
-                          <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Игорь Шулинин</h6>
-                          <div class="interview__small-position">директор Workki в России</div>
-                          <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
-                            ближайших планах компании, локациях и особенностях рынка.</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Станислав Наумов</h6>
-                          <div class="interview__small-position">сооснователь компании CERA GROUP</div>
-                          <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
-                        </div>
-                      </a>
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="interview__tab" id="interview-video">
-                <div class="interview__big">
-                  <div class="interview__big-one">
-                    <a href="#" class="interview__big-video">
-                      <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
-                      <div class="interview__big-time">25:46</div>
-                    </a>
-                    <div class="interview__big-content">
-                      <div class="interview__big-person">
-                        <div class="interview__big-person-img-wrapper">
-                          <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
+                      </a>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
                         </div>
-                        <div class="interview__big-person-text">
-                          <h6 class="interview__big-person-name">Вероника Лежнева</h6>
-                          <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
-                        </div>
-                      </div>
-                      <div class="interview__big-descr">
-                        <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
-                        <div class="interview__big-info">
-                          <div class="interview__big-info-time">11 часов назад</div>
-                          <div class="interview__big-info-views">2 457
-                            <svg class="interview__big-info-icon" width="15" height="10">
-                              <use xlink:href="images/icons.svg#eye-icon"></use>
-                            </svg>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="interview__small">
-                  <div class="interview__small-wrapper">
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Дмитрий Михайлов</h6>
-                          <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
-                          <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <div class="interview__small-play"></div>
-                          <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Игорь Шулинин</h6>
-                          <div class="interview__small-position">директор Workki в России</div>
-                          <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
-                            ближайших планах компании, локациях и особенностях рынка.</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Станислав Наумов</h6>
-                          <div class="interview__small-position">сооснователь компании CERA GROUP</div>
-                          <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
-                        </div>
-                      </a>
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="interview__tab" id="interview-popular">
-                <div class="interview__big">
-                  <div class="interview__big-one">
-                    <a href="#" class="interview__big-video">
-                      <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
-                      <div class="interview__big-time">25:46</div>
-                    </a>
-                    <div class="interview__big-content">
-                      <div class="interview__big-person">
-                        <div class="interview__big-person-img-wrapper">
-                          <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
+                      </a>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
                         </div>
-                        <div class="interview__big-person-text">
-                          <h6 class="interview__big-person-name">Вероника Лежнева</h6>
-                          <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
-                        </div>
-                      </div>
-                      <div class="interview__big-descr">
-                        <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
-                        <div class="interview__big-info">
-                          <div class="interview__big-info-time">11 часов назад</div>
-                          <div class="interview__big-info-views">2 457
-                            <svg class="interview__big-info-icon" width="15" height="10">
-                              <use xlink:href="images/icons.svg#eye-icon"></use>
-                            </svg>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="interview__small">
-                  <div class="interview__small-wrapper">
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Дмитрий Михайлов</h6>
-                          <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
-                          <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <div class="interview__small-play"></div>
-                          <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Игорь Шулинин</h6>
-                          <div class="interview__small-position">директор Workki в России</div>
-                          <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
-                            ближайших планах компании, локациях и особенностях рынка.</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="interview__small-item">
-                      <a href="#" class="interview__small-link">
-                        <div class="interview__small-img-wrapper">
-                          <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
-                        </div>
-                        <div class="interview__small-content">
-                          <h6 class="interview__small-name">Станислав Наумов</h6>
-                          <div class="interview__small-position">сооснователь компании CERA GROUP</div>
-                          <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
-                        </div>
-                      </a>
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1423,115 +1429,121 @@
             <div class="reviews__tabs clearfix" >
               <div class="reviews__tabs-main" id="reviews-tabs">
                 <div class="reviews__tab" id="reviews-new">
-                  <div class="reviews__big">
-                    <div class="reviews__big-wrapper">
-                      <a href="#" class="reviews__review reviews__review_big clearfix">
-                        <div class="reviews__review-img-wrapper">
-                          <div class="reviews__review-img-label">Мнение эксперта</div>
-                          <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
-                        </div>
-                        <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
-                        <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="reviews__small">
-                    <div class="reviews__small-wrapper">
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
+                  <div class="reviews__tab-content">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
                           <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
                           </div>
-                          <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
-                            78 тыс кв м</h6>
-                          <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
                         </a>
                       </div>
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
-                          <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
-                          </div>
-                          <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
-                            по аренде</h6>
-                          <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
-                        </a>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="reviews__tab" id="reviews-popular">
-                  <div class="reviews__big">
-                    <div class="reviews__big-wrapper">
-                      <a href="#" class="reviews__review reviews__review_big clearfix">
-                        <div class="reviews__review-img-wrapper">
-                          <div class="reviews__review-img-label">Мнение эксперта</div>
-                          <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
-                        </div>
-                        <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
-                        <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="reviews__small">
-                    <div class="reviews__small-wrapper">
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
+                  <div class="reviews__tab-content">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
                           <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
                           </div>
-                          <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
-                            78 тыс кв м</h6>
-                          <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
                         </a>
                       </div>
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
-                          <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
-                          </div>
-                          <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
-                            по аренде</h6>
-                          <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
-                        </a>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="reviews__tab" id="reviews-recommend">
-                  <div class="reviews__big">
-                    <div class="reviews__big-wrapper">
-                      <a href="#" class="reviews__review reviews__review_big clearfix">
-                        <div class="reviews__review-img-wrapper">
-                          <div class="reviews__review-img-label">Мнение эксперта</div>
-                          <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
-                        </div>
-                        <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
-                        <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="reviews__small">
-                    <div class="reviews__small-wrapper">
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
+                  <div class="reviews__tab-conent">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
                           <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
                           </div>
-                          <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
-                            78 тыс кв м</h6>
-                          <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
                         </a>
                       </div>
-                      <div class="reviews__small-item">
-                        <a href="#" class="reviews__review clearfix">
-                          <div class="reviews__review-img-wrapper">
-                            <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
-                          </div>
-                          <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
-                            по аренде</h6>
-                          <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
-                        </a>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,5 @@
-.modal-filter__sl-strip {
+.modal-filter__sl-strip,
+.filter__sl-strip {
   .irs {
     &-line {
       top: 25px;
@@ -35,6 +36,23 @@
     &-from,
     &-single {
       visibility: hidden!important;
+    }
+  }
+}
+.filter__sl-strip {
+  .irs {
+    &-line {
+      top: 9px;
+    }
+    &-bar {
+      top: 9px;
+    }
+    &-handle {
+      top: -4px;
+    }
+    &-min,
+    &-max {
+      display: none;
     }
   }
 }

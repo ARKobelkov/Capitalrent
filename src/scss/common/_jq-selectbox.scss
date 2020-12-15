@@ -1,4 +1,6 @@
-.jq-selectbox.modal-filter__select {
+.jq-selectbox.modal-filter__select,
+.jq-selectbox.catalog-select__select,
+.jq-selectbox.filter__select {
   .jq-selectbox__select {
     border: 2px solid #e1e4ec;
     border-radius: 2px;
@@ -46,7 +48,8 @@
   }
 }
 
-.jq-selectbox.modal-filter__sl-currency {
+.jq-selectbox.modal-filter__sl-currency,
+.jq-selectbox.filter__sl-currency {
   .jq-selectbox__select {
     background: #e1e4ec;
     border-radius: 0px 2px 2px 0px;
@@ -79,5 +82,49 @@
   .jq-selectbox__dropdown {
     font: inherit;
     border: none;
+  }
+}
+.jq-selectbox.filter__sl-currency {
+  .jq-selectbox__select {
+    height: 37px;
+    width: 48px;
+    padding: 0 20px 0 7px;
+  }
+  &_long {
+    .jq-selectbox__select {
+      width: 105px;
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+}
+
+.jq-selectbox.catalog-select__select {
+  .jq-selectbox__select {
+    background: #fff;
+    height: 55px;
+    font: 400 17px / 30px 'Fira Sans', sans-serif;
+    color: #2c2f2e;
+    @media screen and (min-width: 480px) {
+      min-width: 310px;
+    }
+  }
+  .jq-selectbox__select-text {
+    margin-top: 12px;
+  }
+  .jq-selectbox__trigger {
+    &-arrow {
+      top: 21px;
+    }
+  }
+}
+.jq-selectbox.filter__select {
+  .jq-selectbox__select {
+    height: 70px;
+  }
+  .jq-selectbox__select-text {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
   }
 }
