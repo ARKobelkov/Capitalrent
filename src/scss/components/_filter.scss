@@ -207,12 +207,19 @@
     display: flex;
     border: 1px solid #e1e7e8;
     border-radius: 20px;
-    margin: 10px 27px 30px;
+    margin: 10px auto 30px;
+    max-width: 195px;
     @media screen and (min-width: 480px) {
-      margin: 0 13px 30px;
+      margin: 0 auto 30px;
+      max-width: 223px;
     }
     &-label {
       display: block;
+      &:nth-child(2) {
+        .filter__switcher-text {
+          margin-left: -15px;
+        }
+      }
     }
     &-input {
       display: none;

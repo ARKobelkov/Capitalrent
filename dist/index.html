@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -482,971 +483,917 @@
           <!-- End (modal-filter) -->
         </section>
         <!-- End (header) -->
-        <!-- (location) -->
-        <section class="location">
-          <div class="location__cover cover">
-            <ul class="location__list location__list_narrow">
-              <li class="location__item">
-                <a href="/" class="location__link">
-                  <svg class="location__icon" width="15" height="14">
-                    <use xlink:href="images/icons.svg#house-icon"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="location__item">
-                <span href="#" class="location__last">Каталог недвижимости</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <!-- End (location) -->
-        <!-- (catalog) -->
-        <section class="catalog">
-          <div class="catalog__cover cover">
-            <div class="catalog__content">
-              <div class="catalog__header">
-                <div class="catalog__header-main">
-                  <h1 class="catalog__header-title">Продажа торговых помещений</h1>
-                  <div class="catalog__header-filters">
-                    <form action="#" name="headerForm" method="POST">
-                      <div class="catalog__header-field">
-                        <div class="catalog__header-links">
-                          <!-- (catalog-switcher) -->
-                          <div class="catalog-switcher">
-                            <div class="catalog-switcher__catalog">
-                              <a href="#" class="catalog-switcher__catalog-link active">
-                                <div class="catalog-switcher__catalog-icon"></div>
-                              </a>
-                            </div>
-                            <div class="catalog-switcher__map">
-                              <a href="#" class="catalog-switcher__map-link">
-                                <svg class="catalog-switcher__map-icon" width="15" height="18">
-                                  <use xlink:href="images/icons.svg#icon-map"></use>
-                                </svg>
-                              </a>
-                            </div>
-                          </div>
-                          <!-- End (catalog-switcher) -->
-                        </div>
-                        <div class="catalog__header-currency">
-                          <!-- (catalog-currency) -->
-                          <div class="catalog-currency">
-                            <div class="catalog-currency__item">
-                              <label class="catalog-currency__label">
-                                <input checked type="radio" name="catalog-currency" class="catalog-currency__input">
-                                <span class="catalog-currency__text">₽</span>
-                              </label>
-                            </div>
-                            <div class="catalog-currency__item">
-                              <label class="catalog-currency__label">
-                                <input type="radio" name="catalog-currency" class="catalog-currency__input">
-                                <span class="catalog-currency__text">$</span>
-                              </label>
-                            </div>
-                            <div class="catalog-currency__item">
-                              <label class="catalog-currency__label">
-                                <input type="radio" name="catalog-currency" class="catalog-currency__input">
-                                <span class="catalog-currency__text">€</span>
-                              </label>
-                            </div>
-                          </div>
-                          <!-- End (catalog-currency) -->
-                        </div>
-                        <div class="catalog__header-select">
-                          <!-- (catalog-select) -->
-                          <div class="catalog-select">
-                            <select name="catalogFilter" id="catalogFilter" data-placeholder="Сортировать каталог" class="catalog-select__select">
-                              <option value="catalogFilter0"></option>
-                              <option value="catalogFilter1">Сначала новые</option>
-                              <option value="catalogFilter2">Сначала дешевые</option>
-                              <option value="catalogFilter2">Сначала дорогие</option>
-                            </select>
-                          </div>
-                          <!-- End (catalog-select) -->
-                        </div>
+        <!-- (categories) -->
+        <section class="categories">
+          <div class="categories__cover cover">
+            <div class="categories__wrapper">
+              <div class="categories__header">
+                <h1 class="categories__title">Недвижимость для вашего бизнеса в Москве</h1>
+                <div class="categories__search">
+                  <form action="#" name="search">
+                    <div class="categories__search-content">
+                      <div class="categories__search-field" id="search-field">
+                        <input type="text" name="search-text" class="categories__search-input" value placeholder="Введите текст...">
                       </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="catalog__header-descr">На сегодняшний день в базе предложений представлено 20 зданий от собственников, с фотографиями и подробным описанием. Их стоимость по Москве составляет до 14 868 000 руб./месяц. Если вас заинтересовал какой-либо объект, и по нему требуется дополнительная информация – мы вышлем все необходимое по вашему запросу.
+                      <div class="categories__search-btn-field">
+                        <button class="categories__btn" id="search-btn">
+                          <div class="categories__btn-content">
+                            <svg class="categories__btn-icon" width="16" height="17">
+                              <use xlink:href="images/icons.svg#search-icon"></use>
+                            </svg>
+                            <svg class="categories__btn-icon hidden" width="16" height="17">
+                              <use xlink:href="images/icons.svg#close-icon"></use>
+                            </svg>
+                            <div class="categories__btn-text">Поиск</div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
-              <div class="catalog__wrapper clearfix">
-                <div class="catalog__aside">
-                  <button class="catalog__open-filter" id="filter-switcher">показать/скрыть фильтр</button>
-                  <div class="catalog__filter">
-                    <!-- (filter) -->
-                    <div class="filter">
-                      <form action="#" name="filterRent" method="POST">
-                        <div class="filter__field">
-                          <div class="filter__main">
-                            <div class="filter__block">
-                              <div class="filter__switcher">
-                                <label class="filter__switcher-label">
-                                  <input type="radio" name="switcherInput" class="filter__switcher-input" checked>
-                                  <span class="filter__switcher-text">купить</span>
-                                </label>
-                                <label class="filter__switcher-label">
-                                  <input type="radio" name="switcherInput" class="filter__switcher-input">
-                                  <span class="filter__switcher-text">Снять</span>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="filter__block">
-                              <div class="filter__select-wrapper">
-                                <select name="typeInvestment" id="typeInvestment" data-placeholder=" " class="filter__select">
-                                  <option value="typeInvestment0"></option>
-                                  <option value="typeInvestment1">Бизнес в продаже</option>
-                                  <option value="typeInvestment2">Бизнес в аренде</option>
-                                </select>
-                                <div class="filter__placeholder">Тип инвестирования</div>
-                              </div>
-                            </div>
-                            <div class="filter__block">
-                              <div class="filter__select-wrapper">
-                                <select name="typeInvestment" id="geoPosition" data-placeholder=" " class="filter__select">
-                                  <option value="geoPosition0"></option>
-                                  <option value="geoPosition1">Вся Москва</option>
-                                  <option value="geoPosition2">Центр</option>
-                                </select>
-                                <div class="filter__placeholder">Область поиска</div>
-                              </div>
-                            </div>
-                            <div class="filter__block">
-                              <div class="filter__sl-item">
-                                <div class="filter__sl-item-top">
-                                  <div class="filter__sl-label">Стоимость</div>
-                                  <div class="filter__sl-inputs">
-                                    <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
-                                    </div>
-                                    <div class="filter__sl-divider"></div>
-                                    <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="costTo" value="" placeholder="" data-field="before" class="filter__sl-input">
-                                    </div>
-                                    <div class="filter__sl-currency-wrapper">
-                                      <select name="currency" class="filter__sl-currency">
-                                        <option value="ruble">₽</option>
-                                        <option value="euro">€</option>
-                                        <option value="dollar">$</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="filter__sl-item-bottom">
-                                  <div class="filter__sl-strip">
-                                    <input type="hidden" name="costStrip" data-step="0.1" data-min="0.25" data-max="127" data-postfix=" млн." data-from="18" data-before="106" class="filter__sl-strip-input">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="filter__block">
-                              <div class="filter__sl-item">
-                                <div class="filter__sl-item-top">
-                                  <div class="filter__sl-label">Площадь</div>
-                                  <div class="filter__sl-inputs">
-                                    <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="squareFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
-                                    </div>
-                                    <div class="filter__sl-divider"></div>
-                                    <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="squareTo" value="" placeholder="" data-field="before" class="filter__sl-input">
-                                    </div>
-                                    <div class="filter__sl-unit">
-                                      <div class="filter__sl-unit-text">м²</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="filter__sl-item-bottom">
-                                  <div class="filter__sl-strip">
-                                    <input type="text" name="squareStrip" data-step="1" data-min="56" data-max="1326" data-postfix=" м²" data-from="234" data-before="1133" class="filter__sl-strip-input">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="filter__block hidden">
-                              <div class="filter__sl-item">
-                                <div class="filter__sl-item-top">
-                                  <div class="filter__sl-label">Окупаемость</div>
-                                  <div class="filter__sl-inputs filter__sl-inputs_long">
-                                    <div class="filter__sl-prefix">
-                                      <div class="filter__sl-prefix-text">от</div>
-                                    </div>
-                                    <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="payback" value="" placeholder="20"  class="filter__sl-input" data-number="number">
-                                    </div>
-                                    <div class="filter__sl-unit">
-                                      <div class="filter__sl-unit-text">месяцев</div>
-                                    </div>
-                                  </div>
-                                  <div class="filter__radio-btns">
-                                    <label class="filter__radio-label">
-                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="6">
-                                      <span class="filter__radio-text">до 6 мес.</span>
-                                    </label>
-                                    <label class="filter__radio-label">
-                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="12">
-                                      <span class="filter__radio-text">до 12 мес.</span>
-                                    </label>
-                                    <label class="filter__radio-label">
-                                      <input type="radio" name="payback-radio" class="filter__radio-input" value="24">
-                                      <span class="filter__radio-text">до 24 мес.</span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="filter__btns">
-                            <button class="filter__all-filters">
-                              <div class="filter__all-filters-text">еще фильтры</div> 
-                            </button>
-                            <button class="filter__save-btn">
-                              <svg class="filter__save-icon" width="19" height="16">
-                                <use xlink:href="images/icons.svg#valentines-heart-icon"></use>
-                              </svg>
-                            </button>
-                          </div>
+              <div class="categories__main">
+                <div class="categories__block">
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <a href="#1" class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/cafe.svg" alt="Рестораны и кафе" class="category__img">
                         </div>
-                      </form>
+                        <div class="category__text">Рестораны и кафе</div>
+                      </a>
+                      <div class="category__links">
+                        <a href="#2" class="category__link">Аренда</a>
+                        <a href="#3" class="category__link">Продажа</a>
+                      </div>
                     </div>
-                    <!-- End (filter) -->
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/barbershop.svg" alt="Парикмахерские и салоны" class="category__img">
+                        </div>
+                        <div class="category__text">Парикмахерские и салоны</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/office.svg" alt="Офисные помещения" class="category__img">
+                        </div>
+                        <div class="category__text">Офисные помещения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                  <div class="category">
+                    <div class="category__name">
+                      <div class="category__img-wrapper">
+                        <img src="images/content/categories/bank.svg" alt="Банки" class="category__img">
+                      </div>
+                      <div class="category__text">Банки</div>
+                    </div>
+                    <div class="category__links">
+                      <a href="#" class="category__link">Аренда</a>
+                      <a href="#" class="category__link">Продажа</a>
+                    </div>
+                  </div>
+                  <!-- End (category) -->
+                  </div>
+                  <div class="categories__long">
+                    <a href="#" class="categories__long-link">
+                      <div class="categories__long-img-wrapper">
+                        <img src="images/content/categories/rent-side.svg" alt="Аренда" class="categories__long-img">
+                      </div>
+                      <div class="categories__long-content">
+                        <h6 class="categories__long-title">арендный бизнес</h6>
+                        <p class="categories__long-descr">Поможем купить готовый арендный бизнес с минимальными рисками</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/shop.svg" alt="Торговые помещения" class="category__img">
+                        </div>
+                        <div class="category__text">Торговые помещения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/showroom.svg" alt="Шоу-румы" class="category__img">
+                        </div>
+                        <div class="category__text">Шоу-румы</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category">
+                    <!-- (category) -->
+                    <div class="category category_noimg" id="all-categories">
+                      <a href="#" class="category__name">
+                        <div class="category__all-categories">
+                          показать все 
+                          <br>
+                          категории</div>
+                      </a>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__long">
+                    <a href="#" class="categories__long-link">
+                      <div class="categories__long-img-wrapper">
+                        <img src="images/content/categories/map-side.svg" alt="Аренда" class="cartegories__long-img">
+                      </div>
+                      <div class="categories__long-content">
+                        <h6 class="categories__long-title">объекты на карте</h6>
+                        <p class="categories__long-descr">Вся недвижимость на одной карте с удобной фильтрацией</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
+                  </div>
+                  <div class="categories__category hidden">
+                    <!-- (category) -->
+                    <div class="category">
+                      <div class="category__name">
+                        <div class="category__img-wrapper">
+                          <img src="images/content/categories/free.svg" alt="Свободного назначаения" class="category__img">
+                        </div>
+                        <div class="category__text">Свободного назначаения</div>
+                      </div>
+                      <div class="category__links">
+                        <a href="#" class="category__link">Аренда</a>
+                        <a href="#" class="category__link">Продажа</a>
+                      </div>
+                    </div>
+                    <!-- End (category) -->
                   </div>
                 </div>
-                <div class="catalog__main">
-                  <div class="catalog__list">
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale1.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End (categories) -->
+        <!-- (journal) -->
+        <section class="journal">
+          <div class="journal__cover cover">
+            <!-- (section-header) -->
+            <div class="section-header">
+              <h2 class="section-header__title">Журнал</h2>
+              <div class="section-header__tabs" id="journal-nav">
+                <div class="section-header__tabs-text">Показать:</div>
+                <ul class="section-header__tabs-list">
+                  <li class="section-header__tabs-item">
+                    <a href="#journal-new" class="section-header__tabs-link">новое</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#journal-popular" class="section-header__tabs-link">популярное</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#journal-recommend" class="section-header__tabs-link">рекомендуем</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-header__link-wrapper">
+                <a href="#" class="section-header__link">перейти в раздел</a>
+              </div>
+            </div>
+            <!-- End (section-header) -->
+            <div class="journal__tabs" id="journal-tabs">
+              <div class="journal__tab clearfix" id="journal-new">
+                <div class="journal__main">
+                  <div class="journal__news journal__news_large">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-label">Новость дня</div>
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-1.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">В Москве осталось демонтировать 53 дома по программе сноса пятиэтажных домов</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">5 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
                             </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Готовый арендный бизнес - Бизнес-Центр - 14 520 м²</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_orange">Ленинский проспект </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">870 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 40 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
                           </div>
                         </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-2.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">С 1 июля в России ужесточатся требования к застройщикам жил...</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">11 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-3.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Логопарк Север 2» - крупнейшая сделка по аренде</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-4.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Ривер Тауэр» Блажко признали банкротом</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-5.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">UFG Real Estate выкупила БЦ «Легион-TI»</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">21 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="journal__aside">
+                  <h4 class="journal__aside-title">Новое на сайте</h4>
+                  <ul class="journal__aside-list">
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">С 1 июля в России ужесточатся требования к застройщикам жилья</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Workki в NEO GEO дополнят открытой террасой</a>
+                      <span class="journal__aside-time">45 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">PNK построит офис и склад для VICTORIA STENOVA</a>
+                      <span class="journal__aside-time">1 час назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">У аэропорта «Симферополь» обустроят парк</a>
+                      <span class="journal__aside-time">3 часа назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Под Шатурой построят овощной склад за 200 млн руб</a>
+                      <span class="journal__aside-time">11 часов назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">«Логопарк девелопмент» построит склад на 400 тыс кв м в Подмосковье</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">В «новой Москве» построят склад на 300 тыс кв м</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="journal__tab clearfix" id="journal-popular">
+                <div class="journal__main">
+                  <div class="journal__news journal__news_large">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-label">Новость дня</div>
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-1.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">В Москве осталось демонтировать 53 дома по программе сноса пятиэтажных домов</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">5 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-2.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">С 1 июля в России ужесточатся требования к застройщикам жил...</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">11 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-3.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Логопарк Север 2» - крупнейшая сделка по аренде</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-4.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Ривер Тауэр» Блажко признали банкротом</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-5.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">UFG Real Estate выкупила БЦ «Легион-TI»</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">21 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="journal__aside">
+                  <h4 class="journal__aside-title">Популярное на сайте</h4>
+                  <ul class="journal__aside-list">
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">С 1 июля в России ужесточатся требования к застройщикам жилья</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Workki в NEO GEO дополнят открытой террасой</a>
+                      <span class="journal__aside-time">45 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">PNK построит офис и склад для VICTORIA STENOVA</a>
+                      <span class="journal__aside-time">1 час назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">У аэропорта «Симферополь» обустроят парк</a>
+                      <span class="journal__aside-time">3 часа назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Под Шатурой построят овощной склад за 200 млн руб</a>
+                      <span class="journal__aside-time">11 часов назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">«Логопарк девелопмент» построит склад на 400 тыс кв м в Подмосковье</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">В «новой Москве» построят склад на 300 тыс кв м</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="journal__tab clearfix" id="journal-recommend">
+                <div class="journal__main">
+                  <div class="journal__news journal__news_large">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-label">Новость дня</div>
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-1.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">В Москве осталось демонтировать 53 дома по программе сноса пятиэтажных домов</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">5 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-2.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">С 1 июля в России ужесточатся требования к застройщикам жил...</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">11 часов назад</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-3.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Логопарк Север 2» - крупнейшая сделка по аренде</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-4.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">«Ривер Тауэр» Блажко признали банкротом</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">22 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="journal__news">
+                    <a href="#" class="journal__news-link">
+                      <div class="journal__news-img-wrapper">
+                        <img src="images/content/journal-news/journal-news-5.jpg" alt="Новость1" class="journal__news-img">
+                      </div>
+                      <div class="journal__news-content">
+                        <h6 class="journal__news-title">UFG Real Estate выкупила БЦ «Легион-TI»</h6>
+                        <div class="journal__news-descr">
+                          <div class="journal__news-time">21 июля</div>
+                          <div class="journal__news-views">2 457
+                            <svg class="journal__news-icon" width="15" height="10">
+                              <use xlink:href="images/icons.svg#eye-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="journal__aside">
+                  <h4 class="journal__aside-title">Рекомендованное на сайте</h4>
+                  <ul class="journal__aside-list">
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">С 1 июля в России ужесточатся требования к застройщикам жилья</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Workki в NEO GEO дополнят открытой террасой</a>
+                      <span class="journal__aside-time">45 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">PNK построит офис и склад для VICTORIA STENOVA</a>
+                      <span class="journal__aside-time">1 час назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">У аэропорта «Симферополь» обустроят парк</a>
+                      <span class="journal__aside-time">3 часа назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">Под Шатурой построят овощной склад за 200 млн руб</a>
+                      <span class="journal__aside-time">11 часов назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">«Логопарк девелопмент» построит склад на 400 тыс кв м в Подмосковье</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                    <li class="journal__aside-item">
+                      <a href="#" class="journal__aside-link">В «новой Москве» построят склад на 300 тыс кв м</a>
+                      <span class="journal__aside-time">15 минут назад</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End (journal) -->
+        <!-- (interview) -->
+        <section class="interview">
+          <div class="interview__cover cover">
+            <!-- (section-header) -->
+            <div class="section-header">
+              <h2 class="section-header__title">Интервью</h2>
+              <div class="section-header__tabs" id="interview-nav">
+                <div class="section-header__tabs-text">Показать:</div>
+                <ul class="section-header__tabs-list">
+                  <li class="section-header__tabs-item">
+                    <a href="#interview-new" class="section-header__tabs-link">новые</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#interview-video" class="section-header__tabs-link">видео</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#interview-popular" class="section-header__tabs-link">популярное</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-header__link-wrapper">
+                <a href="#" class="section-header__link">перейти в раздел</a>
+              </div>
+            </div>
+            <!-- End (section-header) -->
+            <div class="interview__tabs" id="interview-tabs">
+              <div class="interview__tab" id="interview-new">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
                       </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item catalog__item_long">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <div class="rental-card__img-label">4 блока</div>
-                          <img src="images/content/catalog/sale2.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
                         </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Демидов деловой квартал "Красная Роза 1875"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_violet">Китай-город </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">330 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">36</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 30 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">25 - 438</div>
-                              <div class="rental-card__unit">м²</div>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
                             </div>
                           </div>
                         </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale3.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Готовый арендный бизнес - Объект - 600 м2</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_green">Автозаводская</div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">12</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 55 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">120</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale4.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Франшиза "Доходная квартира"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_blue">Электрозаводская </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 120 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale5.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Готовый арендный бизнес - Бизнес-Центр - 14 520 м²</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_orange">Академическая </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">870 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 527 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">75</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item catalog__item_long">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <div class="rental-card__img-label">2 блока</div>
-                          <img src="images/content/catalog/sale6.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Демидов деловой квартал "Красная Роза 1875"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_orange">Шаболовская </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">330 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">36</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 10 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">25 - 150</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale7.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn active">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Готовый арендный бизнес - Объект - 600 м2</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_red">Театральная </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">12</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 130 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale8.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Франшиза "Доходная квартира"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_orange">Шоссе Энтузиастов </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 200 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale9.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Франшиза "Доходная квартира"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_blue">Площадь Революции </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 15 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale10.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Франшиза "Доходная квартира"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_green">Кожуховская </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">24</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 7 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">343</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <img src="images/content/catalog/sale3.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Готовый арендный бизнес - Объект - 600 м2</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_green">Автозаводская</div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">100 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">12</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 55 500 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">120</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
-                    </div>
-                    <div class="catalog__item catalog__item_long">
-                      <!-- (rental-card) -->
-                      <a href="#" class="rental-card">
-                        <div class="rental-card__img-wrapper">
-                          <div class="rental-card__img-label">4 блока</div>
-                          <img src="images/content/catalog/sale2.jpg" alt="Фото объекта" class="rental-card__img">
-                          <button class="rental-card__favorite-btn">
-                            <svg class="rental-card__icon" width="20" height="19">
-                              <use xlink:href="images/icons.svg#favorite-star-icon"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="rental-card__content">
-                          <h6 class="rental-card__title">Демидов деловой квартал "Красная Роза 1875"</h6>
-                          <div class="rental-card__address">ЦАО, Никитский бульвар, д. 12
-                            <svg class="rental-card__geo-icon" width="10" height="12">
-                              <use xlink:href="images/icons.svg#icon-map"></use>
-                            </svg>
-                          </div>
-                          <div class="rental-card__metro">
-                            <!-- (metro) -->
-                            <div class="metro">
-                              <div class="metro__station metro__station_violet">Китай-город </div>
-                              <div class="metro__time"> 10 мин пешком</div>
-                            </div>
-                            <!-- End (metro) -->
-                          </div>
-                          <div class="rental-card__option rental-card__option_profit">
-                            <div class="rental-card__option-descr">Чистая прибыль</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">330 000</div>
-                              <div class="rental-card__unit">руб./мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_payback">
-                            <div class="rental-card__option-descr">Окупаемость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">36</div>
-                              <div class="rental-card__unit">мес</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_cost">
-                            <div class="rental-card__option-descr">Стоимость</div>
-                            <div class="rental-card__square">
-                              <div class="rental-card__count"><span class="rental-card__count-suffix">от</span> 30 000 000</div>
-                              <div class="rental-card__unit">руб.</div>
-                            </div>
-                          </div>
-                          <div class="rental-card__option rental-card__option_space">
-                            <div class="rental-card__square">
-                              <div class="rental-card__count">25 - 438</div>
-                              <div class="rental-card__unit">м²</div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                      <!-- End (rental-card) -->
+                      </div>
                     </div>
                   </div>
-                  <div class="catalog__btns">
-                    <div class="catalog__show-more">
-                      <!-- (btn-show) -->
-                      <button class="btn-show">показать ещё
-                        <svg class="btn-show__icon" width="15" height="15">
-                          <use xlink:href="images/icons.svg#loading-icon"></use>
-                        </svg>
-                      </button>
-                      <!-- End (btn-show) -->
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                    <div class="catalog__pagination">
-                      <!-- (pagination) -->
-                      <ul class="pagination">
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link pagination__link_prev disabled"></a>
-                        </li>
-                        <li class="pagination__item">
-                          <span class="pagination__link pagination__link_active">1</span>
-                        </li>
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link">2</a>
-                        </li>
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link">3</a>
-                        </li>
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link">4</a>
-                        </li>
-                        <li class="pagination__item">
-                          <span class="pagination__link">...</span>
-                        </li>
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link">8</a>
-                        </li>
-                        <li class="pagination__item">
-                          <a href="#" class="pagination__link pagination__link_next"></a>
-                        </li>
-                      </ul>
-                      <!-- End (pagination) -->
+                  </div>
+                </div>
+              </div>
+              <div class="interview__tab" id="interview-video">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
+                      </a>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
+                        </div>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="catalog__arrow-up">
-                      <!-- (arrow-up) -->
-                      <a href="#" class="arrow-up"></a>
-                      <!-- End (arrow-up) -->
+                  </div>
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="interview__tab" id="interview-popular">
+                <div class="interview__tab-content">
+                  <div class="interview__big">
+                    <div class="interview__big-one">
+                      <a href="#" class="interview__big-video">
+                        <img src="images/content/interview/video.jpg" alt="Превью отзыва" class="interview__big-img">
+                        <div class="interview__big-time">25:46</div>
+                      </a>
+                      <div class="interview__big-content">
+                        <div class="interview__big-person">
+                          <div class="interview__big-person-img-wrapper">
+                            <img src="images/content/interview/person-small.jpg" alt="Фото персонажа" class="interview__big-person-img">
+                          </div>
+                          <div class="interview__big-person-text">
+                            <h6 class="interview__big-person-name">Вероника Лежнева</h6>
+                            <div class="interview__big-person-position">директор департамента исследований Colliers International</div>
+                          </div>
+                        </div>
+                        <div class="interview__big-descr">
+                          <p class="interview__big-descr-text">О развитии районных ТЦ в Москве, заинтересованности девелоперов жилых кварталов в консультантах и потребности города в крупных ТЦ</p>
+                          <div class="interview__big-info">
+                            <div class="interview__big-info-time">11 часов назад</div>
+                            <div class="interview__big-info-views">2 457
+                              <svg class="interview__big-info-icon" width="15" height="10">
+                                <use xlink:href="images/icons.svg#eye-icon"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interview__small">
+                    <div class="interview__small-wrapper">
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person1.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Дмитрий Михайлов</h6>
+                            <div class="interview__small-position">ОСНОВАТЕЛЬ АГЕНТСТВА НЕДВИЖИМОСТИ</div>
+                            <q class="interview__small-descr">Идея, что на коммерческой недвижимости в области не заработаешь, - всего лишь миф</q>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <div class="interview__small-play"></div>
+                            <img src="images/content/interview/person2.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Игорь Шулинин</h6>
+                            <div class="interview__small-position">директор Workki в России</div>
+                            <p class="interview__small-descr">Директор новой сети коворкингов рассказывает о
+                              ближайших планах компании, локациях и особенностях рынка.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="interview__small-item">
+                        <a href="#" class="interview__small-link">
+                          <div class="interview__small-img-wrapper">
+                            <img src="images/content/interview/person3.png" alt="Фото персонажа" class="interview__small-img">
+                          </div>
+                          <div class="interview__small-content">
+                            <h6 class="interview__small-name">Станислав Наумов</h6>
+                            <div class="interview__small-position">сооснователь компании CERA GROUP</div>
+                            <q class="interview__small-descr">В Eataly состав и наполнение различными ресторанами и зонами маркета определяется в соответствии с площадью помещений и локацией</q>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1454,20 +1401,247 @@
             </div>
           </div>
         </section>
-        <!-- End (catalog) -->
+        <!-- End (interview) -->
+        <!-- (reviews) -->
+        <section class="reviews">
+          <div class="reviews__cover cover">
+             <!-- (section-header) -->
+             <div class="section-header">
+              <h2 class="section-header__title">Обзоры</h2>
+              <div class="section-header__tabs" id="reviews-nav">
+                <div class="section-header__tabs-text">Показать:</div>
+                <ul class="section-header__tabs-list">
+                  <li class="section-header__tabs-item">
+                    <a href="#reviews-new" class="section-header__tabs-link">новое</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#reviews-popular" class="section-header__tabs-link">популярное</a>
+                  </li>
+                  <li class="section-header__tabs-item">
+                    <a href="#reviews-recommend" class="section-header__tabs-link">рекомендуем</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-header__link-wrapper">
+                <a href="#" class="section-header__link">перейти в раздел</a>
+              </div>
+            </div>
+            <!-- End (section-header) -->
+            <div class="reviews__tabs clearfix" >
+              <div class="reviews__tabs-main" id="reviews-tabs">
+                <div class="reviews__tab" id="reviews-new">
+                  <div class="reviews__tab-content">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
+                          <div class="reviews__review-img-wrapper">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
+                          </div>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__tab" id="reviews-popular">
+                  <div class="reviews__tab-content">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
+                          <div class="reviews__review-img-wrapper">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
+                          </div>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__tab" id="reviews-recommend">
+                  <div class="reviews__tab-conent">
+                    <div class="reviews__big">
+                      <div class="reviews__big-wrapper">
+                        <a href="#" class="reviews__review reviews__review_big clearfix">
+                          <div class="reviews__review-img-wrapper">
+                            <div class="reviews__review-img-label">Мнение эксперта</div>
+                            <img src="images/content/reviews/expert.jpg" alt="Фото эксперта" class="reviews__review-img">
+                          </div>
+                          <h6 class="reviews__review-title">Марина Дроздова, руководитель группы направления street retail компании «Магазин Магазинов», о развитии аптечных сетей в Москве и Подмосковье, запросах фармацевтических компаний и новых форматах. </h6>
+                          <p class="reviews__review-descr">По нашим данным, это около 40 аптечных брендов. Среди новых компаний – «ЕАптека» (интернет-аптека, которая планирует выходить на физический рынок), «Сердце города», «Живы-Здоровы», «Н2О». Такие крупнейшие федеральные сети, как «Ригла», «36, 6», так же продолжат свое развитие. В свою очередь...вных ре-</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="reviews__small">
+                      <div class="reviews__small-wrapper">
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/lenta.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Лента» арендует 14 гипермаркетов на
+                              78 тыс кв м</h6>
+                            <p class="reviews__review-descr">«Лента» на 15 лет возьмет в аренду 14 гипермаркетов «Наш» в Москве и ряде российских регионов, сообщает «Интерфакс»</p>
+                          </a>
+                        </div>
+                        <div class="reviews__small-item">
+                          <a href="#" class="reviews__review clearfix">
+                            <div class="reviews__review-img-wrapper">
+                              <img src="images/content/reviews/logopark.jpg" alt="Фото эксперта" class="reviews__review-img">
+                            </div>
+                            <h6 class="reviews__review-title">«Логопарк Север – 2» - крупнейшая сделка
+                              по аренде</h6>
+                            <p class="reviews__review-descr">«Логопарк Девелопмент» объявляют о закрытии крупнейшей сделки по аренде склада на севере Подмосковья в складском комплексе...</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__aside">
+                <!-- (banner) -->
+                <div class="banner">
+                  <a href="#" class="banner__link">
+                    <div class="banner__label">ТОП 10</div>
+                    <img src="images/content/banner.jpg" alt="Баннер" class="banner__img">
+                    <h5 class="banner__text">ЛУЧШИе места
+                      <br>
+                      для вашего бизнеса
+                      <br>
+                      в москве</h5>
+                  </a>
+                </div>
+                <!-- End (banner) -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End (reviews) -->
+        <!-- (about) -->
+        <section class="about">
+          <div class="about__cover cover">
+            <div class="about__wrapper">
+              <div class="about__info">
+                <h2 class="about__title">Агентство недвижимости CapitalRent</h2>
+                <p>Деловая активность в Москве не затихает никогда, несмотря ни на экономическую
+                  ситуацию в стране и мире. Наиболее популярная услуга – аренда офисов и торговых площадей,
+                  а в последние годы вырос спрос и на складские и производственные помещения и промышленные земли. Если вам нужно арендовать, сдать в аренду, купить, продать и оформить коммерческую недвижимость, вам осталось только оставить заявку с нашего сайта или сделать один короткий звонок в наш офис!</p>
+                <p>Агентство CapitalRent начинало работу еще в те годы, когда профессия риэлтора только начинала становление. За прошедшее время мы выросли до крупнойорганизации, заслужившей
+                  безупречную репутацию у клиентов и партнеров. Мы работаем с ведущими арендаторами,
+                  покупателями владельцами недвижимости – торговыми сетями, зарубежными компаниями,
+                  частными инвесторами, и готовы к решению самых различных задач в этой сфере.</p>
+                <div class="about__link-wrapper">
+                  <a href="#" class="about__link">подробнее о нашем агентстве</a>
+                </div>
+              </div>
+              <div class="about__brends">
+                <h2 class="about__title">Наши клиенты</h2>
+                <ul class="about__imgs">
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/tps.png" alt="ТПС" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/chayohana.png" alt="Чайхона №1" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/burger-king.png" alt="Бургер Кинг" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/anderson.png" alt="АндерСон" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/sberbank.png" alt="Сбербанк" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/kfc.png" alt="KFC" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/mvideo.png" alt="М.видео" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/coffe-house.png" alt="Кофе Хауз" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/svayznou.png" alt="Связной" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/evroset.png" alt="Евросеть" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/eldorado.png" alt="Эльдорадо" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/absolute.png" alt="Абсолют" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/pyaterochka.png" alt="Пятерочка" class="about__brend">
+                  </li>
+                  <li class="about__img-wrapper">
+                    <img src="images/content/brands/perekrestok.png" alt="Перекресток" class="about__brend">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End (about) -->
       </div>
       <!-- End (main) -->
       <!-- (footer) -->
       <div class="wrapper__footer">
         <footer class="footer">
-          <div class="footer__top">
-           <div class="footer__cover cover">
-            <div class="footer__top-wrapper">
-              <h6 class="footer__top-title">Поможем купить готовый арендный бизнес с минимальными рисками</h6>
-              <p>Любой бизнес, так или иначе связанный с коммерческой недвижимостью, направлен на извлечение прибыли – на аренде или открытии собственного предприятия. Мы предлагаем аренду зданий от собственников, чтобы ваше дело вышло на новый уровень. Это может быть заработок на субаренде, открытии собственного кафе, ресторана или магазина, либо что-то другое. Некоторым компаниям, в которых работает большое число сотрудников, может быть интересно арендовать отдельно стоящее здание (ОСЗ) под офисные и административные нужды. Таким образом, можно собрать команду подготовленных специалистов в одном месте, что поможет эффективно организовать работу отделов и повысить эффективность всей компании. Если вам больше подходит долгосрочное развитие бизнеса и желание инвестировать средства вам может быть более выгодно купить здание в собственность. Это позволит больше не зависеть от различных ситуаций и от решений других людей, владельцев арендуемой площади. Помимо этого, некоторые дома представляют собой архитектурную и историческую ценность, что само по себе делает их особо значимыми в городе.</p>
-            </div>
-           </div>
-          </div>
           <div class="footer__main">
             <div class="footer__cover cover">
               <div class="footer__main-wrapper">
@@ -1718,14 +1892,16 @@
     <!-- End (mobile-nav) -->
     <!-- (scripts) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/svg4everybody.min.js"></script>
-    <script src="js/jquery.formstyler.min.js"></script>
-    <script src="js/ion.rangeSlider.min.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/clipboard.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/plugins/jquery.easytabs.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b8636f71-6292-4daf-ab16-98720e450cba&lang=ru_RU"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/clipboard.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/sticky-kit.js"></script>
+    <script src="js/jquery.easytabs.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
     <script src="js/script.js"></script>
     <!-- End (scripts) -->
   </body>

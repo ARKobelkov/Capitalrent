@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -596,11 +597,11 @@
                                   <div class="filter__sl-label">Стоимость</div>
                                   <div class="filter__sl-inputs">
                                     <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="costFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
+                                      <input type="text" data-cost="true" name="costFrom" value="" placeholder="" data-field="from" class="filter__sl-input">
                                     </div>
                                     <div class="filter__sl-divider"></div>
                                     <div class="filter__sl-input-wrapper">
-                                      <input type="text" name="costTo" value="" placeholder="" data-field="before" class="filter__sl-input">
+                                      <input type="text" data-cost="true" name="costTo" value="" placeholder="" data-field="before" class="filter__sl-input">
                                     </div>
                                     <div class="filter__sl-currency-wrapper">
                                       <select name="currency" class="filter__sl-currency">
@@ -728,7 +729,7 @@
                   </div>
                 </div>
                 <div class="catalog__main">
-                  <div class="catalog__list catalog__list_horizontal">
+                  <div class="catalog__list catalog__list_horizontal" id="catalog">
                     <div class="catalog__item">
                       <!-- (rental-card) -->
                       <a href="#" class="rental-card">
@@ -1228,7 +1229,7 @@
                     </div>
                     <div class="catalog__arrow-up">
                       <!-- (arrow-up) -->
-                      <a href="#" class="arrow-up"></a>
+                      <a href="#catalog" class="arrow-up"></a>
                       <!-- End (arrow-up) -->
                     </div>
                   </div>
@@ -1501,14 +1502,16 @@
     <!-- End (mobile-nav) -->
     <!-- (scripts) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/svg4everybody.min.js"></script>
-    <script src="js/jquery.formstyler.min.js"></script>
-    <script src="js/ion.rangeSlider.min.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/clipboard.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/plugins/jquery.easytabs.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b8636f71-6292-4daf-ab16-98720e450cba&lang=ru_RU"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script src="js/ion.rangeSlider.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/clipboard.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/sticky-kit.js"></script>
+    <script src="js/jquery.easytabs.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
     <script src="js/script.js"></script>
     <!-- End (scripts) -->
   </body>

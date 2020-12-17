@@ -407,6 +407,7 @@ $(function () {
     var maxValue = parseInt(slider.attr('data-max'));
     var fromValue = parseInt(slider.attr('data-from'));
     var beforeValue = parseInt(slider.attr('data-before'));
+    var unit = ' млн';
     slider.ionRangeSlider({
       type: 'double',
       min: minValue,
@@ -418,40 +419,74 @@ $(function () {
       hide_from_to: true,
       onStart: function onStart(data) {
         if (fromField.length) {
-          fromField.attr('placeholder', data.min);
-          fromField.val(data.from);
+          if (fromField.attr('data-cost')) {
+            fromField.attr('placeholder', data.min + unit);
+            fromField.val(data.from + unit);
+          } else {
+            fromField.attr('placeholder', data.min);
+            fromField.val(data.from);
+          }
         }
   
         if (beforeField.length) {
-          beforeField.attr('placeholder', data.max);
-          beforeField.val(data.to);
+          if (fromField.attr('data-cost')) {
+            beforeField.attr('placeholder', data.max + unit);
+            beforeField.val(data.to + unit);
+          } else {
+            beforeField.attr('placeholder', data.max);
+            beforeField.val(data.to);
+          }
         }
       },
       onChange: function onChange(data) {
         if (fromField.length) {
-          fromField.val(data.from);
+          if (fromField.attr('data-cost')) {
+            fromField.val(data.from + unit);
+          } else {
+            fromField.val(data.from);
+          }
         }
   
         if (beforeField.length) {
-          beforeField.val(data.to);
+          if (fromField.attr('data-cost')) {
+            beforeField.val(data.to + unit);
+          } else {
+            beforeField.val(data.to);
+          }
         }
       },
       onFinish: function onFinish(data) {
         if (fromField.length) {
-          fromField.val(data.from);
+          if (fromField.attr('data-cost')) {
+            fromField.val(data.from + unit);
+          } else {
+            fromField.val(data.from);
+          }
         }
   
         if (beforeField.length) {
-          beforeField.val(data.to);
+          if (fromField.attr('data-cost')) {
+            beforeField.val(data.to + unit);
+          } else {
+            beforeField.val(data.to);
+          }
         }
       },
       onUpdate: function onUpdate(data) {
         if (fromField.length) {
-          fromField.val(data.from);
+          if (fromField.attr('data-cost')) {
+            fromField.val(data.from + unit);
+          } else {
+            fromField.val(data.from);
+          }
         }
   
         if (beforeField.length) {
-          beforeField.val(data.to);
+          if (fromField.attr('data-cost'))  {
+            beforeField.val(data.to + unit);
+          } else {
+            beforeField.val(data.to);
+          }
         }
       }
     });
@@ -469,11 +504,11 @@ $(function () {
   
     if (currentField.attr('data-field') === 'from') {
       slider.update({
-        from: valueField
+        from: valueField 
       });
     } else if (currentField.attr('data-field') === 'before') {
       slider.update({
-        to: valueField
+        to: valueField 
       });
     }
   });
@@ -504,5 +539,69 @@ $(function () {
       $(this).val($(this).val().replace(/[^0-9]/g, ''));
     }
   });
+
+  // Подставить значения радио в инпут
+  $('.filter__radio-input').on('change', function() {
+
+    const parentBlock = $(this).closest('.filter__sl-item-top');
+    const input = parentBlock.find('.filter__sl-input');
+
+    input.val($(this).val());
+  });
   
+  // Прилипание бокового фильтра
+  $(window).bind("load resize", function(){
+		if(window.innerWidth > 1439) {
+			$(".catalog__aside").stick_in_parent({
+				offset_top: 0
+			});
+		} else{
+			$(".catalog__aside").trigger("sticky_kit:detach");
+		}
+  });
+  
+   /* Плавный скролл */
+   $(".arrow-up").click(function(){
+    var _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  // Табы в каталоге
+    $('#options-nav').easytabs({
+      updateHash: false,
+      animate: false,
+      panelContext: $('#options-tabs')
+    });
+
+  // Поиск по буквам и выбор станции
+  $('[data-filter="filter"]').on('keyup', function () {
+
+    const input = $(this)[0];
+    const inputValue = input.value.toUpperCase();
+    const dropdown = $('[data-dropdown="dropdown"]')[0];
+    const dropdownItems = dropdown.getElementsByTagName('li');
+    let i;
+
+    for (i = 0; i < dropdownItems.length; i++) {
+      var a = dropdownItems[i].querySelector('.metro__station');
+
+        if (a.innerHTML.toUpperCase().indexOf(inputValue) === 0) {
+          dropdownItems[i].style.display = "block";
+        } else {
+          dropdownItems[i].style.display = "none";
+        }
+    };
+  });
+
+  $('.metro-search__dropdown-item').on('click', function() {
+
+    const input = $('[data-filter="filter"]');
+    const metroBlock = $(this).find('.metro__station')
+
+    input.val(metroBlock.text());
+  });
+
+  // Кастомный скролл в фильтре
+  $('.scrollbar-inner').scrollbar();
 });

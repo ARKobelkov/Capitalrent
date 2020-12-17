@@ -1,0 +1,134 @@
+.options {
+  background: $secondbg;
+  &__header {
+    border: 2px solid #e6e9ea;
+    padding-top: 38px;
+    background: #fff;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: 768px) {
+        margin-bottom: -2px;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 0 25px;
+      }
+    }
+    &-item {
+      padding: 0 25px;
+    }
+    &-link {
+      display: block;
+      padding-bottom: 25px;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+      font: 500 17px / 25px 'Fira Sans', sans-serif;
+      text-transform: uppercase;
+      color: #2c2f2e;
+      transition: all 0.3s ease;
+      &:hover,
+      &:active {
+        color: #f43c2e;
+        @media screen and (min-width: 768px) {
+          border-color: #f43c2e;
+        }
+      }
+    }
+    &-link.active {
+      color: #f43c2e;
+      @media screen and (min-width: 768px) {
+        border-color: #f43c2e;
+      }
+    }
+  }
+  &__tabs {
+    border: 2px solid #e6e9ea;
+    border-top: none;
+    background: #fff;
+  }
+  &__tab {
+    display: none;
+  }
+  &__tab-content {
+    padding: 50px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      padding: 50px 25px 0;
+    }
+  }
+  &__block {
+    padding: 0 25px;
+    &:first-child {
+      width: 100%;
+      @media screen and (min-width: 1200px) {
+        width: 30%;
+      }
+    }
+    &:nth-child(2) {
+      width: 100%;
+      @media screen and (min-width: 990px) {
+        width: 50%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 41%;
+      }
+    }
+    &:last-child {
+      width: 100%;
+      @media screen and (min-width: 990px) {
+        width: 50%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 29%;
+      }
+    }    
+
+    // margin-bottom: 25px;
+  }
+  &__list {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    &_half {
+      .options__item {
+        width: 100%;
+        @media screen and (min-width: 480px) {
+          width: 50%;
+        }
+      }
+    }
+    &_fourth {
+      .options__item {
+        width: 25%;
+      }
+    }
+  }
+  &__item {
+    width: 100%;
+    padding-right: 15px;
+    &_last {
+      order: 1;
+      @media screen and (min-width: 480px) {
+        order: 0;
+      }
+    }
+  }
+  &__title {
+    font: 500 17px / 19px 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    color: #2c2f2e;
+    margin-bottom: 17px;
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    font: 400 15px / 22px 'Fira Sans', sans-serif;
+    color: #4e5e72;
+    @include texthover;
+  }
+  &__input {
+    padding-top: 10px;
+    margin-bottom: 50px;
+  }
+}

@@ -36,6 +36,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      background: #fff;
       &:hover .journal__news-img,
       &:active .journal__news-img {
         transform: scale(1.2);
@@ -193,6 +194,25 @@
       display: block;
       font: 400 13px / 23px 'Fira Sans', sans-serif;
       color: $journalasidetime;
+    }
+  }
+  &_blue-bg {
+    background: $secondbg;
+    .journal__aside {
+      background: #fff;
+      margin-top: 10px;
+      padding: 0 20px;
+      @media screen and (min-width: 990px) {
+        width: 325px;
+        margin-left: -325px;
+      }
+    }
+    .journal__aside-link {
+      color: #2c2f2e;
+      @include texthover;
+    }
+    .journal__aside-title {
+      display: none;
     }
   }
 }
